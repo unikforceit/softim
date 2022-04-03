@@ -1,0 +1,475 @@
+.navbar-area.navigation-style-02 .custom-container .navbar-collapse .navbar-nav {
+    text-align: left;
+}
+
+.navbar-area.navigation-style-02 .custom-container .nav-right-content {
+    margin-left: 0;
+    margin-right: 80px;
+}
+
+.banner-area .bg-img {
+    left: inherit;
+    right: 40%;
+}
+
+
+.banner-area .btn-wrap .blank-btn {
+    margin-right: 30px;
+}
+
+.banner-area .banner-inner {
+    padding-right: 120px;
+    padding-left: 0;
+}
+
+.content-wrapper .right-content {
+    margin-right: 10px;
+    margin-left: 0;
+    text-align: right;
+}
+
+.content-wrapper .left-content {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+
+.service-item-list.active .service-title .title {
+    padding-right: 30px;
+    padding-left: 0;
+}
+
+.service-item-list .service-title .title:before {
+    left: inherit;
+    right: 0;
+}
+
+
+.icon-box-item[style="text-align:left"] .icon {
+    justify-content: right;
+}
+
+.single-packages-box.style-01,
+.blog-grid-item-01 .content,
+.single-testimonial-item-03 .content,
+.single-packages-box .content,
+.single-deals-box .content {
+    text-align: right;
+}
+
+.single-packages-box .content .package-list li i {
+    margin-right: 0;
+    float: right;
+    margin-left: 10px;
+}
+
+.single-packages-box.style-02 .thumb {
+    position: relative;
+}
+
+.single-packages-box.style-02 .thumb .price {
+    position: absolute;
+    right: 25px;
+}
+
+.blog-grid-item-01 .content .post-meta li:after {
+    left: -15px;
+    right: inherit;
+}
+
+.blog-grid-item-01 .content .read-btn i {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.blog-grid-item-01 .content .read-btn:hover i {
+    margin-right: 15px;
+}
+
+.blog-grid-item-01 .content .post-meta li {
+    margin-right: 0;
+    margin-left: 25px;
+}
+
+.history-single-item:nth-child(even) .history-single-item-content .content {
+    text-align: left;
+}
+
+.widget.footer-widget .widget-headline:after {
+    left: inherit;
+    right: 0;
+}
+
+.newsletter-form .submit i {
+    margin-right: 10px;
+}
+
+.custom-logo-link, .site-logo {
+    margin-right: 0;
+    margin-left: 80px;
+}
+
+.copyright-wrap-inner .social_share li + li {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+.navbar-area .custom-container .navbar-collapse .navbar-nav li + li {
+    margin-right: 30px;
+    margin-left: 0;
+}
+
+.navbar-area .custom-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li {
+    margin-right: 0;
+}
+
+.navbar-area .custom-container .navbar-collapse .navbar-nav li.menu-item-has-children {
+    padding-right: 0;
+    padding-left: 25px;
+}
+
+.navbar-area .custom-container .navbar-collapse .navbar-nav li.menu-item-has-children:before {
+    left: 0;
+    right: inherit;
+}
+
+
+.book-form .book-form-icon {
+    right: inherit;
+    left: 30px;
+}
+
+.book-form .form--control:after {
+    right: inherit;
+    left: 20px;
+}
+
+
+.book-form .form--control .current {
+    display: block;
+    text-align: right;
+}
+
+.navbar-collapse .main-menu li.menu-item-has-children.show .sub-menu {
+    right: inherit;
+    z-index: 7;
+    left: 0;
+}
+
+.navbar-collapse .main-menu li.menu-item-has-children a {
+    padding-left: 20px;
+    padding-right: 0;
+}
+
+.navbar-collapse .main-menu li.menu-item-has-children a::before {
+    left: 0;
+    right: inherit;
+}
+
+.navbar-collapse .main-menu li.menu-item-has-children a::after {
+    left: 0;
+    right: inherit;
+}
+
+.nav-menu-close {
+    left: inherit;
+    right: 2em;
+}
+
+.service-item-list .service-title .title span {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.header-icon-box-item .icon,
+.header-icon-box-item .thumb {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.course-single-item .thumb .price {
+    left: inherit;
+    right: 20px;
+}
+
+.course-single-item .content .tutor-single-loop-meta i {
+    float: right;
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+.news-single-list-items .content .author-meta li {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.news-single-list-items .content .author-meta li + li:after {
+    right: -15px;
+    left: inherit;
+}
+
+.news-single-items .content .author-meta li {
+    margin-left: 30px;
+    margin-right: 0;
+}
+
+.news-single-items .content .author-meta li + li:after {
+    left: inherit;
+    right: -15px;
+}
+
+.history-single-item .content {
+    margin-right: 0;
+    margin-left: 50px;
+}
+
+.slick-carousel-controls .slider-nav.style-01 {
+    left: 0;
+    right: inherit;
+}
+
+.breadcrumb-wrap .page-list li {
+    padding-right: 45px;
+    padding-left: 0;
+}
+
+.breadcrumb-wrap .page-list li:after {
+    right: 18px;
+    left: inherit;
+}
+
+.slick-carousel-controls .slider-nav.style-01 div.prev-arrow {
+    left: 0;
+}
+
+.slick-carousel-controls .slider-nav.style-01 div.next-arrow {
+    right: -120px;
+}
+
+.single-testimonial-item-02 .author-meta .thumb img {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.accordion-wrapper .card .card-header a:after {
+    left: 20px;
+    right: inherit;
+}
+
+.single-meta-item .content {
+    margin-right: 15px;
+    margin-left: 0;
+    text-align: right;
+}
+.widget .elementor-widget-container > h1:after, .widget .elementor-widget-container > h2:after, .widget .elementor-widget-container > h3:after, .widget .elementor-widget-container > h4:after, .widget .elementor-widget-container > h5:after, .widget .elementor-widget-container > h6:after,
+.widget > h1, .widget > h2, .widget > h3, .widget > h4, .widget > h5, .widget > h6, .widget .widget-headline,
+.widget .request-form-widget .widget-headline {
+    text-align: right;
+}
+
+.widget > h1:after, .widget > h2:after, .widget > h3:after, .widget > h4:after, .widget > h5:after, .widget > h6:after, .widget .widget-headline:after {
+    right: -25px;
+    left: inherit;
+}
+
+.package-book-form .icon {
+    left: 20px;
+    right: inherit;
+}
+.icon-box-item.top[style="text-align:right"] .icon-wrap{
+    justify-content: start;
+}
+.rtl .tutor-custom-list-style li {
+    padding-right: 0;
+}
+
+.tutor-custom-list-style li i {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.single-instructor-wrap .rating-digits {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.social-icon.style-03 li + li {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.theme-recent-post-wrap li.theme-recent-post-item .thumb {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.contact-form-area,
+.desktop-left,
+.banner-area .banner-inner,
+.text-content-tab,
+.call-to-action-item .content,
+.navbar-collapse .main-menu li,
+.news-single-list-items .content,
+.history-single-item .content,
+.choose-single-item .content,
+.course-single-item .content,
+.header-icon-box-item,
+.banner-area .banner-inner-02,
+.about-us-widget,
+.footer-top-widget-wrap,
+.widget.footer-widget,
+.book-form .form--control,
+.nice-select .option,
+.navbar-area .custom-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li,
+.accordion-wrapper .card,
+.single-testimonial-item-02 .content,
+.news-single-items .content,
+.tutor-course-benefits-content ul,
+.package-book-form .form--control,
+.single-instructor-wrap, .single-instructor-wrap .single-instructor-top
+.contact-form-area,
+.team-details-page .top-content-area .content,
+.study-option-table th,
+.tutor-single-course-segment,
+.tutor-course-summery,
+.widget,
+.benefit-single-item,
+.performance-single-item,
+.blog-standard-item-01,
+.comments-area,
+.single-contact-item,
+.woocommerce,
+.single-packages-box,
+.contact-form-area .form--control,
+.blog-single-content-wrap {
+    text-align: right;
+}
+.comments-area .comment-list li .single-comment-wrap .thumb{
+    margin-left: 20px;
+    margin-right: 0;
+}
+.comments-area .comment-list li ul.children li{
+    margin-left: 0;
+    margin-right: 50px;
+}
+.comments-area .comment-list li .single-comment-wrap .content .comment-reply-link{
+    left: 0;
+    right: inherit;
+}
+.blog-single-content-wrap .post-meta li:after,
+.blog-standard-item-01 .content .post-meta li:after {
+    right: inherit;
+    left: -16px;
+}
+.wp-block-search__label:after,
+.wp-block-group__inner-container > h1:after, .wp-block-group__inner-container > h2:after, .wp-block-group__inner-container > h3:after, .wp-block-group__inner-container > h4:after, .wp-block-group__inner-container > h5:after, .wp-block-group__inner-container > h6:after{
+    left: inherit;
+    right: -25px;
+}
+.blog-single-content-wrap .blog-list li:after{
+    right: 0;
+}
+.blog-single-content-wrap .blog-list li{
+    padding-right: 40px;
+}
+blockquote:not(.has-light-gray-color):not(.has-very-dark-gray-color):not(.is-style-large):not(.is-style-large) cite:before{
+    right: 0;
+    left: inherit;
+}
+blockquote:not(.has-light-gray-color):not(.has-very-dark-gray-color):not(.is-style-large):not(.is-style-large) cite{
+    padding-right: 75px;
+}
+.btn-wrap .read-btn i {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.module-download-area .content .title {
+    margin-right: 30px;
+    margin-left: 0;
+}
+
+.study-option-table th:first-child {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 0;
+}
+
+.study-option-table tr:last-child td:first-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 10px;
+}
+
+.study-option-table th:last-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 10px;
+}
+
+.study-option-table tr:last-child td:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 10px;
+}
+
+.team-details-page .top-content-area .content {
+    margin-right: 30px;
+    margin-left: 0;
+}
+
+.team-details-page .top-content-area .content .team-social-area .social-icon li + li {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.team-details-page .top-content-area .content .team-contact-list li i {
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.contact-form-area .icon {
+    right: inherit;
+    left: 30px;
+}
+
+.contact-form-area .form--control {
+    padding: 0 20px;
+}
+
+.contact-form-area .form--control:after {
+    right: inherit;
+    left: 18px;
+}
+
+.form--control .current {
+    display: block;
+    text-align: right;
+}
+
+.performance-single-item .content p:after,
+.performance-single-item .content .title:after {
+    left: inherit;
+    right: 0;
+}
+
+.performance-single-item .icon:before {
+    left: -30px;
+    right: inherit;
+}
+
+.benefit-single-item .icon:before {
+    right: 10px;
+    left: inherit;
+}
+
+.accordion-wrapper .card .card-body.style-01 .card-body-inner {
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.single-contact-item .icon{
+    margin-right: 0;
+    margin-left: 30px;
+}
+.rtl .single-instructor-wrap .instructor-bio{
+    padding-right: 0;
+}
