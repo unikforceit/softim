@@ -1,0 +1,322 @@
+/*--------------------------------------------------------------
+# Footer-block
+--------------------------------------------------------------*/
+.footer-section{
+  background-color: #F9FBFF;
+  overflow: hidden;
+  position: relative;
+  &.two{
+    div[class*="col"]:nth-of-type(4n + 4) .footer-widget .title {
+      color: $white;
+      @media only screen and (max-width: 1499px) {
+        color: $color__heading;
+      }
+      &::after{
+        background-color: $white;
+        @media only screen and (max-width: 1499px) {
+          background-color: $bg--base;
+        }
+      }
+    }
+  }
+  .footer-element-one{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: zoominoutsinglefeatured 5s linear infinite;
+    @media only screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+  .footer-element-two{
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+    opacity: .35;
+    @media only screen and (max-width: 575px) {
+      display: none;
+    }
+    img{
+        animation: horizontal-move 2s linear infinite;
+    }
+  }
+  .footer-element-three{
+      position: absolute;
+      bottom: 8%;
+      right: 12%;
+      opacity: .35;
+      @media only screen and (max-width: 575px) {
+        display: none;
+      }
+      img{
+          animation: scroll-ver 3s linear infinite;
+      }
+  }
+  .footer-element-four{
+      position: absolute;
+      top: 12%;
+      right: 0;
+      width: 1%;
+      opacity: .25;
+      @media only screen and (max-width: 575px) {
+        display: none;
+      }
+      img{
+          animation: scroll-down 2s linear infinite;
+      }
+  }
+  .footer-element-five{
+      position: absolute;
+      top: 18%;
+      right: 5%;
+      opacity: .35;
+      @media only screen and (max-width: 575px) {
+        display: none;
+      }
+      img{
+          animation: scroll-down 3s linear infinite;
+      }
+  }
+  .footer-element-six{
+      position: absolute;
+      top: 40%;
+      right: 10%;
+      opacity: .35;
+      @media only screen and (max-width: 575px) {
+        display: none;
+      }
+      img{
+          animation: scroll-down 5s linear infinite;
+      }
+  }
+  .footer-element-seven{
+    position: absolute;
+    top: 47%;
+    left: 13%;
+    opacity: .35;
+    @media only screen and (max-width: 1700px) {
+      display: none;
+    }
+    &.two{
+      top: 55%;
+      left: 2%;
+    }
+    img{
+        animation: horizontal-move 2s linear infinite;
+    }
+  }
+  .footer-element-eight{
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    opacity: .25;
+    z-index: 3;
+    animation: rotate 5s linear infinite;
+  }
+}
+.footer-top-area{
+  position: relative;
+  z-index: 9;
+  margin-bottom: 80px;
+  &::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 1px;
+    border-bottom: 1px dashed #9DBAFE;
+    @media only screen and (max-width: 1499px) {
+      width: 100%;
+    }
+  }
+}
+.footer-contact-list{
+  .sub-title{
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .link-title{
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+}
+div[class*="col"]:nth-of-type(3n + 3) .footer-contact-list {
+  .sub-title{
+    color: $white;
+    @media only screen and (max-width: 1499px) {
+      color: $color__text;
+    }
+  }
+  .link-title{
+    color: $white;
+    @media only screen and (max-width: 1499px) {
+      color: $color__heading;
+    }
+  }
+}
+.footer-list{
+  margin-bottom: -10px;
+  li{
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    @media only screen and (max-width: 991px) {
+      font-size: 14px;
+    }
+    a{
+      display: inline-block;
+      transition: all 0.3s;
+      &:hover{
+        color: $text--base;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+.footer-widget{
+  .title{
+    font-weight: 600;
+    margin-bottom: 45px;
+    font-family: $font_body;
+    position: relative;
+    margin-top: -5px;
+    &::after{
+      position: absolute;
+      content: '';
+      bottom: -22px;
+      left: 0;
+      width: 60px;
+      height: 1px;
+      background-color: $bg--base;
+    }
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 40px;
+      &::after{
+        bottom: -20px;
+      }
+    }
+  }
+}
+.footer-social{
+  margin-top: 30px;
+  @media only screen and (max-width: 991px) {
+    margin-top: 20px;
+  }
+  li{
+    display: inline-block;
+    a{
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      display: inline-block;
+      text-align: center;
+      border: 1px solid $bg--base;
+      border-radius: 50%;
+      color: $text--base;
+      transition: all 0.3s;
+      &:hover,
+      &.active{
+        background-color: $bg--base;
+        color: $white;
+      }
+    }
+  }
+  li+li{
+    margin-left: 5px;
+  }
+}
+.footer-logo{
+  margin-bottom: 20px;
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 20px;
+  }
+  a{
+    margin-right: 0;
+  }
+}
+.envato-author{
+  margin-bottom: 30px;
+}
+.footer-subscribe-form{
+  position: relative;
+  input{
+    padding-right: 70px;
+    @media only screen and (max-width: 1499px) {
+      border: 1px solid $border--base;
+    }
+  }
+  button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: $bg--base;
+    border-radius: 5px;
+    width: 39px;
+    height: 39px;
+    color: $white;
+    font-size: 20px;
+  }
+}
+.footer-area{
+  position: relative;
+  z-index: 2;
+  &::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 41%;
+    height: 100%;
+    background-color: $bg--base;
+    z-index: -1;
+    @media only screen and (max-width: 1499px) {
+      display: none;
+    }
+  }
+  .footer-area-element{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+@media screen and (min-device-width: 2100px) and (max-device-width: 2500px) {
+  .footer-area{
+    &::after{
+      width: 43%;
+    }
+  }
+}
+.copyright-wrapper{
+  background-color: $white;
+  font-size: 14px;
+  padding: 60px 0;
+  margin-top: 120px;
+  @media only screen and (max-width: 991px) {
+    margin-top: 80px;
+    padding: 40px 0;
+  }
+  &.two{
+    padding: 30px 0;
+    margin-top: 0;
+    .copyright-area{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media only screen and (max-width: 991px) {
+        display: block;
+      }
+      .footer-logo{
+        margin-bottom: 0;
+        @media only screen and (max-width: 991px) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  p{
+    color: #505050;
+    letter-spacing: 1px;
+  }
+}

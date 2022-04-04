@@ -277,20 +277,6 @@ if (!class_exists('Softim_Init')) {
             }
             $all_css_files = array(
                 array(
-                    'handle' => 'animate',
-                    'src' => SOFTIM_CSS . '/animate.css',
-                    'deps' => array(),
-                    'ver' => $theme_version,
-                    'media' => 'all',
-                ),
-                array(
-                    'handle' => 'flaticon',
-                    'src' => SOFTIM_CSS . '/flaticon.css',
-                    'deps' => array(),
-                    'ver' => $theme_version,
-                    'media' => 'all',
-                ),
-                array(
                     'handle' => 'bootstrap',
                     'src' => SOFTIM_CSS . '/bootstrap.min.css',
                     'deps' => array(),
@@ -298,15 +284,57 @@ if (!class_exists('Softim_Init')) {
                     'media' => 'all',
                 ),
                 array(
+                    'handle' => 'animate',
+                    'src' => SOFTIM_CSS . '/animate.css',
+                    'deps' => array(),
+                    'ver' => $theme_version,
+                    'media' => 'all',
+                ),
+                array(
+                    'handle' => 'icomoon',
+                    'src' => SOFTIM_CSS . '/icomoon.css',
+                    'deps' => array(),
+                    'ver' => $theme_version,
+                    'media' => 'all',
+                ),
+                array(
+                    'handle' => 'line-awesome',
+                    'src' => SOFTIM_CSS . '/line-awesome.min.css',
+                    'deps' => array(),
+                    'ver' => $theme_version,
+                    'media' => 'all',
+                ),
+                array(
                     'handle' => 'font-awesome',
-                    'src' => SOFTIM_CSS . '/font-awesome.min.css',
+                    'src' => SOFTIM_CSS . '/fontawesome-all.min.css',
                     'deps' => array(),
                     'ver' => '5.12.0',
                     'media' => 'all',
                 ),
                 array(
-                    'handle' => 'magnific-popup',
-                    'src' => SOFTIM_CSS . '/magnific-popup.css',
+                    'handle' => 'lightcase',
+                    'src' => SOFTIM_CSS . '/lightcase.css',
+                    'deps' => array(),
+                    'ver' => $theme_version,
+                    'media' => 'all',
+                ),
+                array(
+                    'handle' => 'odometer',
+                    'src' => SOFTIM_CSS . '/odometer.css',
+                    'deps' => array(),
+                    'ver' => $theme_version,
+                    'media' => 'all',
+                ),
+                array(
+                    'handle' => 'nice-select',
+                    'src' => SOFTIM_CSS . '/nice-select.css',
+                    'deps' => array(),
+                    'ver' => $theme_version,
+                    'media' => 'all',
+                ),
+                array(
+                    'handle' => 'swiper',
+                    'src' => SOFTIM_CSS . '/swiper.min.css',
                     'deps' => array(),
                     'ver' => $theme_version,
                     'media' => 'all',
@@ -326,24 +354,6 @@ if (!class_exists('Softim_Init')) {
                     'media' => 'all',
                 ),
             );
-            if (class_exists('WooCommerce')) {
-                $all_css_files[] = array(
-                    'handle' => 'softim-woocommerce-style',
-                    'src' => SOFTIM_CSS . '/woocommerce-style' . $css_ext,
-                    'deps' => array(),
-                    'ver' => $theme_version,
-                    'media' => 'all',
-                );
-            }
-            if (softim()->is_tutor_active()) {
-                $all_css_files[] = array(
-                    'handle' => 'softim-tutor-style',
-                    'src' => SOFTIM_CSS . '/tutor-style' . $css_ext,
-                    'deps' => array(),
-                    'ver' => $theme_version,
-                    'media' => 'all',
-                );
-            }
             $all_css_files = apply_filters('softim_theme_enqueue_style', $all_css_files);
 
             if (is_array($all_css_files) && !empty($all_css_files)) {
@@ -381,8 +391,57 @@ if (!class_exists('Softim_Init')) {
                     'in_footer' => true,
                 ),
                 array(
-                    'handle' => 'magnific-popup',
-                    'src' => SOFTIM_JS . '/jquery.magnific-popup.js',
+                    'handle' => 'isotope',
+                    'src' => SOFTIM_JS . '/isotope.pkgd.min.js',
+                    'deps' => array('jquery'),
+                    'ver' => $theme_version,
+                    'in_footer' => true,
+                ),
+                array(
+                    'handle' => 'aos',
+                    'src' => SOFTIM_JS . '/aos.js',
+                    'deps' => array('jquery'),
+                    'ver' => $theme_version,
+                    'in_footer' => true,
+                ),
+                array(
+                    'handle' => 'jquery-nice-select',
+                    'src' => SOFTIM_JS . '/jquery.nice-select.js',
+                    'deps' => array('jquery'),
+                    'ver' => $theme_version,
+                    'in_footer' => true,
+                ),
+                array(
+                    'handle' => 'lightcase',
+                    'src' => SOFTIM_JS . '/lightcase.js',
+                    'deps' => array('jquery'),
+                    'ver' => $theme_version,
+                    'in_footer' => true,
+                ),
+                array(
+                    'handle' => 'odometer',
+                    'src' => SOFTIM_JS . '/odometer.min.js',
+                    'deps' => array('jquery'),
+                    'ver' => $theme_version,
+                    'in_footer' => true,
+                ),
+                array(
+                    'handle' => 'swiper',
+                    'src' => SOFTIM_JS . '/swiper.min.js',
+                    'deps' => array('jquery'),
+                    'ver' => $theme_version,
+                    'in_footer' => true,
+                ),
+                array(
+                    'handle' => 'TweenMax',
+                    'src' => SOFTIM_JS . '/TweenMax.min.js',
+                    'deps' => array('jquery'),
+                    'ver' => $theme_version,
+                    'in_footer' => true,
+                ),
+                array(
+                    'handle' => 'viewport',
+                    'src' => SOFTIM_JS . '/viewport.jquery.js',
                     'deps' => array('jquery'),
                     'ver' => $theme_version,
                     'in_footer' => true,
