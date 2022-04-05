@@ -57,18 +57,6 @@ function softim_register_required_plugins() {
             'required'     => false,
             'external_url' => 'https://wordpress.org/plugins/elementor/',
         ),
-        array(
-            'name'         => 'Woo Commerce',
-            'slug'         => 'woocommerce',
-            'required'     => false,
-            'external_url' => 'https://wordpress.org/plugins/woocommerce/',
-        ),
-        array(
-            'name'         => 'Tutor LMS – eLearning and online course solution',
-            'slug'         => 'tutor',
-            'required'     => false,
-            'source'       => 'https://wordpress.org/plugins/tutor/',
-        ),
 		array(
 			'name'         => 'Contact Form 7',
 			'slug'         => 'contact-form-7',
