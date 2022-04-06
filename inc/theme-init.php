@@ -209,7 +209,7 @@ if (!class_exists('Softim_Init')) {
             //body font enqueue
             $body_font = cs_get_option('_body_font') ? cs_get_option('_body_font') : false;
             $body_font_variant = cs_get_option('body_font_variant') ? cs_get_option('body_font_variant') : false;
-            $body_font['family'] = (isset($body_font['font-family']) && !empty($body_font['font-family'])) ? $body_font['font-family'] : 'Lato';
+            $body_font['family'] = (isset($body_font['font-family']) && !empty($body_font['font-family'])) ? $body_font['font-family'] : 'Poppins';
             $body_font['font'] = (isset($body_font['type']) && !empty($body_font['type'])) ? $body_font['type'] : 'google';
             $body_font_variant = !empty($body_font_variant) ? $body_font_variant : array(400, 700, 600, 500);
             $google_fonts = array();
@@ -234,7 +234,7 @@ if (!class_exists('Softim_Init')) {
             }
             $heading_font = cs_get_option('heading_font') ? cs_get_option('heading_font') : false;
             $heading_font_variant = cs_get_option('heading_font_variant') ? cs_get_option('heading_font_variant') : false;
-            $heading_font['family'] = (isset($heading_font['font-family']) && !empty($heading_font['font-family'])) ? $heading_font['font-family'] : 'Playfair Display';
+            $heading_font['family'] = (isset($heading_font['font-family']) && !empty($heading_font['font-family'])) ? $heading_font['font-family'] : 'Jost';
             $heading_font['font'] = (isset($heading_font['type']) && !empty($heading_font['type'])) ? $heading_font['type'] : 'google';
             $heading_font_variant = !empty($heading_font_variant) ? $heading_font_variant : array(400, 500, 600, 700, 800);
             if (!empty($heading_font_variant) && !$heading_font_enable) {

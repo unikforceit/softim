@@ -93,7 +93,7 @@ if (class_exists('CSF')) {
                 'title' => esc_html__('Typography', 'softim'),
                 'id' => '_body_font',
                 'default' => array(
-                    'font-family' => 'Lato',
+                    'font-family' => 'Poppins',
                     'font-size' => '16',
                     'line-height' => '26',
                     'unit' => 'px',
@@ -139,7 +139,7 @@ if (class_exists('CSF')) {
                 'title' => esc_html__('Typography', 'softim'),
                 'id' => 'heading_font',
                 'default' => array(
-                    'font-family' => 'Playfair Display',
+                    'font-family' => 'Jost',
                     'type' => 'google',
                 ),
                 'color' => false,
