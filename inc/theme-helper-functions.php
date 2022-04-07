@@ -683,16 +683,6 @@ if (!class_exists('Softim_Helper_Functions')) {
             return $selectors . '{' . $output . ';}';
         }
 
-
-        /**
-         * is tutor active
-         * @since 1.0.0
-         * */
-        public function is_tutor_active()
-        {
-            return defined('TUTOR_VERSION');
-        }
-
         /**
          * Is softim active
          * @since 1.0.0
