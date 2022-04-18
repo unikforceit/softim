@@ -92,40 +92,68 @@ if (!class_exists('Softim_Customize')) {
             }
 
             ?>
-            <div class="breadcrumb-wrap <?php echo esc_attr($header_variant_class); ?>">
+           <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <section class="banner-section two inner">
+                <div class="banner-element-four two">
+                    <img src="assets/images/element/element-5.png" alt="element">
+                </div>
+                <div class="banner-element-five two">
+                    <img src="assets/images/element/element-7.png" alt="element">
+                </div>
+                <div class="banner-element-nineteen two">
+                    <img src="assets/images/element/element-6.png" alt="element">
+                </div>
+                <div class="banner-element-twenty-two two">
+                    <img src="assets/images/element/element-69.png" alt="element">
+                </div>
+                <div class="banner-element-twenty-three two">
+                    <img src="assets/images/element/element-70.png" alt="element">
+                </div>
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="breadcrumb-content">
-                                <?php
-                                if (is_archive()) {
-                                    if (class_exists('WooCommerce') && is_shop()) {
-                                        printf('<h2 class="page-title">%1$s </h2>', str_replace("Archives: ", "", get_the_archive_title()));
+                    <div class="row justify-content-center align-items-center mb-30-none">
+                        <div class="col-xl-12 mb-30">
+                            <div class="banner-content two">
+                                <div class="banner-content-header">
+                                    <?php
+                                    if (is_archive()) {
+                                        if (class_exists('WooCommerce') && is_shop()) {
+                                            printf('<h2 class="title">%1$s </h2>', str_replace("Archives: ", "", get_the_archive_title()));
+                                        } else {
+                                            the_archive_title('<h2 class="title">', '</h2>');
+                                        }
+                                    } elseif (is_404()) {
+                                        printf('<h2 class="title">%1$s</h2>', esc_html__('Error 404', 'softim'));
+                                    } elseif (is_search()) {
+                                        printf('<h2 class="title">%1$s %2$s</h2>', esc_html__('Search Results for:', 'softim'), get_search_query());
+                                    } elseif (is_singular('post')) {
+                                        printf('<h2 class="title">%1$s </h2>', get_the_title());
+                                    } elseif (is_singular('page')) {
+                                        if ($page_header_meta['page_title']) {
+                                            printf('<h2 class="title">%1$s </h2>', get_the_title());
+                                        }
                                     } else {
-                                        the_archive_title('<h2 class="page-title">', '</h2>');
-                                    }
-                                } elseif (is_404()) {
-                                    printf('<h2 class="page-title">%1$s</h2>', esc_html__('Error 404', 'softim'));
-                                } elseif (is_search()) {
-                                    printf('<h2 class="page-title">%1$s %2$s</h2>', esc_html__('Search Results for:', 'softim'), get_search_query());
-                                } elseif (is_singular('post')) {
-                                    printf('<h2 class="page-title">%1$s </h2>', get_the_title());
-                                } elseif (is_singular('page')) {
-                                    if ($page_header_meta['page_title']) {
-                                        printf('<h2 class="page-title">%1$s </h2>', get_the_title());
-                                    }
-                                } else {
-                                    printf('<h2 class="page-title">%1$s </h2>', get_the_title($page_id));
-                                }
-                                if ($page_header_meta['page_breadcrumb']) {
-                                    softim_breadcrumb();
-                                }
-                                ?>
+                                        printf('<h2 class="title">%1$s </h2>', get_the_title($page_id));
+                                    } ?>
+                                    <div class="breadcrumb-area">
+                                        <nav aria-label="breadcrumb">
+                                            <?php
+                                            if ($page_header_meta['page_breadcrumb']) {
+                                                softim_breadcrumb();
+                                            }
+                                            ?>
+                                        </nav>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                End Banner
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
             <?php
         }
 

@@ -151,9 +151,9 @@ if (!class_exists('Softim_Init')) {
                     'name' => esc_html__('Course Sidebar', 'softim'),
                     'id' => 'tutor-sidebar',
                     'description' => esc_html__('Add widgets here.', 'softim'),
-                    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                    'before_widget' => '<div id="%1$s" class="widget-box %2$s">',
                     'after_widget' => '</div>',
-                    'before_title' => '<h4 class="widget-headline style-01">',
+                    'before_title' => '<h4 class="widget-title">',
                     'after_title' => '</h4>',
                 ));
             }
