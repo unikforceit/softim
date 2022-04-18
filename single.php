@@ -15,30 +15,37 @@ if ($softim->is_softim_core_active()){
     softim_core()->setPostViews(get_the_ID());
 }
 ?>
-    <div id="primary" class="content-area blog-content-page padding-120 <?php echo esc_attr($full_width_class);?>">
-        <main id="main" class="site-main">
-            <div class="container">
-                <div class="row">
-                    <div class="<?php echo esc_attr($page_layout_meta['content_column_class']);?>">
-                        <?php
-                        while ( have_posts() ) :
-                            the_post();
-                            get_template_part( 'template-parts/content', 'single' );
-                            // If comments are open or we have at least one comment, load up the comment template.
-                            if ( comments_open() || get_comments_number() || get_option( 'thread_comments' )) :
-                                comments_template();
-                            endif;
-                        endwhile; // End of the loop.
-                        ?>
-                    </div>
-                    <?php if ($page_layout_meta['sidebar_enable']): ?>
-                        <div class="<?php echo esc_attr($page_layout_meta['sidebar_column_class']);?>">
-                            <?php get_sidebar();?>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Blog
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <section class="blog-section ptb-120">
+        <div class="container">
+            <div class="row justify-content-center mb-60-none">
+                <div class="col-xl-8 col-lg-8 mb-60">
+                    <div class="row justify-content-center mb-60-none">
+                        <div class="col-xl-12 mb-60">
+                            <?php
+                            while ( have_posts() ) :
+                                the_post();
+                                get_template_part( 'template-parts/content', 'single' );
+                                // If comments are open or we have at least one comment, load up the comment template.
+                                if ( comments_open() || get_comments_number() || get_option( 'thread_comments' )) :
+                                    comments_template();
+                                endif;
+                            endwhile; // End of the loop.
+                            ?>
                         </div>
-                    <?php endif; ?>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 mb-60">
+                    <?php get_sidebar();?>
                 </div>
             </div>
-        </main><!-- #main -->
-    </div><!-- #primary -->
+        </div>
+    </section>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        End Blog
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <?php
 get_footer();
