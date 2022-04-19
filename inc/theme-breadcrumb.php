@@ -23,7 +23,7 @@ class Softim_Breadcrumb {
 		'blog'      => 'Blog',
 		'blog_url'  => '',
 		'seperator' => false,
-		'class'     => 'page-list',
+		'class'     => 'breadcrumb',
 		'element'   => 'ul'
 	];
 
@@ -73,7 +73,7 @@ class Softim_Breadcrumb {
 		foreach ( $breadcrumbs as $crumb ) {
 			// if a list wrap each item in a <li>
 			if ( $el === 'ul' || $el === 'ol' ) {
-				$html .= '<li>';
+				$html .= '<li class="breadcrumb-item">';
 			}
 
 			// If crumb has a url make a link

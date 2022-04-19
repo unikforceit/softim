@@ -172,10 +172,10 @@ if (!class_exists('Softim_Init')) {
                 'name' => esc_html__('Footer Widget Area', 'softim'),
                 'id' => 'footer-widget',
                 'description' => esc_html__('Add widgets here.', 'softim'),
-                'before_widget' => '<div class="col-lg-3 col-md-6"><div id="%1$s" class="widget footer-widget %2$s">',
+                'before_widget' => '<div class="col-xl-4 col-lg-4 col-md-6 mb-30"><div id="%1$s" class="footer-widget %2$s">',
                 'after_widget' => '</div></div>',
-                'before_title' => '<h4 class="widget-headline">',
-                'after_title' => '</h4>',
+                'before_title' => '<h5 class="title">',
+                'after_title' => '</h5>',
             ));
             register_sidebar(array(
                 'name' => esc_html__('Footer Widget Area Two', 'softim'),
