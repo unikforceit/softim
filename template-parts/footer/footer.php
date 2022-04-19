@@ -14,14 +14,12 @@ $copyright_text = str_replace('{year}',date('Y'),$copyright_text);
         <?php get_template_part('template-parts/content/footer-widget'); ?>
         <div class="copyright-wrap">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <div class="copyright-content">
-                            <div class="copyright-text">
-                                <?php
-                                echo wp_kses($copyright_text, softim()->kses_allowed_html(array('a')));
-                                ?>
-                            </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-12 text-center">
+                        <div class="copyright-area">
+                            <?php
+                            echo wp_kses($copyright_text, softim()->kses_allowed_html(array('a')));
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -29,3 +27,4 @@ $copyright_text = str_replace('{year}',date('Y'),$copyright_text);
         </div>
     </footer>
 </div>
+

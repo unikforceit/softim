@@ -35,11 +35,11 @@ $post_single_meta = Softim_Group_Fields_Value::post_meta('blog_single_post');
         <nav>
             <ul class="pagination two">
                 <li class="page-item prev">
-                    <a class="page-link" href="#" rel="prev" aria-label="Prev &raquo;"><i class="fas fa-chevron-left"></i></a>
+                    <a class="page-link" href="#" rel="prev" aria-label="Prev &raquo;"><i class="fa fa-chevron-left"></i></a>
                 </li>
                 <li class="page-item tags"><a class="page-link" href="blog.html"><i class="icon-Tags_menu"></i></a></li>
                 <li class="page-item next">
-                    <a class="page-link" href="#" rel="next" aria-label="Next &raquo;"><i class="fas fa-chevron-right"></i></a>
+                    <a class="page-link" href="#" rel="next" aria-label="Next &raquo;"><i class="fa fa-chevron-right"></i></a>
                 </li>
             </ul>
         </nav>
@@ -52,10 +52,10 @@ $post_single_meta = Softim_Group_Fields_Value::post_meta('blog_single_post');
                         </div>
                         <div class="slider-nav-area">
                             <div class="slider-prev">
-                                <i class="fas fa-chevron-left"></i>
+                                <i class="fa fa-chevron-left"></i>
                             </div>
                             <div class="slider-next">
-                                <i class="fas fa-chevron-right"></i>
+                                <i class="fa fa-chevron-right"></i>
                             </div>
                         </div>
                     </div>
