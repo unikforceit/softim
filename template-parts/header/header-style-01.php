@@ -135,3 +135,87 @@ $shortcodes_right_content = cs_get_option('header_two_top_right_info_bar_shortco
         </div>
     </div>
 </div>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Header
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<header class="header-section">
+    <div class="header">
+        <div class="header-bottom-area">
+            <div class="container custom-container">
+                <div class="header-menu-content">
+                    <nav class="navbar navbar-expand-xl p-0">
+                        <?php
+                        $header_two_logo = cs_get_option('header_two_logo');
+                        if (has_custom_logo() && empty($header_two_logo['id'])) {
+                            the_custom_logo();
+                        } elseif (!empty($header_two_logo['id'])) {
+                            printf('<a class="site-logo site-title" href="%1$s"><img src="%2$s" alt="%3$s"/></a>', esc_url(get_home_url()), $header_two_logo['url'], $header_two_logo['alt']);
+                        } else {
+                            printf('<a class="site-title" href="%1$s">%2$s</a>', esc_url(get_home_url()), esc_html(get_bloginfo('title')));
+                        }
+                        ?>
+                        <button class="navbar-toggler d-block d-xl-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggle-bar"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                            <div class="header-right">
+                                <div class="search-bar">
+                                    <form class="header-search-form">
+                                        <input type="search" name="keyword" id="header_search" placeholder="Search...">
+                                        <button class="header-search-btn"><i class="las la-search"></i></button>
+                                    </form>
+                                </div>
+                                <div class="header-links-area">
+                                    <ul class="header-links">
+                                        <li>
+                                            <a href="mailto:">
+                                                <div class="links-thumb">
+                                                    <img src="assets/images/icon/icon-1.png" alt="icon">
+                                                </div>
+                                                <span>info@softim.com</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+11256326501">
+                                                <div class="links-thumb">
+                                                    <img src="assets/images/icon/icon-2.png" alt="icon">
+                                                </div>
+                                                <span>+11 256 3265 01</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="menu-toggler ml-auto">
+                                    <span class="toggle-bar"></span>
+                                </button>
+                                <div class="menu-toggler-wrapper">
+                                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                                        <?php
+                                        wp_nav_menu(array(
+                                            'theme_location' => 'main-menu',
+                                            'menu_class' => 'navbar-nav',
+                                            'container' => false,
+                                            'fallback_cb' => 'softim_theme_fallback_menu',
+                                            'items_wrap'           => '<ul id="%1$s" class="%2$s navbar-nav main-menu">%3$s</ul>',
+                                        ));
+                                        ?>
+                                    </div>
+                                </div>
+                                <div class="header-action-area">
+                                    <div class="header-action">
+                                        <a href="contact.html" class="btn--base">GET STARTED</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Header
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->

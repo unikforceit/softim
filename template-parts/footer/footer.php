@@ -5,9 +5,9 @@
  * @since 1.0.0
  */
 
-$copyright_text = !empty(cs_get_option('copyright_text')) ? cs_get_option('copyright_text'): esc_html__('Fly Next Airlines. All rights reserved. ','softim').'<a href="'.esc_url('https://themeforest.net/user/themeim/portfolio').'">'.esc_html__('ThemeIM','softim').'</a>';
-$copyright_text = str_replace('{copy}','&copy;',$copyright_text);
-$copyright_text = str_replace('{year}',date('Y'),$copyright_text);
+$copyright_text = !empty(cs_get_option('copyright_text')) ? cs_get_option('copyright_text') : esc_html__('Fly Next Airlines. All rights reserved. ', 'softim') . '<a href="' . esc_url('https://themeforest.net/user/themeim/portfolio') . '">' . esc_html__('ThemeIM', 'softim') . '</a>';
+$copyright_text = str_replace('{copy}', '&copy;', $copyright_text);
+$copyright_text = str_replace('{year}', date('Y'), $copyright_text);
 ?>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Footer
@@ -40,9 +40,11 @@ $copyright_text = str_replace('{year}',date('Y'),$copyright_text);
             <div class="row justify-content-center">
                 <div class="col-xl-12 text-center">
                     <div class="copyright-area">
-                        <p> <?php
+                        <p>
+                            <?php
                             echo wp_kses($copyright_text, softim()->kses_allowed_html(array('a')));
-                            ?></p>
+                            ?>
+                        </p>
                     </div>
                 </div>
             </div>

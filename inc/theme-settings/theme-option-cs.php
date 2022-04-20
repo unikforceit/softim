@@ -971,57 +971,6 @@ if (class_exists('CSF')) {
         'fields' => Softim_Group_Fields::post_meta('blog_single_post', esc_html__('Blog Single Page', 'softim'))
     ));
 
-    CSF::createSection($prefix . '_theme_options', array(
-        'id' => 'shop_settings',
-        'title' => esc_html__('Shop Settings', 'softim'),
-        'icon' => 'fas fa-shopping-basket',
-    ));
-    /*  Product page options */
-    CSF::createSection($prefix . '_theme_options', array(
-        'id' => 'product_shop_page',
-        'title' => esc_html__('Product Page', 'softim'),
-        'parent' => 'shop_settings',
-        'icon' => 'fas fa-shopping-basket',
-        'fields' => Softim_Group_Fields::page_layout_options(esc_html__('Product Shop Page', 'softim'), 'product_shop')
-    ));
-    /*  Product single page options */
-    CSF::createSection($prefix . '_theme_options', array(
-        'id' => 'product_shop_single_page',
-        'title' => esc_html__('Product Single Page', 'softim'),
-        'parent' => 'shop_settings',
-        'icon' => 'fas fa-shopping-basket',
-        'fields' => array(
-            array(
-                'id' => 'product_shop_single_page_bg_color',
-                'type' => 'color',
-                'title' => esc_html__('Page Background Color', 'softim'),
-                'default' => '#fff'
-            ),
-            array(
-                'id' => 'product_shop_single_page_spacing_top',
-                'title' => esc_html__('Page Spacing Top', 'softim'),
-                'type' => 'slider',
-                'desc' => wp_kses(__('you can set <mark>Padding Top</mark> for page content area.', 'softim'), $allowed_html),
-                'min' => 0,
-                'max' => 500,
-                'step' => 1,
-                'unit' => 'px',
-                'default' => 120,
-            ),
-            array(
-                'id' => 'product_shop_single_page_spacing_bottom',
-                'title' => esc_html__('Page Spacing Bottom', 'softim'),
-                'type' => 'slider',
-                'desc' => wp_kses(__('you can set <mark>Padding Bottom</mark> for page content area.', 'softim'), $allowed_html),
-                'min' => 0,
-                'max' => 500,
-                'step' => 1,
-                'unit' => 'px',
-                'default' => 100,
-            ),
-        ),
-    ));
-
     /*-------------------------------------------------------
           ** Pages & templates Options
    --------------------------------------------------------*/
