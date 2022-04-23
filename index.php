@@ -13,8 +13,6 @@
  */
 
 get_header();
-$page_layout_options = Softim_Group_Fields_Value::page_layout_options('blog');
-
 ?>
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Blog
