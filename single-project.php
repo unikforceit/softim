@@ -36,13 +36,13 @@ get_header();
                         <div class="gallery-content-area">
                             <div class="row justify-content-center mb-30-none">
                                 <div class="col-xl-8 col-lg-8 mb-30">
-                                    <div class="gallery-content">
+                                    <div class="gallery-content text-start">
                                         <h3 class="title"><?php the_title();?></h3>
                                         <p><?php the_content();?></p>
                                     </div>
                                 </div>
                                 <div class="col-xl-4 col-lg-4 mb-30">
-                                    <div class="gallery-sidebar">
+                                    <div class="gallery-sidebar text-start">
                                         <div class="gallery-sidebar-widget">
                                             <ul class="gallery-sidebar-widget-list">
                                                 <li>

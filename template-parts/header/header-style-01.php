@@ -31,7 +31,7 @@ $shortcodes_right_content = cs_get_option('header_two_top_right_info_bar_shortco
                                             <div class="element"></div>
                                         </div>
                                         <div class="toggle">
-                                            <div class="text"><?php esc_html_e('M','softim')?></div>
+                                            <div class="text"><?php esc_html_e('M', 'softim') ?></div>
                                         </div>
                                         <div class="toggle">
                                             <div class="element"></div>
@@ -39,16 +39,16 @@ $shortcodes_right_content = cs_get_option('header_two_top_right_info_bar_shortco
                                     </div>
                                     <div class="toggle-bar">
                                         <div class="toggle">
-                                            <div class="text"><?php esc_html_e('E','softim')?></div>
+                                            <div class="text"><?php esc_html_e('E', 'softim') ?></div>
                                         </div>
                                         <div class="toggle">
                                             <div class="element"></div>
                                         </div>
                                         <div class="toggle res">
-                                            <div class="text"><?php esc_html_e('N','softim')?></div>
+                                            <div class="text"><?php esc_html_e('N', 'softim') ?></div>
                                         </div>
                                         <div class="toggle">
-                                            <div class="text"><?php esc_html_e('U','softim')?></div>
+                                            <div class="text"><?php esc_html_e('U', 'softim') ?></div>
                                         </div>
                                     </div>
                                     <div class="toggle-bar">
@@ -56,7 +56,7 @@ $shortcodes_right_content = cs_get_option('header_two_top_right_info_bar_shortco
                                             <div class="element"></div>
                                         </div>
                                         <div class="toggle pos">
-                                            <div class="text"><?php esc_html_e('N','softim')?></div>
+                                            <div class="text"><?php esc_html_e('N', 'softim') ?></div>
                                         </div>
                                         <div class="toggle">
                                             <div class="element"></div>
@@ -147,6 +147,7 @@ $shortcodes_right_content = cs_get_option('header_two_top_right_info_bar_shortco
                     <nav class="navbar navbar-expand-xl p-0">
                         <?php
                         $header_two_logo = cs_get_option('header_two_logo');
+
                         if (has_custom_logo() && empty($header_two_logo['id'])) {
                             the_custom_logo();
                         } elseif (!empty($header_two_logo['id'])) {
@@ -155,12 +156,17 @@ $shortcodes_right_content = cs_get_option('header_two_top_right_info_bar_shortco
                             printf('<a class="site-title" href="%1$s">%2$s</a>', esc_url(get_home_url()), esc_html(get_bloginfo('title')));
                         }
                         ?>
-                        <button class="navbar-toggler d-block d-xl-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                        <button class="navbar-toggler d-block d-xl-none ml-auto" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent"
+                                aria-controls="navbarSupportedContent" aria-expanded="false"
+                                aria-label="Toggle navigation">
                             <span class="toggle-bar"></span>
                         </button>
+
                         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                             <div class="header-right">
+
                                 <div class="search-bar">
                                     <form class="header-search-form">
                                         <input type="search" name="keyword" id="header_search" placeholder="Search...">
@@ -169,45 +175,55 @@ $shortcodes_right_content = cs_get_option('header_two_top_right_info_bar_shortco
                                 </div>
                                 <div class="header-links-area">
                                     <ul class="header-links">
-                                        <li>
-                                            <a href="mailto:">
-                                                <div class="links-thumb">
-                                                    <img src="assets/images/icon/icon-1.png" alt="icon">
-                                                </div>
-                                                <span>info@softim.com</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="tel:+11256326501">
-                                                <div class="links-thumb">
-                                                    <img src="assets/images/icon/icon-2.png" alt="icon">
-                                                </div>
-                                                <span>+11 256 3265 01</span>
-                                            </a>
-                                        </li>
+                                        <?php
+
+                                        $header_links_icon = cs_get_option('header_links_icon');
+                                        $header_links_repeater = cs_get_option('header_links_repeater');
+                                        if ($header_links_icon) {
+                                            foreach ($header_links_repeater as $item) {
+                                                ?>
+                                                <li>
+                                                    <a href="<?php echo esc_url($item['sidebar_social_icon_item_url']['url']); ?>">
+                                                        <div class="links-thumb">
+                                                            <?php echo wp_get_attachment_image($item['header_two_icon']['id'], 'full'); ?>
+                                                        </div>
+                                                        <span><?php echo esc_html($item['header_two_icon_text']); ?></span>
+                                                    </a>
+                                                </li>
+                                            <?php }
+                                        } ?>
+
                                     </ul>
                                 </div>
+
                                 <button class="menu-toggler ml-auto">
                                     <span class="toggle-bar"></span>
                                 </button>
+
                                 <div class="menu-toggler-wrapper">
-                                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                                    <div class="collapse navbar-collapse justify-content-end"
+                                         id="navbarSupportedContent">
                                         <?php
                                         wp_nav_menu(array(
                                             'theme_location' => 'main-menu',
                                             'menu_class' => 'navbar-nav',
                                             'container' => false,
                                             'fallback_cb' => 'softim_theme_fallback_menu',
-                                            'items_wrap'           => '<ul id="%1$s" class="%2$s navbar-nav main-menu">%3$s</ul>',
+                                            'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav main-menu">%3$s</ul>',
                                         ));
                                         ?>
                                     </div>
                                 </div>
-                                <div class="header-action-area">
-                                    <div class="header-action">
-                                        <a href="contact.html" class="btn--base">GET STARTED</a>
+
+                                <?php if (softim()->is_softim_core_active()) : ?>
+                                    <div class="header-action-area">
+                                        <div class="header-action">
+                                            <a href="<?php echo esc_url(cs_get_option('header_two_navbar_url')) ?>"
+                                               class="btn--base"><?php echo esc_html(cs_get_option('header_two_navbar_title')); ?>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </nav>

@@ -315,40 +315,33 @@ if (class_exists('CSF')) {
             ),
             array(
                 'type' => 'subheading',
-                'content' => '<h3>' . esc_html__('Side Nav Options', 'softim') . '</h3>'
+                'content' => '<h3>' . esc_html__('Header Link Options', 'softim') . '</h3>'
             ),
             array(
-                'id' => 'header_two_plane_image',
-                'type' => 'media',
-                'title' => esc_html__('Plane Image', 'softim'),
-                'library' => 'image',
-                'desc' => wp_kses(__('you can upload <mark> logo</mark> here it will overwrite customizer uploaded logo', 'softim'), $allowed_html),
-            ),
-            array(
-                'id' => 'header_two_bg_image',
-                'type' => 'media',
-                'title' => esc_html__('Sidebar Background Image', 'softim'),
-                'library' => 'image',
-                'desc' => wp_kses(__('you can upload <mark> logo</mark> here it will overwrite customizer uploaded logo', 'softim'), $allowed_html),
-            ),
-            array(
-                'id' => 'sidebar_social_icon',
+                'id' => 'header_links_icon',
                 'type' => 'switcher',
-                'title' => esc_html__('Social Icon', 'softim'),
+                'title' => esc_html__('Header Links', 'softim'),
                 'default' => true,
-                'desc' => wp_kses(__('you can <mark> show/hide</mark> navbar button of header two', 'softim'), $allowed_html),
+                'desc' => wp_kses(__('you can <mark> show/hide</mark> navbar links of header two', 'softim'), $allowed_html),
             ),
             array(
-                'id' => 'sidebar_social_repeater',
+                'id' => 'header_links_repeater',
                 'type' => 'repeater',
-                'title' => esc_html__('Social Item Repeater', 'softim'),
-                'dependency' => array('sidebar_social_icon', '==', 'true'),
+                'title' => esc_html__('Header Links Repeater', 'softim'),
+                'dependency' => array('header_links_icon', '==', 'true'),
                 'fields' => array(
                     array(
-                        'id' => 'sidebar_social_icon_item_icon',
-                        'type' => 'icon',
-                        'title' => esc_html__('Social Item Icon', 'softim'),
-                        'default' => 'flaticon-call'
+                        'id' => 'header_two_icon',
+                        'type' => 'media',
+                        'title' => esc_html__('Header Icon', 'softim'),
+                        'library' => 'image',
+                        'desc' => wp_kses(__('you can upload <mark> Icon</mark> here', 'softim'), $allowed_html),
+                    ),
+                    array(
+                        'id' => 'header_two_icon_text',
+                        'type' => 'text',
+                        'title' => esc_html__('Header Icon Text', 'softim'),
+                        'default' => esc_html__('info@softim.com', 'softim')
                     ),
                     array(
                         'id' => 'sidebar_social_icon_item_url',
@@ -363,12 +356,6 @@ if (class_exists('CSF')) {
                 'content' => '<h3>' . esc_html__('Menu Right Options', 'softim') . '</h3>'
             ),
             array(
-                'id' => 'header_two_top_right_info_bar_shortcode',
-                'type' => 'textarea',
-                'title' => esc_html__('Right Content Shortcode', 'softim'),
-                'shortcoder' => 'softim_shortcodes'
-            ),
-            array(
                 'id' => 'header_two_navbar_button',
                 'type' => 'switcher',
                 'title' => esc_html__('Info Button', 'softim'),
@@ -379,7 +366,7 @@ if (class_exists('CSF')) {
                 'id' => 'header_two_navbar_title',
                 'type' => 'text',
                 'title' => esc_html__('Button Title', 'softim'),
-                'default' => esc_html__('Book Now', 'softim'),
+                'default' => esc_html__('GET STARTED', 'softim'),
                 'dependency' => array('header_two_navbar_button', '==', 'true')
             ),
             array(
