@@ -220,8 +220,7 @@ if (class_exists('CSF')) {
                 'options' => array(
                     '' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/01.png',
                     'style-01' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/02.png',
-                    'style-02' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/03.png',
-                    'style-03' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/04.png'
+                    'style-02' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/03.png'
                 ),
                 'default' => '',
                 'desc' => wp_kses(__('you can set <mark>navbar type</mark> it will show in every page except you select specific navbar type form page settings.', 'softim'), $allowed_html),
@@ -987,6 +986,67 @@ if (class_exists('CSF')) {
                 'unit' => 'px',
                 'default' => 20,
                 'dependency' => array('copyright_three_area_spacing', '==', 'true')
+            ),
+            array(
+                'id' => 'footer_top_icon',
+                'type' => 'switcher',
+                'title' => esc_html__('Footer Top', 'softim'),
+                'default' => true,
+                'desc' => wp_kses(__('you can <mark> show/hide</mark> footer top of footer two', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_top_repeater',
+                'type' => 'repeater',
+                'title' => esc_html__('Footer Top Repeater', 'softim'),
+                'dependency' => array('footer_top_icon', '==', 'true'),
+                'fields' => array(
+                    array(
+                        'id' => 'footer_top_text_1',
+                        'type' => 'text',
+                        'title' => esc_html__('Footer Top Title', 'softim'),
+                        'default' => esc_html__('Call Us', 'softim')
+                    ),
+                    array(
+                        'id' => 'footer_top_text_2',
+                        'type' => 'text',
+                        'title' => esc_html__('Footer Top Text', 'softim'),
+                        'default' => esc_html__('info@example.com', 'softim')
+                    ),
+                    array(
+                        'id' => 'footer_top_url',
+                        'type' => 'text',
+                        'title' => esc_html__('Social URL', 'softim'),
+                        'default' => '#'
+                    )
+                )
+            ),
+            array(
+                'id' => 'footer_three_elements_1',
+                'type' => 'media',
+                'title' => esc_html__('Element 1', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_three_elements_2',
+                'type' => 'media',
+                'title' => esc_html__('Element 2', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_three_elements_3',
+                'type' => 'media',
+                'title' => esc_html__('Element 3', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_three_elements_4',
+                'type' => 'media',
+                'title' => esc_html__('Element 4', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
             )
         )
     ));

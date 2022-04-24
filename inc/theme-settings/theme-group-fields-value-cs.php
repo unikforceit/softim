@@ -52,7 +52,7 @@ if (!class_exists('Softim_Group_Fields_Value')) {
 
             $sidebar_status = is_active_sidebar('sidebar-1') ? true : false;
             $return_var['layout'] = 'default';
-            $return_var['sidebar_enable'] = (class_exists('WooCommerce') && is_cart()) || (class_exists('WooCommerce') && is_checkout()) || (class_exists('WooCommerce') && is_account_page()) || (class_exists('WooCommerce') && is_shop()) ? false : $sidebar_status;
+            $return_var['sidebar_enable'] = $sidebar_status;
             $return_var['content_column_class'] = $return_var['sidebar_enable'] ? 'col-lg-8' : 'col-lg-12';
             $return_var['sidebar_column_class'] = 'col-lg-4';
 
