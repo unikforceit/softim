@@ -176,7 +176,6 @@ $shortcodes_right_content = cs_get_option('header_two_top_right_info_bar_shortco
                                 <div class="header-links-area">
                                     <ul class="header-links">
                                         <?php
-
                                         $header_links_icon = cs_get_option('header_links_icon');
                                         $header_links_repeater = cs_get_option('header_links_repeater');
                                         if ($header_links_icon) {

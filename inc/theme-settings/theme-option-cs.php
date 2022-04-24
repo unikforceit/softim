@@ -397,39 +397,17 @@ if (class_exists('CSF')) {
                 'desc' => wp_kses(__('you can upload <mark> logo</mark> here it will overwrite customizer uploaded logo', 'softim'), $allowed_html),
             ),
             array(
-                'type' => 'subheading',
-                'content' => '<h3>' . esc_html__('info Bar Options', 'softim') . '</h3>'
-            ),
-            array(
-                'id' => 'header_three_top_right_info_bar_shortcode',
-                'type' => 'textarea',
-                'title' => esc_html__('Right Content Shortcode', 'softim'),
-                'shortcoder' => 'softim_shortcodes'
-            ),
-            array(
                 'id' => 'header_three_navbar_button',
                 'type' => 'switcher',
-                'title' => esc_html__('Info Button', 'softim'),
+                'title' => esc_html__('Header Button', 'softim'),
                 'default' => true,
-                'desc' => wp_kses(__('you can <mark> show/hide</mark> navbar button of header two', 'softim'), $allowed_html),
-            ),
-            array(
-                'id' => 'header_three_navbar_button_spacing',
-                'title' => esc_html__('Booking BUtton Margin Right', 'softim'),
-                'type' => 'slider',
-                'desc' => wp_kses(__('you can set <mark>padding</mark> for footer bottom', 'softim'), $allowed_html),
-                'min' => 0,
-                'max' => 500,
-                'step' => 1,
-                'unit' => 'px',
-                'default' => 40,
-                'dependency' => array('header_three_navbar_button', '==', 'true')
+                'desc' => wp_kses(__('you can <mark> show/hide</mark> navbar button of header three', 'softim'), $allowed_html),
             ),
             array(
                 'id' => 'header_three_navbar_title',
                 'type' => 'text',
                 'title' => esc_html__('Button Title', 'softim'),
-                'default' => esc_html__('APPLY ONLINE', 'softim'),
+                'default' => esc_html__('GET STARTED', 'softim'),
                 'dependency' => array('header_three_navbar_button', '==', 'true')
             ),
             array(
@@ -438,63 +416,6 @@ if (class_exists('CSF')) {
                 'title' => esc_html__('Button URL', 'softim'),
                 'default' => '#',
                 'dependency' => array('header_three_navbar_button', '==', 'true')
-            ),
-        )
-    ));
-    /* Header Style 03 */
-    CSF::createSection($prefix . '_theme_options', array(
-        'title' => esc_html__('Header Four', 'softim'),
-        'id' => 'theme_header_four_options',
-        'icon' => 'fa fa-image',
-        'parent' => 'headers_settings',
-        'fields' => array(
-            array(
-                'type' => 'subheading',
-                'content' => '<h3>' . esc_html__('Navbar Options', 'softim') . '</h3>'
-            ),
-            array(
-                'id' => 'header_four_logo',
-                'type' => 'media',
-                'title' => esc_html__('Logo', 'softim'),
-                'library' => 'image',
-                'desc' => wp_kses(__('you can upload <mark> logo</mark> here it will overwrite customizer uploaded logo', 'softim'), $allowed_html),
-            ),
-            array(
-                'type' => 'subheading',
-                'content' => '<h3>' . esc_html__('info Bar Options', 'softim') . '</h3>'
-            ),
-            array(
-                'id' => 'header_four_navbar_button',
-                'type' => 'switcher',
-                'title' => esc_html__('Info Button', 'softim'),
-                'default' => true,
-                'desc' => wp_kses(__('you can <mark> show/hide</mark> navbar button of header two', 'softim'), $allowed_html),
-            ),
-            array(
-                'id' => 'header_four_navbar_button_spacing',
-                'title' => esc_html__('Booking BUtton Margin Right', 'softim'),
-                'type' => 'slider',
-                'desc' => wp_kses(__('you can set <mark>padding</mark> for footer bottom', 'softim'), $allowed_html),
-                'min' => 0,
-                'max' => 500,
-                'step' => 1,
-                'unit' => 'px',
-                'default' => 40,
-                'dependency' => array('header_four_navbar_button', '==', 'true')
-            ),
-            array(
-                'id' => 'header_four_navbar_title',
-                'type' => 'text',
-                'title' => esc_html__('Book Now', 'softim'),
-                'default' => esc_html__('APPLY ONLINE', 'softim'),
-                'dependency' => array('header_four_navbar_button', '==', 'true')
-            ),
-            array(
-                'id' => 'header_four_navbar_url',
-                'type' => 'text',
-                'title' => esc_html__('Button URL', 'softim'),
-                'default' => '#',
-                'dependency' => array('header_four_navbar_button', '==', 'true')
             ),
         )
     ));
@@ -584,6 +505,7 @@ if (class_exists('CSF')) {
         'icon' => ' eicon-footer',
 
     ));
+//    Footer One
     CSF::createSection($prefix . '_theme_options', array(
         'parent' => 'footer_options',
         'id' => 'footer_general_options',
@@ -668,6 +590,7 @@ if (class_exists('CSF')) {
             )
         )
     ));
+//    Footer Two
     CSF::createSection($prefix . '_theme_options', array(
         'parent' => 'footer_options',
         'id' => 'footer_two_options',
@@ -843,7 +766,7 @@ if (class_exists('CSF')) {
             ),
         )
     ));
-
+//    Footer Three
     CSF::createSection($prefix . '_theme_options', array(
         'parent' => 'footer_options',
         'id' => 'footer_three_general_options',
