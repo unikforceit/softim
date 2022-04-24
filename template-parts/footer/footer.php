@@ -13,27 +13,48 @@ $copyright_text = str_replace('{year}', date('Y'), $copyright_text);
     Start Footer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <footer class="footer-section pt-120">
-    <div class="footer-element-one">
-        <img src="assets/images/element/element-48.png" alt="element">
-    </div>
-    <div class="footer-element-two">
-        <img src="assets/images/element/element-39.png" alt="element">
-    </div>
-    <div class="footer-element-three">
-        <img src="assets/images/element/element-40.png" alt="element">
-    </div>
-    <div class="footer-element-four">
-        <img src="assets/images/element/element-7.png" alt="element">
-    </div>
-    <div class="footer-element-five">
-        <img src="assets/images/element/element-41.png" alt="element">
-    </div>
-    <div class="footer-element-six">
-        <img src="assets/images/element/element-42.png" alt="element">
-    </div>
-    <div class="footer-element-seven">
-        <img src="assets/images/element/element-39.png" alt="element">
-    </div>
+    <?php  $footer_elements_1 = cs_get_option('footer_elements_1');?>
+    <?php  $footer_elements_2 = cs_get_option('footer_elements_2');?>
+    <?php  $footer_elements_3 = cs_get_option('footer_elements_3');?>
+    <?php  $footer_elements_4 = cs_get_option('footer_elements_4');?>
+    <?php  $footer_elements_5 = cs_get_option('footer_elements_5');?>
+    <?php  $footer_elements_6 = cs_get_option('footer_elements_6');?>
+    <?php  $footer_elements_7 = cs_get_option('footer_elements_7');?>
+    <?php if (!empty($footer_elements_1['id'])){?>
+        <div class="footer-element-one">
+            <?php echo wp_get_attachment_image($footer_elements_1['id'], 'full')?>
+        </div>
+    <?php } ?>
+    <?php if (!empty($footer_elements_2['id'])){?>
+        <div class="footer-element-two">
+            <?php echo wp_get_attachment_image($footer_elements_2['id'], 'full')?>
+        </div>
+    <?php } ?>
+    <?php if (!empty($footer_elements_3['id'])){?>
+        <div class="footer-element-three">
+            <?php echo wp_get_attachment_image($footer_elements_3['id'], 'full')?>
+        </div>
+    <?php } ?>
+    <?php if (!empty($footer_elements_4['id'])){?>
+        <div class="footer-element-four">
+            <?php echo wp_get_attachment_image($footer_elements_4['id'], 'full')?>
+        </div>
+    <?php } ?>
+    <?php if (!empty($footer_elements_5['id'])){?>
+        <div class="footer-element-five">
+            <?php echo wp_get_attachment_image($footer_elements_5['id'], 'full')?>
+        </div>
+    <?php } ?>
+    <?php if (!empty($footer_elements_6['id'])){?>
+        <div class="footer-element-six">
+            <?php echo wp_get_attachment_image($footer_elements_6['id'], 'full')?>
+        </div>
+    <?php } ?>
+    <?php if (!empty($footer_elements_7['id'])){?>
+        <div class="footer-element-seven">
+            <?php echo wp_get_attachment_image($footer_elements_7['id'], 'full')?>
+        </div>
+    <?php } ?>
     <?php get_template_part('template-parts/content/footer-widget'); ?>
     <div class="copyright-wrapper">
         <div class="container">

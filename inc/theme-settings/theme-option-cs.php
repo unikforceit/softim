@@ -587,6 +587,55 @@ if (class_exists('CSF')) {
                 'unit' => 'px',
                 'default' => 20,
                 'dependency' => array('copyright_area_spacing', '==', 'true')
+            ),
+            array(
+                'id' => 'footer_elements_1',
+                'type' => 'media',
+                'title' => esc_html__('Element 1', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_elements_2',
+                'type' => 'media',
+                'title' => esc_html__('Element 2', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_elements_3',
+                'type' => 'media',
+                'title' => esc_html__('Element 3', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_elements_4',
+                'type' => 'media',
+                'title' => esc_html__('Element 4', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_elements_5',
+                'type' => 'media',
+                'title' => esc_html__('Element 5', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_elements_6',
+                'type' => 'media',
+                'title' => esc_html__('Element 6', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_elements_7',
+                'type' => 'media',
+                'title' => esc_html__('Element 7', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
             )
         )
     ));
@@ -764,6 +813,55 @@ if (class_exists('CSF')) {
                     ),
                 )
             ),
+            array(
+                'id' => 'footer_two_elements_1',
+                'type' => 'media',
+                'title' => esc_html__('Element 1', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_two_elements_2',
+                'type' => 'media',
+                'title' => esc_html__('Element 2', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_two_elements_3',
+                'type' => 'media',
+                'title' => esc_html__('Element 3', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_two_elements_4',
+                'type' => 'media',
+                'title' => esc_html__('Element 4', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_two_elements_5',
+                'type' => 'media',
+                'title' => esc_html__('Element 5', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_two_elements_6',
+                'type' => 'media',
+                'title' => esc_html__('Element 6', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'footer_two_elements_7',
+                'type' => 'media',
+                'title' => esc_html__('Element 7', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the footer elements image.', 'softim'), $allowed_html),
+            )
         )
     ));
 //    Footer Three
