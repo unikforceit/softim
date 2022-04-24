@@ -94,21 +94,36 @@ if (!class_exists('Softim_Customize')) {
     Start Banner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
             <section class="banner-section two inner">
-                <div class="banner-element-four two">
-                    <img src="assets/images/element/element-5.png" alt="element">
-                </div>
-                <div class="banner-element-five two">
-                    <img src="assets/images/element/element-7.png" alt="element">
-                </div>
-                <div class="banner-element-nineteen two">
-                    <img src="assets/images/element/element-6.png" alt="element">
-                </div>
-                <div class="banner-element-twenty-two two">
-                    <img src="assets/images/element/element-69.png" alt="element">
-                </div>
-                <div class="banner-element-twenty-three two">
-                    <img src="assets/images/element/element-70.png" alt="element">
-                </div>
+                <?php  $breadcrumb_elements_1 = cs_get_option('breadcrumb_elements_1');?>
+                <?php  $breadcrumb_elements_2 = cs_get_option('breadcrumb_elements_2');?>
+                <?php  $breadcrumb_elements_3 = cs_get_option('breadcrumb_elements_3');?>
+                <?php  $breadcrumb_elements_4 = cs_get_option('breadcrumb_elements_4');?>
+                <?php  $breadcrumb_elements_5 = cs_get_option('breadcrumb_elements_5');?>
+                <?php if (!empty($breadcrumb_elements_1['id'])){?>
+                    <div class="banner-element-four two">
+                        <?php echo wp_get_attachment_image($breadcrumb_elements_1['id'], 'full')?>
+                    </div>
+                <?php } ?>
+                <?php if (!empty($breadcrumb_elements_2['id'])){?>
+                    <div class="banner-element-five two">
+                        <?php echo wp_get_attachment_image($breadcrumb_elements_2['id'], 'full')?>
+                    </div>
+                <?php } ?>
+                <?php if (!empty($breadcrumb_elements_3['id'])){?>
+                    <div class="banner-element-nineteen two">
+                        <?php echo wp_get_attachment_image($breadcrumb_elements_3['id'], 'full')?>
+                    </div>
+                <?php } ?>
+                <?php if (!empty($breadcrumb_elements_4['id'])){?>
+                    <div class="banner-element-twenty-two two">
+                        <?php echo wp_get_attachment_image($breadcrumb_elements_4['id'], 'full')?>
+                    </div>
+                <?php } ?>
+                <?php if (!empty($breadcrumb_elements_5['id'])){?>
+                    <div class="banner-element-twenty-three two">
+                        <?php echo wp_get_attachment_image($breadcrumb_elements_5['id'], 'full')?>
+                    </div>
+                <?php } ?>
                 <div class="container">
                     <div class="row justify-content-center align-items-center mb-30-none">
                         <div class="col-xl-12 mb-30">
@@ -116,11 +131,7 @@ if (!class_exists('Softim_Customize')) {
                                 <div class="banner-content-header">
                                     <?php
                                     if (is_archive()) {
-                                        if (class_exists('WooCommerce') && is_shop()) {
-                                            printf('<h2 class="title">%1$s </h2>', str_replace("Archives: ", "", get_the_archive_title()));
-                                        } else {
-                                            the_archive_title('<h2 class="title">', '</h2>');
-                                        }
+                                        the_archive_title('<h2 class="title">', '</h2>');
                                     } elseif (is_404()) {
                                         printf('<h2 class="title">%1$s</h2>', esc_html__('Error 404', 'softim'));
                                     } elseif (is_search()) {

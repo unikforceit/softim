@@ -549,6 +549,41 @@ if (class_exists('CSF')) {
                 'desc' => wp_kses(__('you can set <mark>overlay color</mark> for Breadcrumb background image', 'softim'), $allowed_html),
                 'dependency' => array('breadcrumb_enable', '==', 'true')
             ),
+            array(
+                'id' => 'breadcrumb_elements_1',
+                'type' => 'media',
+                'title' => esc_html__('Element 1', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the breadcrumb elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'breadcrumb_elements_2',
+                'type' => 'media',
+                'title' => esc_html__('Element 2', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the breadcrumb elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'breadcrumb_elements_3',
+                'type' => 'media',
+                'title' => esc_html__('Element 3', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the breadcrumb elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'breadcrumb_elements_4',
+                'type' => 'media',
+                'title' => esc_html__('Element 4', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the breadcrumb elements image.', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'breadcrumb_elements_5',
+                'type' => 'media',
+                'title' => esc_html__('Element 5', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> element</mark> here it will show to the breadcrumb elements image.', 'softim'), $allowed_html),
+            ),
         )
     ));
 
