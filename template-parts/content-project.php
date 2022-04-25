@@ -8,10 +8,10 @@
             <?php } ?>
             <div class="team-social-area">
                 <ul class="team-social">
-                    <li><a href="#0"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#0"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#0"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#0"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-google-plus"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
                 </ul>
             </div>
         </div>

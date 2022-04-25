@@ -6071,6 +6071,7 @@ option {
   transition: all ease 0.3s;
   position: relative;
   z-index: 2;
+  display: block;
 }
 @media only screen and (max-width: 1199px) {
   .header-bottom-area .navbar-collapse .main-menu li .sub-menu li {
@@ -6095,6 +6096,7 @@ option {
   display: block;
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
+  line-height: 1.5;
 }
 .header-bottom-area .navbar-collapse .main-menu li .sub-menu li a::after {
   position: unset;
@@ -12918,7 +12920,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
   display: inline-block;
 }
 .navbar-nav ul li + li {
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 .navbar.navbar-area.navbar-expand-lg.navigation-style-01.navbar-default {

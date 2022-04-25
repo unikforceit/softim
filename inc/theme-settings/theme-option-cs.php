@@ -20,7 +20,7 @@ if (class_exists('CSF')) {
         'menu_parent' => 'softim_theme_options',
         'menu_type' => 'submenu',
         'footer_credit' => ' ',
-        'menu_icon' => 'fa fa-filter',
+        'menu_icon' => 'fas fa-filter',
         'show_footer' => false,
         'enqueue_webfont' => false,
         'show_search' => true,
@@ -43,7 +43,7 @@ if (class_exists('CSF')) {
     CSF::createSection($prefix . '_theme_options', array(
         'title' => esc_html__('Preloader & SVG Enable', 'softim'),
         'id' => 'theme_general_preloader_options',
-        'icon' => 'fa fa-spinner',
+        'icon' => 'fas fa-spinner',
         'parent' => 'general_options',
         'fields' => array(
             array(
@@ -176,7 +176,7 @@ if (class_exists('CSF')) {
     CSF::createSection($prefix . '_theme_options', array(
         'title' => esc_html__('Back To Top', 'softim'),
         'id' => 'theme_general_back_top_options',
-        'icon' => 'fa fa-arrow-up',
+        'icon' => 'fas fa-arrow-up',
         'parent' => 'general_options',
         'fields' => array(
             array(
@@ -194,7 +194,7 @@ if (class_exists('CSF')) {
                 'id' => 'back_top_icon',
                 'title' => esc_html__('Back Top Icon', 'softim'),
                 'type' => 'icon',
-                'default' => 'fa fa-angle-up',
+                'default' => 'fas fa-angle-up',
                 'desc' => wp_kses(__('you can set <mark>icon</mark> for back to top.', 'softim'), $allowed_html),
                 'dependency' => array('back_top_enable', '==', 'true')
             ),
@@ -250,13 +250,13 @@ if (class_exists('CSF')) {
     CSF::createSection($prefix . '_theme_options', array(
         'id' => 'headers_settings',
         'title' => esc_html__('Headers', 'softim'),
-        'icon' => 'fa fa-home'
+        'icon' => 'fas fa-home'
     ));
     /* Header Style 01 */
     CSF::createSection($prefix . '_theme_options', array(
         'title' => esc_html__('Header One', 'softim'),
         'id' => 'theme_header_one_options',
-        'icon' => 'fa fa-image',
+        'icon' => 'fas fa-image',
         'parent' => 'headers_settings',
         'fields' => array(
             array(
@@ -298,7 +298,7 @@ if (class_exists('CSF')) {
     CSF::createSection($prefix . '_theme_options', array(
         'title' => esc_html__('Header Two', 'softim'),
         'id' => 'theme_header_two_options',
-        'icon' => 'fa fa-image',
+        'icon' => 'fas fa-image',
         'parent' => 'headers_settings',
         'fields' => array(
             array(
@@ -381,7 +381,7 @@ if (class_exists('CSF')) {
     CSF::createSection($prefix . '_theme_options', array(
         'title' => esc_html__('Header Three', 'softim'),
         'id' => 'theme_header_three_options',
-        'icon' => 'fa fa-image',
+        'icon' => 'fas fa-image',
         'parent' => 'headers_settings',
         'fields' => array(
             array(
@@ -509,7 +509,7 @@ if (class_exists('CSF')) {
         'parent' => 'footer_options',
         'id' => 'footer_general_options',
         'title' => esc_html__('Footer One', 'softim'),
-        'icon' => 'fa fa-list-ul',
+        'icon' => 'fas fa-list-ul',
         'fields' => array(
             array(
                 'type' => 'subheading',
@@ -643,7 +643,7 @@ if (class_exists('CSF')) {
         'parent' => 'footer_options',
         'id' => 'footer_two_options',
         'title' => esc_html__('Footer Two', 'softim'),
-        'icon' => 'fa fa-list-ul',
+        'icon' => 'fas fa-list-ul',
         'fields' => array(
             array(
                 'type' => 'subheading',
@@ -868,7 +868,7 @@ if (class_exists('CSF')) {
         'parent' => 'footer_options',
         'id' => 'footer_three_general_options',
         'title' => esc_html__('Footer Three', 'softim'),
-        'icon' => 'fa fa-list-ul',
+        'icon' => 'fas fa-list-ul',
         'fields' => array(
             array(
                 'type' => 'subheading',
@@ -1057,20 +1057,20 @@ if (class_exists('CSF')) {
     CSF::createSection($prefix . '_theme_options', array(
         'id' => 'blog_settings',
         'title' => esc_html__('Blog Settings', 'softim'),
-        'icon' => 'fa fa-book'
+        'icon' => 'fas fa-book'
     ));
     CSF::createSection($prefix . '_theme_options', array(
         'parent' => 'blog_settings',
         'id' => 'blog_post_options',
         'title' => esc_html__('Blog Post', 'softim'),
-        'icon' => 'fa fa-list-ul',
+        'icon' => 'fas fa-list-ul',
         'fields' => Softim_Group_Fields::post_meta('blog_post', esc_html__('Blog Page', 'softim'))
     ));
     CSF::createSection($prefix . '_theme_options', array(
         'parent' => 'blog_settings',
         'id' => 'blog_single_post_options',
         'title' => esc_html__('Single Post', 'softim'),
-        'icon' => 'fa fa-list-alt',
+        'icon' => 'fas fa-list-alt',
         'fields' => Softim_Group_Fields::post_meta('blog_single_post', esc_html__('Blog Single Page', 'softim'))
     ));
 
@@ -1080,14 +1080,14 @@ if (class_exists('CSF')) {
     CSF::createSection($prefix . '_theme_options', array(
         'id' => 'pages_and_template',
         'title' => esc_html__('Pages Settings', 'softim'),
-        'icon' => 'fa fa-files-o'
+        'icon' => 'fas fa-files-o'
     ));
     /*  404 page options */
     CSF::createSection($prefix . '_theme_options', array(
         'id' => '404_page',
         'title' => esc_html__('404 Page', 'softim'),
         'parent' => 'pages_and_template',
-        'icon' => 'fa fa-exclamation-triangle',
+        'icon' => 'fas fa-exclamation-triangle',
         'fields' => array(
             array(
                 'id' => 'error_bg_switch',
@@ -1164,7 +1164,7 @@ if (class_exists('CSF')) {
         'id' => 'blog_page',
         'title' => esc_html__('Blog Page', 'softim'),
         'parent' => 'pages_and_template',
-        'icon' => 'fa fa-indent',
+        'icon' => 'fas fa-indent',
         'fields' => Softim_Group_Fields::page_layout_options(esc_html__('Blog', 'softim'), 'blog')
     ));
     /*  blog single page options */
@@ -1172,7 +1172,7 @@ if (class_exists('CSF')) {
         'id' => 'blog_single_page',
         'title' => esc_html__('Blog Single Page', 'softim'),
         'parent' => 'pages_and_template',
-        'icon' => 'fa fa-indent',
+        'icon' => 'fas fa-indent',
         'fields' => Softim_Group_Fields::page_layout_options(esc_html__('Blog Single', 'softim'), 'blog_single')
     ));
     /*  archive page options */
@@ -1180,7 +1180,7 @@ if (class_exists('CSF')) {
         'id' => 'archive_page',
         'title' => esc_html__('Archive Page', 'softim'),
         'parent' => 'pages_and_template',
-        'icon' => 'fa fa-archive',
+        'icon' => 'fas fa-archive',
         'fields' => Softim_Group_Fields::page_layout_options(esc_html__('Archive', 'softim'), 'archive')
     ));
     /*  search page options */
@@ -1188,7 +1188,7 @@ if (class_exists('CSF')) {
         'id' => 'search_page',
         'title' => esc_html__('Search Page', 'softim'),
         'parent' => 'pages_and_template',
-        'icon' => 'fa fa-search',
+        'icon' => 'fas fa-search',
         'fields' => Softim_Group_Fields::page_layout_options(esc_html__('Search', 'softim'), 'search')
     ));
 

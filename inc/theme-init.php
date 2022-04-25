@@ -305,10 +305,10 @@ if (!class_exists('Softim_Init')) {
                     'media' => 'all',
                 ),
                 array(
-                    'handle' => 'font-awesome',
+                    'handle' => 'softim-font-awesome',
                     'src' => SOFTIM_CSS . '/fontawesome-all.min.css',
                     'deps' => array(),
-                    'ver' => '5.12.0',
+                    'ver' => '5.15.4',
                     'media' => 'all',
                 ),
                 array(

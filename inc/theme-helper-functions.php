@@ -340,7 +340,7 @@ if (!class_exists('Softim_Helper_Functions')) {
                 <?php endif; ?>
 
                 <div class="single-post-navigation-center-grid">
-                    <a href="<?php echo esc_url(home_url('/')) ?>"><i class="fa fa-th-large"></i></a>
+                    <a href="<?php echo esc_url(home_url('/')) ?>"><i class="fas fa-th-large"></i></a>
                 </div>
 
                 <?php if (!empty($next_post)): ?>
