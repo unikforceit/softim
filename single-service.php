@@ -19,6 +19,7 @@
 
 
 get_header();
+$service_meta = get_post_meta(get_the_ID(), 'softim_service_options', true);
 ?>
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Service
@@ -28,64 +29,37 @@ get_header();
             <div class="row justify-content-center">
                 <div class="col-xl-12">
                     <div class="service-item three details">
-                        <?php if (has_post_thumbnail()){?>
+                        <?php if (has_post_thumbnail()) { ?>
                             <div class="service-thumb">
-                                <?php the_post_thumbnail('full');?>
+                                <?php the_post_thumbnail('full'); ?>
                             </div>
                         <?php } ?>
                         <div class="service-content">
-                            <h2 class="title"><?php the_title();?></h2>
-                            <p><?php the_excerpt();?></p>
+                            <h2 class="title"><?php the_title(); ?></h2>
+                            <p><?php the_content(); ?></p>
                             <div class="service-widget-item-area">
                                 <div class="row justify-content-center mb-30-none">
-                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
-                                        <div class="service-widget-item">
-                                            <div class="service-widget-icon">
-                                                <img src="assets/images/icon/icon-17.png" alt="icon">
+                                    <?php
+                                    if ($service_meta['service_info_widget']) {
+                                        foreach ($service_meta['service_info_widget'] as $service_item) {
+                                            ?>
+                                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
+                                                <div class="service-widget-item">
+                                                    <div class="service-widget-icon">
+                                                        <?php echo wp_get_attachment_image($service_item['image']['id'], 'full'); ?>
+                                                    </div>
+                                                    <div class="service-widget-content">
+                                                        <h5 class="title"><?php echo esc_html($service_item['title']); ?></h5>
+                                                        <span class="sub-title"><?php echo esc_html($service_item['text']); ?></span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="service-widget-content">
-                                                <h5 class="title">CUSTOMIZED STYLE</h5>
-                                                <span class="sub-title">Pre Designed</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
-                                        <div class="service-widget-item">
-                                            <div class="service-widget-icon">
-                                                <img src="assets/images/icon/icon-18.png" alt="icon">
-                                            </div>
-                                            <div class="service-widget-content">
-                                                <h5 class="title">IN TIME RESULT</h5>
-                                                <span class="sub-title">Developer Time</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
-                                        <div class="service-widget-item">
-                                            <div class="service-widget-icon">
-                                                <img src="assets/images/icon/icon-19.png" alt="icon">
-                                            </div>
-                                            <div class="service-widget-content">
-                                                <h5 class="title">PIXEL PERFECT</h5>
-                                                <span class="sub-title">Design Time</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
-                                        <div class="service-widget-item">
-                                            <div class="service-widget-icon">
-                                                <img src="assets/images/icon/icon-20.png" alt="icon">
-                                            </div>
-                                            <div class="service-widget-content">
-                                                <h5 class="title">SEO FRIENDLY</h5>
-                                                <span class="sub-title">Development</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        <?php }
+                                    } ?>
                                 </div>
                             </div>
                             <div class="service-bottom-content">
-                                <h2 class="title"><?php echo esc_html('Service Description');?></h2>
+                                <h2 class="title"><?php echo esc_html('Service Description'); ?></h2>
                                 <p>Pick our website architecture administrations, and your business can depend on 100%
                                     straightforwardness. From our customized statements to our underlying plans, our
                                     group gives your organization complete admittance to our website
@@ -101,52 +75,34 @@ get_header();
                                     positioning in list items relates to higher perceivability.</p>
                                 <div class="sevice-inner-item-area">
                                     <div class="row justify-content-center mb-30-none">
-                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
-                                            <div class="service-inner-item">
-                                                <div class="service-inner-icon">
-                                                    <img src="assets/images/icon/icon-14.png" alt="icon">
+                                        <?php
+                                        if ($service_meta['service_item']) {
+                                            foreach ($service_meta['service_item'] as $service_item2) {
+                                                ?>
+                                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                                    <div class="service-inner-item">
+                                                        <div class="service-inner-icon">
+                                                            <?php echo wp_get_attachment_image($service_item2['image']['id'], 'full'); ?>
+                                                        </div>
+                                                        <div class="service-inner-content">
+                                                            <h4 class="title"><?php echo esc_html($service_item2['title']); ?></h4>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="service-inner-content">
-                                                    <h4 class="title">Over 1500 DVSA certified Develop web product</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
-                                            <div class="service-inner-item">
-                                                <div class="service-inner-icon">
-                                                    <img src="assets/images/icon/icon-15.png" alt="icon">
-                                                </div>
-                                                <div class="service-inner-content">
-                                                    <h4 class="title">Free access to our award winning road brain
-                                                        stroming</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
-                                            <div class="service-inner-item">
-                                                <div class="service-inner-icon">
-                                                    <img src="assets/images/icon/icon-16.png" alt="icon">
-                                                </div>
-                                                <div class="service-inner-content">
-                                                    <h4 class="title">Successful Project Delivery System in our
-                                                        team</h4>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            <?php }
+                                        } ?>
                                     </div>
                                 </div>
                                 <blockquote class="two">
                                     <div class="quote-area d-flex flex-wrap">
                                         <div class="quote-icon">
-                                            <img src="assets/images/client/quote-2.png" alt="quote">
+                                            <?php echo wp_get_attachment_image($service_meta['quoteImage1']['id'], 'full'); ?>
                                         </div>
                                         <div class="quote-shape">
-                                            <img src="assets/images/element/element-66.png" alt="element">
+                                            <?php echo wp_get_attachment_image($service_meta['quoteImage2']['id'], 'full'); ?>
                                         </div>
                                         <div class="quote-content-area">
-                                            <p class="quote-content">Web optimization alludes to an umbrella of
-                                                strategies that upgrade your site’s positioning for significant list
-                                                items. A higher positioning in list items.</p>
+                                            <p class="quote-content"><?php echo esc_html($service_meta['quoteText']);?></p>
                                         </div>
                                     </div>
                                 </blockquote>

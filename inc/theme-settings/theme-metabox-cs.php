@@ -77,13 +77,88 @@ if (class_exists('CSF')) {
         'post_type' => 'service',
     ));
     CSF::createSection($prefix . '_service_options', array(
+        'title' => esc_html__('Service Options', 'softim'),
+        'id' => 'softim_service_info',
         'fields' => array(
             array(
-                'id' => 'service_icon',
-                'type' => 'icon',
-                'title' => esc_html__('Icon', 'softim'),
-                'desc' => wp_kses(__('Select Your Icon', 'softim'), $allowed_html)
-            )
+                'id' => 'service_info_widget',
+                'type' => 'repeater',
+                'title' => esc_html__('Service Info Item', 'softim'),
+                'fields' => array(
+                    array(
+                        'id' => 'image',
+                        'type' => 'media',
+                        'title' => esc_html__('Image', 'softim')
+                    ),
+                    array(
+                        'id' => 'title',
+                        'type' => 'text',
+                        'title' => esc_html__('Title', 'softim')
+                    ),
+                    array(
+                        'id' => 'text',
+                        'type' => 'text',
+                        'title' => esc_html__('Text', 'softim')
+                    ),
+
+                ),
+            ),
+        )
+    ));
+    CSF::createSection($prefix . '_service_options', array(
+        'title' => esc_html__('Service Description', 'softim'),
+        'id' => 'softim_des',
+        'fields' => array(
+            array(
+                'id' => 'description',
+                'type' => 'wp_editor',
+                'title' => esc_html__('Description', 'softim'),
+            ),
+
+        )
+    ));
+    CSF::createSection($prefix . '_service_options', array(
+        'title' => esc_html__('Service Item', 'softim'),
+        'id' => 'softim_service_items',
+        'fields' => array(
+            array(
+                'id' => 'service_item',
+                'type' => 'repeater',
+                'title' => esc_html__('Service Info Item', 'softim'),
+                'fields' => array(
+                    array(
+                        'id' => 'image',
+                        'type' => 'media',
+                        'title' => esc_html__('Image', 'softim')
+                    ),
+                    array(
+                        'id' => 'title',
+                        'type' => 'text',
+                        'title' => esc_html__('Title', 'softim')
+                    ),
+                ),
+            ),
+        )
+    ));
+    CSF::createSection($prefix . '_service_options', array(
+        'title' => esc_html__('Service Quote', 'softim'),
+        'id' => 'softim_service_quotes',
+        'fields' => array(
+            array(
+                'id' => 'quoteImage1',
+                'type' => 'media',
+                'title' => esc_html__('Quote Left Image', 'softim')
+            ),
+            array(
+                'id' => 'quoteText',
+                'type' => 'text',
+                'title' => esc_html__('Quote Text', 'softim'),
+            ),
+            array(
+                'id' => 'quoteImage2',
+                'type' => 'media',
+                'title' => esc_html__('Quote Right Image', 'softim')
+            ),
         )
     ));
 
@@ -200,6 +275,7 @@ if (class_exists('CSF')) {
             ),
         )
     ));
+
 
     //	Packages Meta Box
     CSF::createMetabox($prefix . '_packages_options', array(
