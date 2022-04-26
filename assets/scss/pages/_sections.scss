@@ -1795,6 +1795,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
         .plan-item{
             background-color: $white;
             border: 1px solid transparent;
+            box-shadow: 0 15px 30px rgba(50, 73, 179, 0.15);
             &:hover{
                 background-color: $bg--base;
             }

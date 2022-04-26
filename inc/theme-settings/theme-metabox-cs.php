@@ -71,6 +71,7 @@ if (class_exists('CSF')) {
         'icon' => 'fas fa-file-o',
         'fields' => Softim_Group_Fields::Page_Container_Options('container_options')
     ));
+
     //	Service Meta Box
     CSF::createMetabox($prefix . '_service_options', array(
         'title' => esc_html__('Service Options', 'softim'),
@@ -281,6 +282,31 @@ if (class_exists('CSF')) {
         )
     ));
 
+    /*-------------------------------------
+     Project Options
+    -------------------------------------*/
+    CSF::createMetabox($prefix . '_project_options', array(
+        'title' => esc_html__('Project Options', 'softim'),
+        'post_type' => array('project'),
+        'priority' => 'high'
+    ));
+    CSF::createSection($prefix . '_project_options', array(
+        'title' => esc_html__('Team Info', 'softim'),
+        'id' => 'softim-info',
+        'fields' => array(
+            array(
+                'id' => 'project_tag',
+                'type' => 'text',
+                'title' => esc_html__('Service Type', 'softim'),
+            ),
+            array(
+                'id' => 'url',
+                'type' => 'link',
+                'title' => esc_html__('Web Site Link', 'softim'),
+            ),
+
+        )
+    ));
 
     //	Packages Meta Box
     CSF::createMetabox($prefix . '_packages_options', array(

@@ -23,8 +23,8 @@ $post_single_meta = Softim_Group_Fields_Value::post_meta('blog_single_post');
             <span class="user"><?php esc_html('By :'); ?><?php the_author(); ?></span>
             <span class="category two"><?php the_date('F j, Y'); ?></span>
         </div>
-        <h3 class="title"><?php the_title();?></h3>
-        <div class="blog-content"><?php the_content();?></div>
+        <h3 class="title"><?php the_title(); ?></h3>
+        <div class="blog-content"><?php the_content(); ?></div>
         <div class="blog-tag-wrapper">
             <span>Tags:</span>
             <ul class="blog-footer-tag">
@@ -35,11 +35,13 @@ $post_single_meta = Softim_Group_Fields_Value::post_meta('blog_single_post');
         <nav>
             <ul class="pagination two">
                 <li class="page-item prev">
-                    <a class="page-link" href="#" rel="prev" aria-label="Prev &raquo;"><i class="fas fa-chevron-left"></i></a>
+                    <a class="page-link" href="#" rel="prev" aria-label="Prev &raquo;"><i
+                                class="fas fa-chevron-left"></i></a>
                 </li>
                 <li class="page-item tags"><a class="page-link" href="blog.html"><i class="icon-Tags_menu"></i></a></li>
                 <li class="page-item next">
-                    <a class="page-link" href="#" rel="next" aria-label="Next &raquo;"><i class="fas fa-chevron-right"></i></a>
+                    <a class="page-link" href="#" rel="next" aria-label="Next &raquo;"><i
+                                class="fas fa-chevron-right"></i></a>
                 </li>
             </ul>
         </nav>
@@ -48,7 +50,7 @@ $post_single_meta = Softim_Group_Fields_Value::post_meta('blog_single_post');
                 <div class="col-xl-12">
                     <div class="blog-section-header">
                         <div class="section-header">
-                            <h3 class="section-title">Top Related Post</h3>
+                            <h3 class="section-title"><?php echo esc_html('Top Related Post'); ?></h3>
                         </div>
                         <div class="slider-nav-area">
                             <div class="slider-prev">
