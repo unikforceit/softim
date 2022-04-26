@@ -190,12 +190,6 @@ if (class_exists('CSF')) {
                 'type' => 'repeater',
                 'title' => esc_html__('Social Info', 'softim'),
                 'fields' => array(
-
-                    array(
-                        'id' => 'title',
-                        'type' => 'text',
-                        'title' => esc_html__('Title', 'softim')
-                    ),
                     array(
                         'id' => 'icon',
                         'type' => 'icon',
@@ -203,8 +197,8 @@ if (class_exists('CSF')) {
                     ),
                     array(
                         'id' => 'url',
-                        'type' => 'media',
-                        'title' => esc_html__('Sign', 'softim')
+                        'type' => 'link',
+                        'title' => esc_html__('Link', 'softim')
                     ),
 
                 ),
@@ -233,7 +227,7 @@ if (class_exists('CSF')) {
             array(
                 'id' => 'sign',
                 'type' => 'media',
-                'title' => esc_html__('URL', 'softim'),
+                'title' => esc_html__('Sign Image', 'softim'),
             ),
 
         )
