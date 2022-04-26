@@ -77,6 +77,17 @@ if (class_exists('CSF')) {
         'post_type' => 'service',
     ));
     CSF::createSection($prefix . '_service_options', array(
+        'title' => esc_html__('Service Icon', 'softim'),
+        'id' => 'softim_service_icon',
+        'fields' => array(
+            array(
+                'id' => 'image',
+                'type' => 'media',
+                'title' => esc_html__('Image', 'softim')
+            ),
+        )
+    ));
+    CSF::createSection($prefix . '_service_options', array(
         'title' => esc_html__('Service Options', 'softim'),
         'id' => 'softim_service_info',
         'fields' => array(
