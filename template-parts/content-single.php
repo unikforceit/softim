@@ -25,84 +25,21 @@ $post_single_meta = Softim_Group_Fields_Value::post_meta('blog_single_post');
         </div>
         <h3 class="title"><?php the_title(); ?></h3>
         <div class="blog-content"><?php the_content(); ?></div>
+
         <div class="blog-tag-wrapper">
-            <span>Tags:</span>
-            <ul class="blog-footer-tag">
-                <li><a href="#0">Drivers</a></li>
-                <li><a href="#0">Event</a></li>
-            </ul>
+            <span><?php echo esc_html('Tags:');?></span>
+            <?php $softim->posted_tag(); ?>
         </div>
-        <nav>
-            <ul class="pagination two">
-                <li class="page-item prev">
-                    <a class="page-link" href="#" rel="prev" aria-label="Prev &raquo;"><i
-                                class="fas fa-chevron-left"></i></a>
-                </li>
-                <li class="page-item tags"><a class="page-link" href="blog.html"><i class="icon-Tags_menu"></i></a></li>
-                <li class="page-item next">
-                    <a class="page-link" href="#" rel="next" aria-label="Next &raquo;"><i
-                                class="fas fa-chevron-right"></i></a>
-                </li>
-            </ul>
-        </nav>
-        <div class="blog-related-area">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="blog-section-header">
-                        <div class="section-header">
-                            <h3 class="section-title"><?php echo esc_html('Top Related Post'); ?></h3>
-                        </div>
-                        <div class="slider-nav-area">
-                            <div class="slider-prev">
-                                <i class="fas fa-chevron-left"></i>
-                            </div>
-                            <div class="slider-next">
-                                <i class="fas fa-chevron-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-xl-12">
-                    <div class="blog-slider-area">
-                        <div class="blog-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="blog-item">
-                                        <div class="blog-thumb">
-                                            <img src="assets/images/blog/blog-8.png" alt="blog">
-                                        </div>
-                                        <div class="blog-content">
-                                            <div class="blog-post-meta">
-                                                <span class="user">By : Smith Roy</span>
-                                                <span class="category two"> 24th March, 2021</span>
-                                            </div>
-                                            <h3 class="title"><a href="blog-details.html">Many important brands have
-                                                    given us their trust</a></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="blog-item">
-                                        <div class="blog-thumb">
-                                            <img src="assets/images/blog/blog-11.png" alt="blog">
-                                        </div>
-                                        <div class="blog-content">
-                                            <div class="blog-post-meta">
-                                                <span class="user">By : Smith Roy</span>
-                                                <span class="category two"> 24th March, 2021</span>
-                                            </div>
-                                            <h3 class="title"><a href="blog-details.html">Many important brands have
-                                                    given us their trust</a></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+
+        <?php $softim->post_navigation();?>
+
+        <?php $softim->get_related_post([
+            'post_type' => 'post',
+            'taxonomy' => 'category',
+            'exclude_id' => get_the_ID(),
+            'posts_per_page' => 2
+        ]);?>
     </div>
 </div>

@@ -311,7 +311,7 @@ if (!class_exists('Softim_Helper_Functions')) {
             $tags_list = get_the_tag_list('', esc_html_x(' ', 'list item separator', 'softim'));
             if ($tags_list) {
                 /* translators: 1: list of tags. */
-                printf('<ul class="tags"><li>' . ' %1$s' . '</li></ul>', $tags_list); // WPCS: XSS OK.
+                printf('<ul class="blog-footer-tag"><li>' . ' %1$s' . '</li></ul>', $tags_list); // WPCS: XSS OK.
             }
         }
 
@@ -325,37 +325,23 @@ if (!class_exists('Softim_Helper_Functions')) {
             $prev_post = get_adjacent_post(false, '', true);
             ob_start();
             ?>
-            <div class="single-post-navigation">
-
-                <?php if (!empty($prev_post)): ?>
-                    <div class="prev-post">
-                        <a href="<?php echo esc_url(get_permalink($prev_post->ID)); ?>">
-                            <div class="title-with-link">
-                                <i class="flaticon-left-arrow-3"></i>
-                                <span><?php esc_html_e('Prev Post', 'softim') ?></span>
-                                <h3><?php echo esc_html(wp_trim_words($prev_post->post_title, 4, '.')); ?></h3>
-                            </div>
-                        </a>
-                    </div>
-                <?php endif; ?>
-
-                <div class="single-post-navigation-center-grid">
-                    <a href="<?php echo esc_url(home_url('/')) ?>"><i class="fas fa-th-large"></i></a>
-                </div>
-
-                <?php if (!empty($next_post)): ?>
-                    <div class="next-post">
-                        <a href="<?php echo esc_url(get_permalink($next_post->ID)); ?>">
-                            <div class="title-with-link">
-                                <span><?php esc_html_e('Next Post', 'softim') ?></span> <i
-                                        class="flaticon-right-arrow-2"></i>
-                                <h3><?php echo esc_html(wp_trim_words($next_post->post_title, 4, '.')); ?></h3>
-                            </div>
-                        </a>
-                    </div>
-                <?php endif; ?>
-
-            </div>
+            <nav>
+                <ul class="pagination two">
+            <?php if (!empty($prev_post)): ?>
+                    <li class="page-item prev">
+                        <a class="page-link" href="<?php echo esc_url(get_permalink($prev_post->ID)); ?>" rel="prev" aria-label="Prev &raquo;"><i
+                                    class="fas fa-chevron-left"></i></a>
+                    </li>
+            <?php endif; ?>
+            <?php if (!empty($next_post)): ?>
+                    <li class="page-item tags"><a class="page-link" href="<?php echo esc_url(get_permalink($next_post->ID)); ?>"><i class="icon-Tags_menu"></i></a></li>
+            <?php endif; ?>
+            <li class="page-item next">
+                        <a class="page-link" href="<?php echo esc_url(home_url('/')) ?>" rel="next" aria-label="Next &raquo;"><i
+                                    class="fas fa-chevron-right"></i></a>
+                    </li>
+                </ul>
+            </nav>
             <?php
             return ob_get_clean();
         }
@@ -442,53 +428,62 @@ if (!class_exists('Softim_Helper_Functions')) {
 
                     $post_categories = get_the_terms(get_the_ID(), $post_details['taxonomy']);
                     if ($query->have_posts()) : ?>
-                        <div class="product-related-wrap">
-                            <ul class="product-related-posts colum-<?php echo esc_attr($post_details['posts_per_page']) ?>">
-                                <?php
-                                while ($query->have_posts()) : $query->the_post();
-                                    $img_id = get_post_thumbnail_id(get_the_ID()) ? get_post_thumbnail_id(get_the_ID()) : false;
-                                    $img_url_val = $img_id ? wp_get_attachment_image_src($img_id, 'softim_grid', false) : '';
-                                    $img_url = is_array($img_url_val) && !empty($img_url_val) ? $img_url_val[0] : '';
-                                    $img_alt = get_post_meta($img_id, '_wp_attachment_image_alt', true);
-                                    $comments_count = get_comments_number(get_the_ID());
-                                    $comment_text = ($comments_count > 1) ? $comments_count . ' Comments' . '' : $comments_count . ' Comment' . '';
-                                    ?>
-                                    <li class="sm-outer-wrap">
-                                        <div class="service-single-item-04 margin-bottom-10">
-                                            <?php if (!empty($img_url)): ?>
-                                                <div class="thumb">
-                                                    <img src="<?php echo esc_url($img_url) ?>"
-                                                         alt="<?php echo esc_attr($img_alt) ?>">
-                                                </div>
-                                            <?php endif; ?>
-                                            <div class="content-wrap post-<?php echo esc_attr($post_details['post_type']) ?>">
-                                                <div class="content">
-                                                    <ul class="post-meta">
-                                                        <li>
-                                                            <?php
-                                                            softim()->posted_on();
-                                                            ?>
-                                                        </li>
-                                                        <li>
-                                                            <a href="<?php the_permalink(); ?>">
-                                                                <?php echo esc_html($comment_text); ?></a>
-                                                        </li>
-                                                    </ul>
-                                                    <a href="<?php the_permalink(); ?>">
-                                                        <h4 class="title"><?php the_title(); ?></h4>
-                                                    </a>
-                                                    <?php Softim_Excerpt() ?>
-                                                    <a class="read-btn"
-                                                       href="<?php the_permalink(); ?>"><?php echo esc_html__('Read More', 'softim') ?>
-                                                        <i class="flaticon-right-arrow-2"></i>
-                                                    </a>
-                                                </div>
+                        <div class="blog-related-area">
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="blog-section-header">
+                                        <div class="section-header">
+                                            <h3 class="section-title"><?php echo esc_html('Top Related Post'); ?></h3>
+                                        </div>
+                                        <div class="slider-nav-area">
+                                            <div class="slider-prev">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </div>
+                                            <div class="slider-next">
+                                                <i class="fas fa-chevron-right"></i>
                                             </div>
                                         </div>
-                                    </li>
-                                <?php endwhile; ?>
-                                <?php wp_reset_postdata(); ?>
-                            </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-xl-12">
+                                    <div class="blog-slider-area">
+                                        <div class="blog-slider">
+                                            <div class="swiper-wrapper">
+                                                <?php
+                                                while ($query->have_posts()) : $query->the_post();
+                                                    $img_id = get_post_thumbnail_id(get_the_ID()) ? get_post_thumbnail_id(get_the_ID()) : false;
+                                                    $img_url_val = $img_id ? wp_get_attachment_image_src($img_id, 'softim_grid', false) : '';
+                                                    $img_url = is_array($img_url_val) && !empty($img_url_val) ? $img_url_val[0] : '';
+                                                    $img_alt = get_post_meta($img_id, '_wp_attachment_image_alt', true);
+                                                    ?>
+                                                    <div class="swiper-slide">
+                                                        <div class="blog-item">
+                                                            <?php if (!empty($img_url)): ?>
+                                                                <div class="blog-thumb">
+                                                                    <img src="<?php echo esc_url($img_url); ?>"
+                                                                         alt="<?php echo esc_attr($img_alt); ?>">
+                                                                </div>
+                                                            <?php endif; ?>
+                                                            <div class="blog-content">
+                                                                <div class="blog-post-meta">
+                                                                    <span class="user"><?php echo esc_html('By :'); ?><?php the_author(); ?></span>
+                                                                    <span class="category two"><?php the_date('F j, Y'); ?></span>
+                                                                </div>
+                                                                <h3 class="title"><a
+                                                                            href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <?php endwhile; ?>
+                                                <?php wp_reset_postdata(); ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     <?php
                     endif;

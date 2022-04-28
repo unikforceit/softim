@@ -220,6 +220,7 @@
 
   .form-submit {
     margin-bottom: 0;
+    width: 184px;
   }
 }
 
@@ -243,7 +244,7 @@
 .comment-form {
   .form-group.textarea {
     .form-control {
-      min-height: 140px;
+      min-height: 180px;
       resize: none;
       line-height: 26px;
 
@@ -256,8 +257,7 @@
     }
 
     &:after {
-      content: "\f303";
-      top: 20px;
+      visibility: hidden;
     }
   }
 

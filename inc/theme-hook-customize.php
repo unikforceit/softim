@@ -27,6 +27,10 @@ if (!class_exists('Softim_Customize')) {
             add_action('softim_after_body', array($this, 'preloader'));
             //breadcrumb
             add_action('softim_before_page_content', array($this, 'breadcrumb'));
+            //Header
+            add_action('softim_before_page_content', array($this, 'softim_render_header'));
+            //Footer
+            add_action('softim_after_page_content', array($this, 'softim_render_footer'));
             //back top
             add_action('softim_after_body', array($this, 'back_top'));
             //order comment form
@@ -45,6 +49,20 @@ if (!class_exists('Softim_Customize')) {
                 self::$instance = new self();
             }
             return self::$instance;
+        }
+        // Render Header
+        public function softim_render_header(){
+            $header_switch = cs_get_option('elementor_header_builder');
+            $header = cs_get_option('elementor_header');
+            $option_header = $header_switch == '1' ? $header : '';
+            echo do_shortcode('[RENDER_ELEMENTOR id="'.$option_header.'"]');
+        }
+        // Render Footer
+        public function softim_render_footer(){
+            $footer_switch = cs_get_option('elementor_footer_builder');
+            $footer = cs_get_option('elementor_footer');
+            $option_footer = $footer_switch == '1' ? $footer : '';
+            echo do_shortcode('[RENDER_ELEMENTOR id="'.$option_footer.'"]');
         }
 
         /**

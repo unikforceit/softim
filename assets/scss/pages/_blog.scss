@@ -417,11 +417,14 @@
     }
     .blog-footer-tag{
         li{
-            display: inline-block;
-            background-color: #F3F3F3;
-            padding: 3px 10px;
+            display: flex;
+            gap: 20px;
             font-weight: 500;
             font-size: 14px;
+            a{
+                background-color: #F3F3F3;
+                padding: 3px 10px;
+            }
         }
         li+li{
             margin-left: 10px;
