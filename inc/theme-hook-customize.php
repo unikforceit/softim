@@ -51,11 +51,17 @@ if (!class_exists('Softim_Customize')) {
             return self::$instance;
         }
         // Render Header
-        public function softim_render_header(){
+        public function softim_render_header()
+        {
+            $page_container_meta = Softim_Group_Fields_Value::page_container('softim', 'header_options');
             $header_switch = cs_get_option('elementor_header_builder');
             $header = cs_get_option('elementor_header');
             $option_header = $header_switch == '1' ? $header : '';
-            echo do_shortcode('[RENDER_ELEMENTOR id="'.$option_header.'"]');
+            if ($header_switch == '1' && !empty($header)) {
+                echo do_shortcode('[RENDER_ELEMENTOR id="' . $option_header . '"]');
+            } else{
+                get_template_part('template-parts/header/header', $page_container_meta['navbar_type']);
+            }
         }
         // Render Footer
         public function softim_render_footer(){

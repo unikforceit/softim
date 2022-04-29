@@ -23,16 +23,8 @@
 <?php wp_body_open(); ?>
 <?php
 do_action( 'softim_after_body' );
-$page_container_meta = Softim_Group_Fields_Value::page_container( 'softim', 'header_options' );
-$header_switch = cs_get_option('elementor_header_builder');
-$header = cs_get_option('elementor_header');
 ?>
-
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'softim' ); ?></a>
-    <?php if ($header_switch == '0') {
-            get_template_part('template-parts/header/header', $page_container_meta['navbar_type']);
-         }
-    ?>
 	<?php do_action( 'softim_before_page_content' ) ?>
     <div id="content" class="site-content">
