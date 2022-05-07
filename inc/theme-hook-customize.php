@@ -162,6 +162,8 @@ if (!class_exists('Softim_Customize')) {
                                         printf('<h2 class="title">%1$s %2$s</h2>', esc_html__('Search Results for:', 'softim'), get_search_query());
                                     } elseif (is_singular('post')) {
                                         printf('<h2 class="title">%1$s </h2>', get_the_title());
+                                    }elseif (is_singular('service')) {
+                                        printf('<h2 class="title">%1$s </h2>', get_the_title());
                                     } elseif (is_singular('page')) {
                                         if ($page_header_meta['page_title']) {
                                             printf('<h2 class="title">%1$s </h2>', get_the_title());
