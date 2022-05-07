@@ -112,7 +112,6 @@ if (class_exists('CSF')) {
                         'type' => 'text',
                         'title' => esc_html__('Text', 'softim')
                     ),
-
                 ),
             ),
         )
@@ -170,6 +169,65 @@ if (class_exists('CSF')) {
                 'id' => 'quoteImage2',
                 'type' => 'media',
                 'title' => esc_html__('Quote Right Image', 'softim')
+            ),
+        )
+    ));
+    CSF::createSection($prefix . '_service_options', array(
+        'title' => esc_html__('Service Description 2', 'softim'),
+        'id' => 'softim_des2',
+        'fields' => array(
+            array(
+                'id' => 'description2',
+                'type' => 'wp_editor',
+                'title' => esc_html__('Description', 'softim'),
+            ),
+
+        )
+    ));
+    CSF::createSection($prefix . '_service_options', array(
+        'title' => esc_html__('Service Form Left', 'softim'),
+        'id' => 'softim_form',
+        'fields' => array(
+            array(
+                'id' => 'image1',
+                'type' => 'media',
+                'title' => esc_html__('Move Left Image', 'softim')
+            ),
+            array(
+                'id' => 'image2',
+                'type' => 'media',
+                'title' => esc_html__('Move Right Image', 'softim')
+            ),
+            array(
+                'id' => 'image3',
+                'type' => 'media',
+                'title' => esc_html__('Client Image', 'softim')
+            ),
+        )
+    ));
+    CSF::createSection($prefix . '_service_options', array(
+        'title' => esc_html__('Service Form Right', 'softim'),
+        'id' => 'softim_form2',
+        'fields' => array(
+            array(
+                'id' => 'fTitle',
+                'type' => 'text',
+                'title' => esc_html__('Title 1', 'softim')
+            ),
+            array(
+                'id' => 'fTitle2',
+                'type' => 'text',
+                'title' => esc_html__('Title 2', 'softim')
+            ),
+            array(
+                'id' => 'fText',
+                'type' => 'text',
+                'title' => esc_html__('Text', 'softim')
+            ),
+            array(
+                'id' => 'form',
+                'type' => 'text',
+                'title' => esc_html__('Form', 'softim')
             ),
         )
     ));
