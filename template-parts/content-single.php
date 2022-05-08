@@ -20,7 +20,7 @@ $post_single_meta = Softim_Group_Fields_Value::post_meta('blog_single_post');
     <?php } ?>
     <div class="blog-content">
         <div class="blog-post-meta">
-            <span class="user"><?php esc_html('By :'); ?><?php the_author(); ?></span>
+            <span class="user"><?php echo esc_html('By : '); ?><?php the_author(); ?></span>
             <span class="category two"><?php the_date('F j, Y'); ?></span>
         </div>
         <h3 class="title"><?php the_title(); ?></h3>

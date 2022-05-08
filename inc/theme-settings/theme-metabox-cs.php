@@ -72,6 +72,12 @@ if (class_exists('CSF')) {
         'fields' => Softim_Group_Fields::Page_Container_Options('container_options')
     ));
 
+    //	Post Details Meta Box
+    CSF::createMetabox($prefix . '_post_details_options', array(
+        'title' => esc_html__('Post Options', 'softim'),
+        'post_type' => 'post',
+    ));
+
     //	Service Meta Box
     CSF::createMetabox($prefix . '_service_options', array(
         'title' => esc_html__('Service Options', 'softim'),

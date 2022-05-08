@@ -24,17 +24,21 @@ get_header();
     Start Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <section class="service-section two ptb-120">
+        <?php  $service_elements_1 = cs_get_option('service_bg1');?>
+        <?php  $service_elements_2 = cs_get_option('service_bg2');?>
+        <?php  $service_elements_3 = cs_get_option('service_bg3');?>
+        <?php  $service_elements_4 = cs_get_option('service_bg4');?>
         <div class="service-element-one">
-            <img src="assets/images/element/element-34.png" alt="element">
+            <?php echo wp_get_attachment_image($service_elements_1['id'], 'full')?>
         </div>
         <div class="service-element-two">
-            <img src="assets/images/element/element-35.png" alt="element">
+            <?php echo wp_get_attachment_image($service_elements_2['id'], 'full')?>
         </div>
         <div class="service-element-three">
-            <img src="assets/images/element/element-36.png" alt="element">
+            <?php echo wp_get_attachment_image($service_elements_3['id'], 'full')?>
         </div>
         <div class="service-element-four">
-            <img src="assets/images/element/element-36.png" alt="element">
+            <?php echo wp_get_attachment_image($service_elements_4['id'], 'full')?>
         </div>
         <div class="container">
             <div class="row justify-content-center mb-30-none">

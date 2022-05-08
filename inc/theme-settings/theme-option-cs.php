@@ -522,7 +522,6 @@ if (class_exists('CSF')) {
         )
     ));
 
-
     /*-------------------------------------------------------
            ** Footer  Options
     --------------------------------------------------------*/
@@ -1108,7 +1107,7 @@ if (class_exists('CSF')) {
     CSF::createSection($prefix . '_theme_options', array(
         'id' => 'pages_and_template',
         'title' => esc_html__('Pages Settings', 'softim'),
-        'icon' => 'fas fa-files-o'
+        'icon' => 'fas fa-pager'
     ));
     /*  404 page options */
     CSF::createSection($prefix . '_theme_options', array(
@@ -1218,6 +1217,39 @@ if (class_exists('CSF')) {
         'parent' => 'pages_and_template',
         'icon' => 'fas fa-search',
         'fields' => Softim_Group_Fields::page_layout_options(esc_html__('Search', 'softim'), 'search')
+    ));
+    /*  Service archive options */
+    CSF::createSection($prefix . '_theme_options', array(
+        'id' => 'service_arc_page',
+        'title' => esc_html__('Service Archive Page', 'softim'),
+        'parent' => 'pages_and_template',
+        'icon' => 'fas fa-archive',
+        'fields' => array(
+            array(
+                'id' => 'service_bg1',
+                'title' => esc_html__('Element Image 1', 'softim'),
+                'type' => 'media',
+                'desc' => wp_kses(__('you can set <mark>element</mark> for service archive', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'service_bg2',
+                'title' => esc_html__('Element Image 2', 'softim'),
+                'type' => 'media',
+                'desc' => wp_kses(__('you can set <mark>element</mark> for archive', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'service_bg3',
+                'title' => esc_html__('Element Image 3', 'softim'),
+                'type' => 'media',
+                'desc' => wp_kses(__('you can set <mark>element</mark> for archive', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'service_bg4',
+                'title' => esc_html__('Element Image 4', 'softim'),
+                'type' => 'media',
+                'desc' => wp_kses(__('you can set <mark>element</mark> for archive', 'softim'), $allowed_html),
+            ),
+        )
     ));
 
     /*-------------------------------------------------------
