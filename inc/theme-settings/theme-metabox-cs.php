@@ -355,9 +355,14 @@ if (class_exists('CSF')) {
         'priority' => 'high'
     ));
     CSF::createSection($prefix . '_project_options', array(
-        'title' => esc_html__('Team Info', 'softim'),
+        'title' => esc_html__('Project Info', 'softim'),
         'id' => 'softim-info',
         'fields' => array(
+            array(
+                'id' => 'icon_image',
+                'type' => 'media',
+                'title' => esc_html__('Icon Image', 'softim')
+            ),
             array(
                 'id' => 'project_tag',
                 'type' => 'text',
@@ -368,7 +373,6 @@ if (class_exists('CSF')) {
                 'type' => 'link',
                 'title' => esc_html__('Web Site Link', 'softim'),
             ),
-
         )
     ));
 
