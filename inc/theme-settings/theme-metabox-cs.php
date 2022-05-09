@@ -304,7 +304,7 @@ if (class_exists('CSF')) {
             array(
                 'id' => 'team-tab',
                 'type' => 'repeater',
-                'title' => esc_html__('Tab Button', 'softim'),
+                'title' => esc_html__('Tabs', 'softim'),
                 'fields' => array(
                     array(
                         'id' => 'tabTitle',
@@ -312,34 +312,22 @@ if (class_exists('CSF')) {
                         'title' => esc_html__('Tab Title', 'softim')
                     ),
                     array(
-                        'id' => 'tabTitle1',
-                        'type' => 'text',
-                        'title' => esc_html__('Title 1', 'softim')
-                    ),
-                    array(
-                        'id' => 'tabTitle1_text',
-                        'type' => 'text',
-                        'title' => esc_html__('Title 1 Text', 'softim')
-                    ),
-                    array(
-                        'id' => 'tabTitle2',
-                        'type' => 'text',
-                        'title' => esc_html__('Title 2', 'softim')
-                    ),
-                    array(
-                        'id' => 'tabTitle2_text',
-                        'type' => 'text',
-                        'title' => esc_html__('Title 2 Text', 'softim')
-                    ),
-                    array(
-                        'id' => 'tabTitle3',
-                        'type' => 'text',
-                        'title' => esc_html__('Title 3', 'softim')
-                    ),
-                    array(
-                        'id' => 'tabTitle3_text',
-                        'type' => 'text',
-                        'title' => esc_html__('Title 3 Text', 'softim')
+                        'id' => 'team-tab-content',
+                        'type' => 'repeater',
+                        'title' => esc_html__('Tab Content', 'softim'),
+                        'fields' => array(
+                            array(
+                                'id' => 'tabcTitle',
+                                'type' => 'text',
+                                'title' => esc_html__('Title', 'softim')
+                            ),
+                            array(
+                                'id' => 'tabcInfo',
+                                'type' => 'textarea',
+                                'title' => esc_html__('Info', 'softim')
+                            ),
+
+                        ),
                     ),
                 ),
             ),
