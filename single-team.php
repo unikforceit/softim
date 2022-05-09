@@ -66,60 +66,56 @@ $team_meta = get_post_meta(get_the_ID(), 'softim_team_options', true);
                 <div class="team-tab">
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <?php if ($team_meta['team-tab']) {
-                                $tab_btn = 0;
-                                foreach ($team_meta['team-tab'] as $tab) {
-                                    $tab_btn++;
-                                    if ($tab_btn == 1) {
-                                        $btn_act = 'active';
-                                        $btn_true = 'true';
-                                    } else {
-                                        $btn_act = '';
-                                        $btn_true = 'false';
-                                    }
-                                    ?>
-                                    <button class="nav-link <?php echo esc_attr($btn_act); ?>"
-                                            id="<?php echo esc_attr($tab_btn); ?>-tab" data-toggle="tab"
-                                            data-target="#<?php echo esc_attr($tab_btn); ?>-tab" type="button"
-                                            role="tab" aria-controls="<?php echo esc_attr($tab_btn); ?>"
-                                            aria-selected="<?php echo esc_attr($btn_true); ?>">
-                                        <?php echo esc_html($team_meta['tabTitle']); ?>
-                                    </button>
-                                <?php }
-                            } ?>
+                            <button class="nav-link active" id="education-tab" data-toggle="tab" data-target="#education" type="button" role="tab" aria-controls="education" aria-selected="true">Education</button>
+                            <button class="nav-link" id="experience-tab" data-toggle="tab" data-target="#experience" type="button" role="tab" aria-controls="experience" aria-selected="false">Experience</button>
+                            <button class="nav-link" id="skills-tab" data-toggle="tab" data-target="#skills" type="button" role="tab" aria-controls="skills" aria-selected="false">Work Skills</button>
                         </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
-                        <?php if ($team_meta['team-tab']) {
-                            $tabs = 0;
-                            foreach ($team_meta['team-tab'] as $tab) {
-                                $tabs++;
-                                if ($tabs == 1) {
-                                    $tab_act = 'show active';
-                                } else {
-                                    $tab_act = '';
-                                }
-                                ?>
-                                <div class="tab-pane fade <?php echo esc_attr($tab_act); ?>"
-                                     id="<?php echo esc_attr($tabs); ?>-tab" role="tabpanel"
-                                     aria-labelledby="<?php echo esc_attr($tabs); ?>-tab">
-                                    <div class="team-overview">
-                                        <div class="team-overview-content">
-                                            <h4 class="title"><?php echo esc_html($team_meta['tabTitle1']); ?></h4>
-                                            <p><?php echo esc_html($team_meta['tabTitle1_text']); ?></p>
-                                        </div>
-                                        <div class="team-overview-content">
-                                            <h4 class="title"><?php echo esc_html($team_meta['tabTitle2']); ?></h4>
-                                            <p><?php echo esc_html($team_meta['tabTitle2_text']); ?></p>
-                                        </div>
-                                        <div class="team-overview-content">
-                                            <h4 class="title"><?php echo esc_html($team_meta['tabTitle3']); ?></h4>
-                                            <p><?php echo esc_html($team_meta['tabTitle3_text']); ?></p>
-                                        </div>
-                                    </div>
+                        <div class="tab-pane fade show active" id="education" role="tabpanel" aria-labelledby="education-tab">
+                            <div class="team-overview">
+                                <div class="team-overview-content">
+                                    <h4 class="title">Aliquam suscipit sodales egestas. Vivamus vestibulum metus a sapien congue semper.</h4>
+                                    <p>Aliquam suscipit sodales egestas. Vivamus vestibulum metus a sapien congue semper. Aliquam vestibulum sem leo, et facilisis diam suscipit eu. Integer viverra mi et nunc fringilla, vel tristique nulla consectetur. Suspendisse leo nisi, dictum nec sollicitudin sit amet, vehicula a risus. Donec eleifend ac ex lacinia convallis. Phasellus blandit metus lacus, quis porta ex tincidunt sit amet. Praesent sed porttitor neque.</p>
                                 </div>
-                            <?php }
-                        } ?>
+                                <div class="team-overview-content">
+                                    <h4 class="title">Aliquam suscipit sodales egestas. Vivamus vestibulum metus a sapien.</h4>
+                                    <p>Aliquam suscipit sodales egestas. Vivamus vestibulum metus a sapien congue semper. Aliquam vestibulum sem leo, et facilisis diam suscipit eu. Integer viverra mi et nunc fringilla, vel tristique nulla consectetur. Suspendisse leo nisi, dictum nec sollicitudin sit amet, vehicula a risus. Donec eleifend ac ex lacinia convallis. Phasellus blandit metus lacus, quis porta ex tincidunt sit amet. Praesent sed porttitor neque.</p>
+                                </div>
+                                <div class="team-overview-content">
+                                    <h4 class="title">Aliquam suscipit sodales egestas. Vivamus vestibulum.</h4>
+                                    <p>Aliquam suscipit sodales egestas. Vivamus vestibulum metus a sapien congue semper. Aliquam vestibulum sem leo, et facilisis diam suscipit eu. Integer viverra mi et nunc fringilla, vel tristique nulla consectetur. Suspendisse leo nisi, dictum nec sollicitudin sit amet, vehicula a risus. Donec eleifend ac ex lacinia convallis. Phasellus blandit metus lacus, quis porta ex tincidunt sit amet. Praesent sed porttitor neque.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experience-tab">
+                            <div class="team-overview">
+                                <div class="team-overview-content">
+                                    <h4 class="title">Hic enim architecto sint accusamus, ex maiores ipsum ratione illum nisi beatae!</h4>
+                                    <p>Aliquam suscipit sodales egestas. Vivamus vestibulum metus a sapien congue semper. Aliquam vestibulum sem leo, et facilisis diam suscipit eu. Integer viverra mi et nunc fringilla, vel tristique nulla consectetur. Suspendisse leo nisi, dictum nec sollicitudin sit amet, vehicula a risus.</p>
+                                </div>
+                                <div class="team-overview-content">
+                                    <h4 class="title">Iste dolore accusamus enim consequatur, itaque placeat?</h4>
+                                    <p>Aliquam suscipit sodales egestas. Vivamus vestibulum metus a sapien congue semper. Aliquam vestibulum sem leo, et facilisis diam suscipit eu. Integer viverra mi et nunc fringilla, vel tristique nulla consectetur. Suspendisse leo nisi, dictum nec sollicitudin sit amet, vehicula a risus. Donec eleifend ac ex lacinia convallis. Phasellus blandit metus lacus, quis porta ex tincidunt sit amet. Praesent sed porttitor neque.</p>
+                                </div>
+                                <div class="team-overview-content">
+                                    <h4 class="title">Eaque accusamus illum impedit quos dolorem, fuga saepe quis maxime molestias soluta?</h4>
+                                    <p>Aliquam suscipit sodales egestas. Vivamus vestibulum metus a sapien congue semper. Aliquam vestibulum sem leo, et facilisis diam suscipit eu. Integer viverra mi et nunc fringilla, vel tristique nulla consectetur.Donec eleifend ac ex lacinia convallis. Phasellus blandit metus lacus, quis porta ex tincidunt sit amet. Praesent sed porttitor neque.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
+                            <div class="team-overview">
+                                <div class="team-overview-content">
+                                    <h4 class="title">Odio debitis obcaecati quod sunt omnis ipsa, ullam incidunt.</h4>
+                                    <p>Aliquam suscipit sodales egestas. Vivamus vestibulum metus a sapien congue semper. Aliquam vestibulum sem leo, et facilisis diam suscipit eu. Integer viverra mi et nunc fringilla, vel tristique nulla consectetur. Suspendisse leo nisi, dictum nec sollicitudin sit amet, vehicula a risus. Donec eleifend ac ex lacinia convallis. Phasellus blandit metus lacus, quis porta ex tincidunt sit amet. Praesent sed porttitor neque.</p>
+                                </div>
+                                <div class="team-overview-content">
+                                    <h4 class="title">Placeat, eligendi molestias veritatis ratione accusamus nostrum laudantium.</h4>
+                                    <p>Aliquam suscipit sodales egestas. Vivamus vestibulum metus a sapien congue semper. Aliquam vestibulum sem leo, et facilisis diam suscipit eu. Integer viverra mi et nunc fringilla, vel tristique nulla consectetur. Suspendisse leo nisi, dictum nec sollicitudin sit amet, vehicula a risus. Donec eleifend ac ex lacinia convallis. Phasellus blandit metus lacus, quis porta ex tincidunt sit amet. Praesent sed porttitor neque.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
