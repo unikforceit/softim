@@ -405,6 +405,7 @@ if (class_exists('CSF')) {
             ),
         )
     ));
+
     /* Header Style 03 */
     CSF::createSection($prefix . '_theme_options', array(
         'title' => esc_html__('Header Three', 'softim'),

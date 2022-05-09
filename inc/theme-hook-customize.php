@@ -54,6 +54,7 @@ if (!class_exists('Softim_Customize')) {
         public function softim_render_header()
         {
             $page_container_meta = Softim_Group_Fields_Value::page_container('softim', 'header_options');
+            var_dump($page_container_meta);
             $header_switch = cs_get_option('elementor_header_builder');
             $header = cs_get_option('elementor_header');
             $option_header = $header_switch == '1' ? $header : '';

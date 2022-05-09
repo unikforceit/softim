@@ -13213,7 +13213,7 @@ li.menu-item-has-children::after {
   font-family: "Font Awesome 5 Free";
   font-size: 14px;
   font-weight: 900;
-  color: #fff;
+  color: #1c1c1c;
 }
 
 .navbar-area .custom-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li:before {
