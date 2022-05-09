@@ -1,3 +1,4 @@
+<?php $team_meta = get_post_meta(get_the_ID(), 'softim_team_options', true);?>
 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-60">
     <div class="team-item">
         <div class="team-thumb">
@@ -17,7 +18,7 @@
         </div>
         <div class="team-content">
             <h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-            <span class="sub-title">Sr. Marketer</span>
+            <span class="sub-title"><?php echo esc_html($team_meta['designation']); ?></span>
         </div>
     </div>
 </div>
