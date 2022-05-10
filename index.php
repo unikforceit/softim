@@ -50,19 +50,7 @@ get_header();
                 </div>
             </div>
             <nav>
-                <ul class="pagination">
-                    <li class="page-item prev">
-                        <a class="page-link" href="#" rel="prev" aria-label="Prev &raquo;">PREV</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">01</a></li>
-                    <li class="page-item active" aria-current="page"><span class="page-link">02</span></li>
-                    <li class="page-item"><a class="page-link" href="#">03</a></li>
-                    <li class="page-item"><a class="page-link" href="#">04</a></li>
-                    <li class="page-item"><a class="page-link" href="#">05</a></li>
-                    <li class="page-item next">
-                        <a class="page-link" href="#" rel="next" aria-label="Next &raquo;">NEXT</a>
-                    </li>
-                </ul>
+                <?php softim()->post_pagination(); ?>
             </nav>
         </div>
     </section>

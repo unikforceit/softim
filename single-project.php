@@ -29,9 +29,11 @@ $project_meta = get_post_meta(get_the_ID(), 'softim_project_options', true);
             <div class="row justify-content-center">
                 <div class="col-xl-12">
                     <div class="gallery-item details">
+                        <?php if (has_post_thumbnail()) { ?>
                             <div class="gallery-thumb">
-                                <?php echo wp_get_attachment_image($project_meta['post_image']['id'],'full');?>
+                                <?php the_post_thumbnail('full'); ?>
                             </div>
+                        <?php } ?>
                         <div class="gallery-content-area">
                             <div class="row justify-content-center mb-30-none">
                                 <div class="col-xl-8 col-lg-8 mb-30">

@@ -2,7 +2,9 @@
 <div class="grid-item design marketing">
     <div class="gallery-item">
         <div class="gallery-thumb">
-            <?php echo wp_get_attachment_image($project_meta['post_image']['id'],'full');?>
+            <?php if (has_post_thumbnail()) { ?>
+                <?php the_post_thumbnail(); ?>
+            <?php } ?>
 
             <div class="gallery-thumb-overlay">
                 <div class="gallery-icon">
