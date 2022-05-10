@@ -13203,18 +13203,6 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
 li.menu-item-has-children {
   position: relative;
 }
-li.menu-item-has-children::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-family: "Font Awesome 5 Free";
-  font-size: 14px;
-  font-weight: 900;
-  color: #1c1c1c;
-}
 
 .navbar-area .custom-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li:before {
   right: 15px;

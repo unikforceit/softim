@@ -259,17 +259,17 @@
 }
 li.menu-item-has-children {
   position: relative;
-  &::after {
-    content: '\f078';
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    font-family: "Font Awesome 5 Free";
-    font-size: 14px;
-    font-weight: 900;
-    color: #1c1c1c;
-  }
+  //&::after {
+  //  content: '\f078';
+  //  position: absolute;
+  //  top: 50%;
+  //  right: 20px;
+  //  transform: translateY(-50%);
+  //  font-family: "Font Awesome 5 Free";
+  //  font-size: 14px;
+  //  font-weight: 900;
+  //  color: #1c1c1c;
+  //}
 }
 .navbar-area {
   .custom-container {
