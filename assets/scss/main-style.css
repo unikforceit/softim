@@ -2545,7 +2545,7 @@ label[for=wp-comment-cookies-consent] {
   transform: translateY(-50%);
   height: 18px;
   width: 4px;
-  background-color: var(--main-color-one);
+  background-color: #3249B3;
 }
 
 .wp-block-search__label {
@@ -2568,7 +2568,7 @@ label[for=wp-comment-cookies-consent] {
   transform: translateY(-50%);
   height: 18px;
   width: 4px;
-  background-color: var(--main-color-one);
+  background-color: #3249B3;
 }
 
 /*-------------------------------------------------
