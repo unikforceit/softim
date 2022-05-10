@@ -352,6 +352,11 @@ if (class_exists('CSF')) {
                 'title' => esc_html__('Icon Image', 'softim')
             ),
             array(
+                'id' => 'post_image',
+                'type' => 'media',
+                'title' => esc_html__('Project Image', 'softim')
+            ),
+            array(
                 'id' => 'project_tag',
                 'type' => 'text',
                 'title' => esc_html__('Service Type', 'softim'),
