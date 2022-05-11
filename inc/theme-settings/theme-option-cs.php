@@ -217,6 +217,10 @@ if (class_exists('CSF')) {
                 'id'    => 'elementor_header_builder',
                 'type'  => 'switcher',
                 'title' => 'Build Header by Elementor',
+                'desc' => wp_kses(__('you can set <mark>ON / OFF</mark> to show/hide page header.', 'softim'), $allowed_html),
+                'text_on' => esc_html__('Yes', 'softim'),
+                'text_off' => esc_html__('No', 'softim'),
+                'default' => true
             ),
             array(
                 'id'          => 'elementor_header',
@@ -231,6 +235,10 @@ if (class_exists('CSF')) {
                 'id'    => 'elementor_footer_builder',
                 'type'  => 'switcher',
                 'title' => 'Build Footer by Elementor',
+                'desc' => wp_kses(__('you can set <mark>ON / OFF</mark> to show/hide page footer.', 'softim'), $allowed_html),
+                'text_on' => esc_html__('Yes', 'softim'),
+                'text_off' => esc_html__('No', 'softim'),
+                'default' => true
             ),
             array(
                 'id'          => 'elementor_footer',

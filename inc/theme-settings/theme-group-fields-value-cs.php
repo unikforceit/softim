@@ -97,6 +97,11 @@ if (!class_exists('Softim_Group_Fields_Value')) {
                 $return_var['page_breadcrumb_enable'] = false;
                 $return_var['navbar_type'] = !empty(cs_get_option('navbar_type')) ? cs_get_option('navbar_type') : '';
                 $return_var['footer_type'] = !empty(cs_get_option('footer_type')) ? cs_get_option('footer_type') : '';
+                $return_var['elementor_header_builder'] = true;
+                $return_var['elementor_header'] = !empty(cs_get_option('elementor_header')) ? cs_get_option('elementor_header') : '';
+                $return_var['elementor_footer_builder'] = true;
+                $return_var['elementor_footer'] = !empty(cs_get_option('elementor_footer')) ? cs_get_option('elementor_footer') : '';
+
             }
 
             $page_id = softim()->page_id();
@@ -124,6 +129,11 @@ if (!class_exists('Softim_Group_Fields_Value')) {
                     $return_var['page_breadcrumb_enable'] = !$return_var['page_title'] && !$return_var['page_breadcrumb'] ? true : false;
                     $return_var['navbar_type'] = isset($page_container_meta['navbar_type']) && !empty($page_container_meta['navbar_type']) ? $page_container_meta['navbar_type'] : $return_var['navbar_type'];
                     $return_var['footer_type'] = isset($page_container_meta['footer_type']) && !empty($page_container_meta['footer_type']) ? $page_container_meta['footer_type'] : $return_var['footer_type'];
+                    $return_var['elementor_header_builder'] = isset($page_container_meta['elementor_header_builder']) && $page_container_meta['elementor_header_builder'] ? true : false;
+                    $return_var['elementor_header'] = isset($page_container_meta['elementor_header']) && !empty($page_container_meta['elementor_header']) ? $page_container_meta['elementor_header'] : $return_var['elementor_header'];
+                    $return_var['elementor_footer_builder'] = isset($page_container_meta['elementor_footer_builder']) && $page_container_meta['elementor_footer_builder'] ? true : false;
+                    $return_var['elementor_footer'] = isset($page_container_meta['elementor_footer']) && !empty($page_container_meta['elementor_footer']) ? $page_container_meta['elementor_footer'] : $return_var['elementor_footer'];
+
                 }
             }
 

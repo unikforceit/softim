@@ -54,22 +54,34 @@ if (!class_exists('Softim_Customize')) {
         public function softim_render_header()
         {
             $page_container_meta = Softim_Group_Fields_Value::page_container('softim', 'header_options');
-            var_dump($page_container_meta);
             $header_switch = cs_get_option('elementor_header_builder');
             $header = cs_get_option('elementor_header');
-            $option_header = $header_switch == '1' ? $header : '';
-            if ($header_switch == '1' && !empty($header)) {
-                echo do_shortcode('[RENDER_ELEMENTOR id="' . $option_header . '"]');
+            $header_meta_switch = $page_container_meta['elementor_header_builder'];
+            $header_meta = $page_container_meta['elementor_header'];
+
+            if ($header_meta_switch == true && !empty($header_meta)){
+                echo do_shortcode('[RENDER_ELEMENTOR id="' . $header_meta . '"]');
+            } elseif ($header_switch == true && !empty($header)) {
+                echo do_shortcode('[RENDER_ELEMENTOR id="' . $header . '"]');
             } else{
                 get_template_part('template-parts/header/header', $page_container_meta['navbar_type']);
             }
         }
-        // Render Footer
-        public function softim_render_footer(){
+        public function softim_render_footer()
+        {
+            $page_container_meta = Softim_Group_Fields_Value::page_container('softim', 'header_options');
             $footer_switch = cs_get_option('elementor_footer_builder');
             $footer = cs_get_option('elementor_footer');
-            $option_footer = $footer_switch == '1' ? $footer : '';
-            echo do_shortcode('[RENDER_ELEMENTOR id="'.$option_footer.'"]');
+            $footer_meta_switch = $page_container_meta['elementor_footer_builder'];
+            $footer_meta = $page_container_meta['elementor_footer'];
+
+            if ($footer_meta_switch == true && !empty($footer_meta)){
+                echo do_shortcode('[RENDER_ELEMENTOR id="' . $footer_meta . '"]');
+            } elseif ($footer_switch == true && !empty($footer)) {
+                echo do_shortcode('[RENDER_ELEMENTOR id="' . $footer . '"]');
+            } else{
+                get_template_part('template-parts/footer/footer', $page_container_meta['footer_type']);
+            }
         }
 
         /**
