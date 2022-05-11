@@ -202,9 +202,8 @@ if (!class_exists('Softim_Helper_Functions')) {
                         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                     }
                     echo '<ul class="pagination">';
-                    echo '<li  class="page-item"><span>' . esc_html($paged) . esc_html__(' of ', 'softim') . esc_html($wp_query->max_num_pages) . '</span></li>';
                     foreach ($page_format as $page) {
-                        echo "<li>" . wp_kses($page, $allowed_html) . "</li>";
+                        echo "<li class='page-item'>" . wp_kses($page, $allowed_html) . "</li>";
                     }
                     print '</ul>';
                 }

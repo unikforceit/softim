@@ -10,7 +10,7 @@
     });
   });
 
-  $("select").niceSelect(),
+  $(".wpcf7 select").niceSelect(),
 
 // aos
 AOS.init();

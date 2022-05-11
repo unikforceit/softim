@@ -93,6 +93,12 @@ if (!class_exists('Softim_Init')) {
                 'gallery',
                 'caption',
             ));
+            //woocommerce support
+            add_theme_support('woocommerce');
+            add_theme_support('wc-product-gallery-zoom');
+            add_theme_support('wc-product-gallery-lightbox');
+            add_theme_support('wc-product-gallery-slider');
+
 
             // Add theme support for selective wp block styles
             add_theme_support("wp-block-styles");
@@ -146,17 +152,7 @@ if (!class_exists('Softim_Init')) {
                 'before_title' => '<h4 class="widget-headline style-01">',
                 'after_title' => '</h4>',
             ));
-            if (softim()->is_softim_core_active()) {
-                register_sidebar(array(
-                    'name' => esc_html__('Course Sidebar', 'softim'),
-                    'id' => 'tutor-sidebar',
-                    'description' => esc_html__('Add widgets here.', 'softim'),
-                    'before_widget' => '<div id="%1$s" class="widget-box %2$s">',
-                    'after_widget' => '</div>',
-                    'before_title' => '<h4 class="widget-title">',
-                    'after_title' => '</h4>',
-                ));
-            }
+            
             if (softim()->is_softim_core_active()) {
                 register_sidebar(array(
                     'name' => esc_html__('Product Sidebar', 'softim'),
@@ -354,6 +350,15 @@ if (!class_exists('Softim_Init')) {
                     'media' => 'all',
                 ),
             );
+            if (class_exists('WooCommerce')) {
+                $all_css_files[] = array(
+                    'handle' => 'softim-woocommerce-style',
+                    'src' => SOFTIM_CSS . '/woocommerce-style' . $css_ext,
+                    'deps' => array(),
+                    'ver' => $theme_version,
+                    'media' => 'all',
+                );
+            }
             $all_css_files = apply_filters('softim_theme_enqueue_style', $all_css_files);
 
             if (is_array($all_css_files) && !empty($all_css_files)) {
@@ -527,7 +532,10 @@ if (!class_exists('Softim_Init')) {
                     'file-path' => SOFTIM_THEME_SETTINGS
                 ),
             );
-
+            $includes_files[] = array(
+                'file-name' => 'theme-woocommerce-customize',
+                'file-path' => SOFTIM_INC
+            );
 
             if (is_array($includes_files) && !empty($includes_files)) {
                 foreach ($includes_files as $file) {

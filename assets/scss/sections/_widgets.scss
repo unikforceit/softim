@@ -400,8 +400,8 @@
 }
 
 .widget {
-  &.elementor-widget-wp-widget-flynext_request_form_widget,
-  &.flynext-request-form-widget {
+  &.elementor-widget-wp-widget-softim_request_form_widget,
+  &.softim-request-form-widget {
     padding: 0;
   }
 
@@ -734,7 +734,7 @@
   }
 }
 
-.widget_flynext_category {
+.widget_softim_category {
   ul {
     li {
       + li {
