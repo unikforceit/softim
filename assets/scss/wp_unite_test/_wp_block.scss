@@ -209,15 +209,16 @@
   color: #fff;
 }
 .wp-block-search button[type=submit]::before, .wp-block-search input[type=submit]::before {
-  content: '/';
+  content: '\f002';
   position: absolute;
-  top: 0;
+  top: 75%;
   right: 0;
-  width: 100%;
+  width: 20%;
   height: 100%;
-  background: #000;
-  color: #fff;
-  font-size: 40px;
+  transform: translateY(-50%);
+  color: #3249B3;
+  font-family: "Font Awesome 5 Free";
+  font-size: 18px;
 }
 
 .wp-block-tag-cloud a {
