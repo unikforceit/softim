@@ -285,9 +285,11 @@
       z-index: 1;
       transform: translateY(-50%);
       font-family: "Font Awesome 5 Free";
-      color: var(--main-color-one);
+      color: #000;
       font-weight: 900;
+      opacity: 0.5;
     }
+
 
     &:first-child {
       &:after {
@@ -305,6 +307,18 @@
       &:after {
         content: "\f57d";
       }
+    }
+  }
+  .comment-form-cookies-consent{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    input{
+      width: 20px;
+    }
+    label{
+      padding: 0;
+      margin: 0;
     }
   }
 

@@ -48,7 +48,7 @@
         transition: all 0.3s ease-in;
 
         &:hover {
-          color: var(--main-color-one);
+          color: #3249B3;
         }
 
         &.rsswidget {
@@ -1210,4 +1210,21 @@
     width: 4px;
     background-color: #3249B3;
   }
+}
+ul.wp-block-categories-list.wp-block-categories li {
+  position:relative;
+  font-size: 15px;
+  border-bottom: 1px dashed #C9C9C9;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  padding-left:20px;
+}
+ul.wp-block-categories-list.wp-block-categories li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background-color: #000;
 }

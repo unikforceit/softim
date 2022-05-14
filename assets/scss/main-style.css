@@ -1539,8 +1539,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   font-family: "Font Awesome 5 Free";
-  color: var(--main-color-one);
+  color: #000;
   font-weight: 900;
+  opacity: 0.5;
 }
 .comment-form .form-group:first-child:after {
   content: "";
@@ -1550,6 +1551,24 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 .comment-form .form-group:nth-child(3):after {
   content: "";
+}
+.comment-form .comment-form-cookies-consent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.comment-form .comment-form-cookies-consent input {
+  width: 20px;
+}
+.comment-form .comment-form-cookies-consent label {
+  padding: 0;
+  margin: 0;
 }
 .comment-form .comments-area .comment-form .form-group::after {
   content: " ";
@@ -1681,7 +1700,7 @@ label[for=wp-comment-cookies-consent] {
   transition: all 0.3s ease-in;
 }
 .widget ul li a:hover {
-  color: var(--main-color-one);
+  color: #3249B3;
 }
 .widget ul li a.rsswidget {
   font-weight: 600;
@@ -2569,6 +2588,25 @@ label[for=wp-comment-cookies-consent] {
   height: 18px;
   width: 4px;
   background-color: #3249B3;
+}
+
+ul.wp-block-categories-list.wp-block-categories li {
+  position: relative;
+  font-size: 15px;
+  border-bottom: 1px dashed #C9C9C9;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+ul.wp-block-categories-list.wp-block-categories li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background-color: #000;
 }
 
 /*-------------------------------------------------
@@ -11022,8 +11060,8 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
 }
 .about-btn.two span a {
   color: #3249B3;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 700;
   margin-left: 10px;
 }
 @media only screen and (max-width: 1199px) {
@@ -12552,6 +12590,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
 
 .blog-post-meta {
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 .blog-post-meta.two {
   margin-bottom: 0;
@@ -13559,9 +13598,9 @@ li.menu-item-has-children {
 }
 
 .wp-block-tag-cloud a:hover {
-  background-color: var(--main-color-one);
+  background-color: #3249B3;
+  border: 1px solid #3249B3;
   color: #fff;
-  border-color: var(--main-color-one);
 }
 
 .wp-block-rss {
