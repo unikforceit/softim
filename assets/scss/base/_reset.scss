@@ -750,8 +750,18 @@ blockquote{
             line-height: 40px;
             display: block;
             margin: 0;
+            transition: all 0.3s;
             &:focus{
                 box-shadow: none;
+            }
+            &:hover{
+                background-color: #3249B3;
+                border-color: transparent;
+                color: #fff;
+            }
+            &.next,&.prev{
+                width: 50px;
+                border-color: transparent;
             }
         }
         &.next{
@@ -1119,4 +1129,17 @@ blockquote{
         box-shadow: 0 0 30px rgba($bg--base, 50%);
         background: transparent;
     }
+}
+
+.postIcon ul.elementor-icon-list-items li.elementor-icon-list-item span.elementor-icon-list-icon {
+    width: 25px;
+    height: 25px;
+    background: rgba(50, 73, 179, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4px;
+    padding-top: 1px;
+    margin-right: 15px;
 }

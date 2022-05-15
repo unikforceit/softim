@@ -192,8 +192,8 @@ if (!class_exists('Softim_Helper_Functions')) {
                     'current' => max(1, get_query_var('paged')),
                     'total' => $wp_query->max_num_pages,
                     'type' => 'array',
-                    'prev_text' => '«',
-                    'next_text' => '»',
+                    'prev_text' => 'PREV',
+                    'next_text' => 'NEXT',
                 ));
                 if (is_array($page_format)) {
                     if (is_front_page()) {
@@ -215,8 +215,8 @@ if (!class_exists('Softim_Helper_Functions')) {
                     'current' => max(1, get_query_var('paged')),
                     'total' => $nav_query->max_num_pages,
                     'type' => 'array',
-                    'prev_text' => '«',
-                    'next_text' => '»',
+                    'prev_text' => 'PREV',
+                    'next_text' => 'NEXT',
                 ));
 
                 if (is_array($page_format)) {

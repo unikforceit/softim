@@ -2038,7 +2038,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
         width: 100%;
     }
     &:last-child{
-        width: 66.66%;
+        width: 33.33%;
         @media only screen and (max-width: 767px) {
             width: 50%;
         }

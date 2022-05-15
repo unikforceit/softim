@@ -2590,7 +2590,9 @@ label[for=wp-comment-cookies-consent] {
   background-color: #3249B3;
 }
 
-ul.wp-block-categories-list.wp-block-categories li {
+.wp-block-group__inner-container ul.wp-block-categories-list.wp-block-categories li,
+.wp-block-group__inner-container ul.wp-block-archives-list.wp-block-archives li,
+.wp-block-group__inner-container ul.wp-block-latest-posts__list.wp-block-latest-posts li {
   position: relative;
   font-size: 15px;
   border-bottom: 1px dashed #C9C9C9;
@@ -2599,7 +2601,9 @@ ul.wp-block-categories-list.wp-block-categories li {
   padding-left: 20px;
 }
 
-ul.wp-block-categories-list.wp-block-categories li::before {
+.wp-block-group__inner-container ul.wp-block-categories-list.wp-block-categories li::before,
+.wp-block-group__inner-container ul.wp-block-archives-list.wp-block-archives li::before,
+.wp-block-group__inner-container ul.wp-block-latest-posts__list.wp-block-latest-posts li::before {
   content: "";
   position: absolute;
   top: 0;
@@ -2607,6 +2611,7 @@ ul.wp-block-categories-list.wp-block-categories li::before {
   display: block;
   font-family: "Font Awesome 5 Free";
   font-weight: 700;
+  background-color: transparent;
 }
 
 /*-------------------------------------------------
@@ -3577,10 +3582,21 @@ blockquote .quote-icon {
   line-height: 40px;
   display: block;
   margin: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .pagination .page-item a:focus, .pagination .page-item span:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+.pagination .page-item a:hover, .pagination .page-item span:hover {
+  background-color: #3249B3;
+  border-color: transparent;
+  color: #fff;
+}
+.pagination .page-item a.next, .pagination .page-item a.prev, .pagination .page-item span.next, .pagination .page-item span.prev {
+  width: 50px;
+  border-color: transparent;
 }
 .pagination .page-item.next {
   padding: 8px 0;
@@ -4001,6 +4017,25 @@ blockquote .quote-icon {
     background: transparent;
   }
 }
+.postIcon ul.elementor-icon-list-items li.elementor-icon-list-item span.elementor-icon-list-icon {
+  width: 25px;
+  height: 25px;
+  background: rgba(50, 73, 179, 0.1);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 4px;
+  padding-top: 1px;
+  margin-right: 15px;
+}
+
 /*-------------------------------------------------
     [ ## Heading ]
 */
@@ -11485,7 +11520,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
   }
 }
 .grid-item:last-child {
-  width: 66.66%;
+  width: 33.33%;
 }
 @media only screen and (max-width: 767px) {
   .grid-item:last-child {

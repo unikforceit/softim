@@ -692,8 +692,11 @@ p.no-comments {
 .woocommerce-header-area-wrap {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 14px;
     align-items: center;
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-bottom: 60px;
 }
 
 .woocommerce-header-area-wrap select {
@@ -721,7 +724,8 @@ p.no-comments {
 }
 
 .woocommerce-header-area-wrap .woocommerce-result-count {
-    padding-top: 5px;
+    padding: 0;
+    margin: 0;
 }
 
 .wc-page-content-inner .products {
@@ -803,7 +807,7 @@ p.no-comments {
     color: #3249B3;
     line-height: 20px;
     display: block;
-    margin-bottom: 25px;
+    margin-top: 5px;
 }
 
 .softim-single-product-item .product-content-wrap .price del {

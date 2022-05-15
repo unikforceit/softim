@@ -1211,7 +1211,9 @@
     background-color: #3249B3;
   }
 }
-ul.wp-block-categories-list.wp-block-categories li {
+.wp-block-group__inner-container ul.wp-block-categories-list.wp-block-categories li,
+.wp-block-group__inner-container ul.wp-block-archives-list.wp-block-archives li,
+.wp-block-group__inner-container ul.wp-block-latest-posts__list.wp-block-latest-posts li {
   position:relative;
   font-size: 15px;
   border-bottom: 1px dashed #C9C9C9;
@@ -1219,7 +1221,9 @@ ul.wp-block-categories-list.wp-block-categories li {
   margin-bottom: 15px;
   padding-left:20px;
 }
-ul.wp-block-categories-list.wp-block-categories li::before {
+.wp-block-group__inner-container ul.wp-block-categories-list.wp-block-categories li::before,
+.wp-block-group__inner-container ul.wp-block-archives-list.wp-block-archives li::before,
+.wp-block-group__inner-container ul.wp-block-latest-posts__list.wp-block-latest-posts li::before {
   content: '\f105';
   position: absolute;
   top: 0;
@@ -1227,4 +1231,5 @@ ul.wp-block-categories-list.wp-block-categories li::before {
   display: block;
   font-family: "Font Awesome 5 Free";
   font-weight: 700;
+  background-color: transparent;
 }
