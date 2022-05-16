@@ -9216,6 +9216,14 @@ div[class*=col]:nth-of-type(3n + 3) .footer-contact-list .link-title {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+.brand-item.style-01 {
+  border: 0;
+  background: #F9FBFF;
+}
+.brand-item.style-01 img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
 .brand-item img {
   display: inline-block;
   width: auto;
@@ -9226,6 +9234,13 @@ div[class*=col]:nth-of-type(3n + 3) .footer-contact-list .link-title {
   -webkit-box-shadow: 0 0 30px rgba(50, 73, 179, 0.2);
           box-shadow: 0 0 30px rgba(50, 73, 179, 0.2);
   border: 1px dashed transparent;
+}
+.brand-item:hover.style-01 {
+  border: 0;
+}
+.brand-item:hover.style-01 img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 /*-------------------------------------------------

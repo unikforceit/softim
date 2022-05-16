@@ -1,5 +1,13 @@
-<?php $project_meta = get_post_meta(get_the_ID(), 'softim_project_options', true);?>
-<div class="grid-item design marketing">
+<?php $project_meta = get_post_meta(get_the_ID(), 'softim_project_options', true);
+
+$categories = get_the_category();
+
+if ( ! empty( $categories ) ) {
+    $cat  = $categories[0]->name;
+}
+
+?>
+<div class="grid-item <?php echo esc_attr($cat);?>">
     <div class="gallery-item">
         <div class="gallery-thumb">
             <?php if (has_post_thumbnail()) { ?>
