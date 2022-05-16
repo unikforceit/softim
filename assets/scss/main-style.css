@@ -12537,6 +12537,62 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
 }
 
 /*-------------------------------------------------
+    team hero Section Styling Here
+---------------------------------------------------*/
+.team-hero-section {
+  margin-top: 120px;
+  background: #F9F9F9;
+  padding-top: 120px;
+  padding-bottom: 90px;
+}
+.team-hero-section .team-thumbnail {
+  overflow: hidden;
+}
+.team-hero-section .team-thumbnail:hover img {
+  -webkit-transform: scale(1.1) rotate(5deg);
+          transform: scale(1.1) rotate(5deg);
+}
+.team-hero-section .team-thumbnail img {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.team-hero-section .hero-single-item:hover .team-thumbnail img {
+  -webkit-transform: scale(1.2) rotate(5deg);
+          transform: scale(1.2) rotate(5deg);
+}
+.team-hero-section .hero-single-item .content .title-main {
+  font-size: 40px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #1C1C1C;
+  margin-bottom: 36px;
+}
+
+.counter-single-items {
+  margin-top: 55px;
+}
+.counter-single-items .content .title {
+  display: inline-block;
+  font-size: 22px;
+  line-height: 1.6;
+  color: #3249B3;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.counter-single-items .content p {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Poppins";
+  color: #1C1C1C;
+}
+.counter-single-items .content .odo-area .odo-title {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Poppins";
+  color: #3249B3;
+}
+
+/*-------------------------------------------------
     Happy Client Section Styling Here
 ---------------------------------------------------*/
 .happy-client-section {
