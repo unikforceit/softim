@@ -19,6 +19,12 @@
 
 
 get_header();
+
+$tax_args = array(
+    'taxonomy' => 'project-cat',
+    'number' => 4,
+);
+$categories = get_terms($tax_args);
 ?>
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Gallery
@@ -28,15 +34,15 @@ get_header();
             <div class="gallery-filter-wrapper">
                 <div class="button-group filter-btn-group two">
                     <button class="active" data-filter="*">All</button>
-                    <button data-filter=".design">Web Development</button>
-                    <button data-filter=".webdev">Software Development </button>
-                    <button data-filter=".marketing">Digital marketing</button>
-                    <button data-filter=".appdev">UX/UI Design</button>
+                    <?php  foreach ($categories as $category) {?>
+                        <button data-filter=".<?php echo esc_attr($category->slug);?>"><?php echo esc_html($category->name);?></button>
+                    <?php }?>
                 </div>
                 <div class="grid two">
                     <?php if (have_posts()) : ?>
 
                         <?php
+                        var_dump($wp_query);
                         /* Start the Loop */
                         while (have_posts()) :
                             the_post();

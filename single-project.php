@@ -48,7 +48,7 @@ $project_meta = get_post_meta(get_the_ID(), 'softim_project_options', true);
                                             <ul class="gallery-sidebar-widget-list">
                                                 <li>
                                                     <h5 class="title"><?php echo esc_html('Client'); ?></h5>
-                                                    <span class="sub-title"><?php echo the_author(); ?></span>
+                                                    <span class="sub-title"><?php the_author(); ?></span>
                                                 </li>
                                                 <li>
                                                     <h5 class="title"><?php echo esc_html('Date'); ?></h5>
