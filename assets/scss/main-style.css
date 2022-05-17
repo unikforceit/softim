@@ -9493,13 +9493,15 @@ div[class*=col]:nth-of-type(2n + 2) .project-item::after {
     right: 0;
   }
 }
-.project-slider-area .slider-next, .project-slider-area .slider-prev {
+.project-slider-area .slider-next,
+.project-slider-area .slider-prev {
   position: relative;
   right: -60%;
   margin-bottom: 30px;
 }
 @media only screen and (max-width: 575px) {
-  .project-slider-area .slider-next, .project-slider-area .slider-prev {
+  .project-slider-area .slider-next,
+.project-slider-area .slider-prev {
     right: auto;
   }
 }
@@ -10269,7 +10271,7 @@ div[class*=col]:nth-of-type(2n + 2) .project-item::after {
   color: #1C1C1C;
 }
 .service-item.details:hover .service-content p {
-  color: #4B4B4B;
+  color: #1C1C1C;
 }
 .service-item.details:hover .service-content .service-btn a {
   color: #fff;
@@ -10563,6 +10565,7 @@ div[class*=col]:nth-of-type(4n + 4) .service-item {
 .statistics-left-content .title {
   font-weight: 700;
   margin-top: -10px;
+  text-transform: capitalize;
 }
 .statistics-left-content .statistics-left-btn {
   margin-top: 40px;
@@ -10632,6 +10635,44 @@ div[class*=col]:nth-of-type(4n + 4) .service-item {
 }
 .statistics-item-area div[class*=col]:nth-of-type(2n + 2) .statistics-item .odo-area .title {
   color: #1C1C1C;
+}
+.statistics-item-area .icon-box-items {
+  background: #fff;
+  padding: 50px 50px 50px;
+  -webkit-filter: drop-shadow(0px 20px 20px rgba(50, 73, 179, 0.1));
+          filter: drop-shadow(0px 20px 20px rgba(50, 73, 179, 0.1));
+}
+.statistics-item-area .icon-box-items .odo-title {
+  display: inline-block;
+  color: #1C1C1C;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.6;
+  margin-bottom: 0px;
+}
+@media only screen and (max-width: 991px) {
+  .statistics-item-area .icon-box-items .odo-title {
+    font-size: 30px;
+  }
+}
+.statistics-item-area .icon-box-items .odo-area .title {
+  display: inline-block;
+  font-size: 22px;
+  line-height: 1.6;
+  color: #1C1C1C;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.statistics-item-area .icon-box-items .icon {
+  margin-bottom: 15px;
+}
+.statistics-item-area .icon-box-items .content p {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #1C1C1C;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0;
 }
 
 /*-------------------------------------------------
@@ -10837,21 +10878,24 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
 .overview-content .title {
   margin-bottom: 15px;
   font-weight: 700;
+  text-transform: capitalize;
 }
 .overview-content .overview-btn {
   margin-top: 40px;
 }
 
 /*-------------------------------------------------
-    [ ### about block ]
-*/
+            [ ### about block ]
+---------------------------------------------------*/
 .about-section {
   position: relative;
 }
 .about-section.two {
   background-color: #F5F8FF;
 }
-.about-section.two .box1, .about-section.two .box2, .about-section.two .box3 {
+.about-section.two .box1,
+.about-section.two .box2,
+.about-section.two .box3 {
   background-color: rgba(255, 255, 255, 0.3);
 }
 .about-section .about-element-one {
@@ -11054,6 +11098,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
   font-weight: 700;
   margin-bottom: 20px;
   margin-top: -5px;
+  text-transform: capitalize;
 }
 .about-content p {
   margin-bottom: 30px;
@@ -11065,6 +11110,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
 }
 .about-content p.para {
   font-weight: 600;
+  color: #2a2727;
 }
 .about-content.two {
   margin-left: 0;
@@ -11141,7 +11187,9 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
 .box-wrapper.two {
   width: 490px;
 }
-.box-wrapper.two .box1, .box-wrapper.two .box2, .box-wrapper.two .box3 {
+.box-wrapper.two .box1,
+.box-wrapper.two .box2,
+.box-wrapper.two .box3 {
   border: 1px dashed #E2E2E2;
 }
 .box-wrapper.two .box1 .box-element-one {
@@ -11149,7 +11197,9 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
   left: 10px;
 }
 
-.box1, .box2, .box3 {
+.box1,
+.box2,
+.box3 {
   border-radius: 50%;
   border: 1px solid #E2E2E2;
   position: absolute;
@@ -11159,7 +11209,9 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
   transform: translate(-50%, -50%);
 }
 @media only screen and (max-width: 1300px) {
-  .box1, .box2, .box3 {
+  .box1,
+.box2,
+.box3 {
     display: none;
   }
 }
@@ -11258,8 +11310,6 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
 .plan-section.two .plan-item {
   background-color: #fff;
   border: 1px solid transparent;
-  -webkit-box-shadow: 0 15px 30px rgba(50, 73, 179, 0.15);
-          box-shadow: 0 15px 30px rgba(50, 73, 179, 0.15);
 }
 .plan-section.two .plan-item:hover {
   background-color: #3249B3;
@@ -11363,7 +11413,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
 }
 .plan-price-area .price-title {
   font-size: 40px;
-  font-weight: 400;
+  font-weight: 700;
   color: #3249B3;
 }
 @media only screen and (max-width: 340px) {
@@ -11535,7 +11585,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
   }
 }
 .grid-item:last-child {
-  width: 33.33%;
+  width: 66.66%;
 }
 @media only screen and (max-width: 767px) {
   .grid-item:last-child {
@@ -11649,6 +11699,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
 .gallery-item.details .gallery-content-area .title {
   font-size: 30px;
   margin-bottom: 20px;
+  text-transform: capitalize;
 }
 @media only screen and (max-width: 991px) {
   .gallery-item.details .gallery-content-area .title {
@@ -11701,7 +11752,8 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
 .gallery-widget-item-section .gallery-widget-item-slider {
   overflow: hidden;
 }
-.gallery-widget-item-section .gallery-widget-item-slider .slider-prev, .gallery-widget-item-section .gallery-widget-item-slider .slider-next {
+.gallery-widget-item-section .gallery-widget-item-slider .slider-prev,
+.gallery-widget-item-section .gallery-widget-item-slider .slider-next {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -11716,11 +11768,13 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
   color: #A8B3E2;
 }
 @media only screen and (max-width: 1430px) {
-  .gallery-widget-item-section .gallery-widget-item-slider .slider-prev, .gallery-widget-item-section .gallery-widget-item-slider .slider-next {
+  .gallery-widget-item-section .gallery-widget-item-slider .slider-prev,
+.gallery-widget-item-section .gallery-widget-item-slider .slider-next {
     display: none;
   }
 }
-.gallery-widget-item-section .gallery-widget-item-slider .slider-prev:hover, .gallery-widget-item-section .gallery-widget-item-slider .slider-next:hover {
+.gallery-widget-item-section .gallery-widget-item-slider .slider-prev:hover,
+.gallery-widget-item-section .gallery-widget-item-slider .slider-next:hover {
   color: #fff;
 }
 .gallery-widget-item-section .gallery-widget-item-slider .slider-prev {
@@ -11837,6 +11891,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
   margin-top: -13px;
   font-weight: 700;
   line-height: 1.5;
+  text-transform: capitalize;
 }
 @media only screen and (max-width: 575px) {
   .agency-content .title {
@@ -12131,6 +12186,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
   font-family: "Jost", sans-serif;
   font-weight: 600;
   margin-bottom: 0;
+  text-transform: capitalize;
 }
 .faq-wrapper .faq-item .faq-title .title span {
   color: #3249B3;
@@ -12274,6 +12330,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
 }
 .contact-section.two .contact-form-header .left .title {
   font-weight: 700;
+  text-transform: capitalize;
 }
 @media only screen and (max-width: 767px) {
   .contact-section.two .contact-form-header .right {
@@ -13020,7 +13077,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
 }
 
 /*-------------------------------------------------
-   Home 03 Blog Section Styling Here
+   Blog Section Styling Here
 ---------------------------------------------------*/
 .blog-section {
   margin-top: 120px;

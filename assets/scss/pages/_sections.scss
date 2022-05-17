@@ -49,6 +49,7 @@
   &:hover {
     box-shadow: 0 0 30px rgba($bg--base, 0.2);
     border: 1px dashed transparent;
+
     &.style-01 {
       border: 0;
 
@@ -68,6 +69,7 @@
 
   &.two {
     overflow: visible;
+
     @media only screen and (max-width: 575px) {
       margin-top: 0;
     }
@@ -110,6 +112,7 @@
     top: 0;
     left: 50%;
     animation: scroll-down 2s linear infinite;
+
     @media only screen and (max-width: 1700px) {
       display: none;
     }
@@ -120,6 +123,7 @@
     bottom: 7%;
     left: 50%;
     animation: horizontal-move 1s linear infinite;
+
     @media only screen and (max-width: 1700px) {
       display: none;
     }
@@ -128,6 +132,7 @@
 
 .project-item-wrapper {
   margin: -30px;
+
   @media only screen and (max-width: 991px) {
     margin: 0;
     margin-top: 30px;
@@ -160,6 +165,7 @@
     border: 1px dashed $bg--secondary;
     border-radius: 10px;
     z-index: -1;
+
     @media only screen and (max-width: 991px) {
       display: none;
     }
@@ -190,6 +196,7 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s;
+
     @media only screen and (max-width: 575px) {
       opacity: 1;
       visibility: visible;
@@ -206,6 +213,7 @@
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
         padding: 4px 10px 4px 10px;
+
         @media only screen and (max-width: 575px) {
           font-size: 16px;
           line-height: 25px;
@@ -299,14 +307,17 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
 .project-slider-area {
   position: relative;
   right: -5%;
+
   @media only screen and (max-width: 991px) {
     right: 0;
   }
 
-  .slider-next, .slider-prev {
+  .slider-next,
+  .slider-prev {
     position: relative;
     right: -60%;
     margin-bottom: 30px;
+
     @media only screen and (max-width: 575px) {
       right: auto;
     }
@@ -327,6 +338,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     background-color: $white;
     border-radius: 50%;
     margin-bottom: 15px;
+
     @media only screen and (max-width: 991px) {
       background-color: #F5F8FF;
     }
@@ -347,32 +359,41 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
   position: relative;
   overflow: hidden;
   padding-top: 60px;
+
   @media only screen and (max-width: 1848px) {
     margin-left: 100px;
   }
+
   @media only screen and (max-width: 1799px) {
     margin-left: 80px;
   }
+
   @media only screen and (max-width: 1740px) {
     margin-left: 60px;
   }
+
   @media only screen and (max-width: 1670px) {
     margin-left: 30px;
   }
+
   @media only screen and (max-width: 1640px) {
     margin-left: 10px;
   }
+
   @media only screen and (max-width: 1600px) {
     margin-left: 0;
   }
+
   @media only screen and (max-width: 1199px) {
     margin-left: 60px;
   }
+
   @media only screen and (max-width: 991px) {
     padding-left: 120px;
     padding-right: 15px;
     margin-left: 0;
   }
+
   @media only screen and (max-width: 991px) {
     padding-left: 15px;
   }
@@ -386,18 +407,23 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     height: 100%;
     background-color: #F9FBFF;
     border-radius: 10px;
+
     @media only screen and (max-width: 1600px) {
       left: 200px;
     }
+
     @media only screen and (max-width: 1450px) {
       left: 150px;
     }
+
     @media only screen and (max-width: 1300px) {
       left: 100px;
     }
+
     @media only screen and (max-width: 1250px) {
       left: 70px;
     }
+
     @media only screen and (max-width: 1199px) {
       left: 0;
       width: 100%;
@@ -417,6 +443,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     position: absolute;
     top: 60%;
     right: 0;
+
     @media only screen and (max-width: 1700px) {
       display: none;
     }
@@ -426,6 +453,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     position: absolute;
     top: 62%;
     left: 12%;
+
     @media only screen and (max-width: 1700px) {
       display: none;
     }
@@ -436,6 +464,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     top: 40%;
     right: 10%;
     animation: horizontal-move 1s linear infinite;
+
     @media only screen and (max-width: 1700px) {
       display: none;
     }
@@ -446,6 +475,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     top: 65%;
     left: 19%;
     animation: scroll-down 3s linear infinite;
+
     @media only screen and (max-width: 1700px) {
       display: none;
     }
@@ -456,6 +486,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     top: 30%;
     left: 5%;
     animation: scroll-ver 2s linear infinite;
+
     @media only screen and (max-width: 1700px) {
       display: none;
     }
@@ -470,9 +501,11 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
   padding: 60px;
   border-radius: 10px;
   overflow: hidden;
+
   @media only screen and (max-width: 991px) {
     padding: 30px;
   }
+
   @media only screen and (max-width: 575px) {
     padding: 20px;
   }
@@ -490,6 +523,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
   padding: 60px;
   width: 433px;
   height: 380px;
+
   @media only screen and (max-width: 991px) {
     width: 100%;
     height: 100%;
@@ -506,6 +540,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
 .choose-content {
   width: calc(100% - 433px);
   padding-left: 30px;
+
   @media only screen and (max-width: 991px) {
     width: 100%;
     padding-left: 0;
@@ -533,6 +568,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     font-weight: 700;
     font-size: 24px;
     margin-bottom: 0px;
+
     @media only screen and (max-width: 991px) {
       font-size: 22px;
     }
@@ -645,6 +681,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     0% {
       transform: translate3d(0, 0, 0);
     }
+
     100% {
       transform: translate3d(-50%, 0, 0);
     }
@@ -658,30 +695,37 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     font-weight: 700;
     position: relative;
     transition: all 0.5s;
+
     @media only screen and (max-width: 630px) {
       animation: none;
     }
+
     @media only screen and (max-width: 1800px) {
       font-size: 140px;
       line-height: 140px;
     }
+
     @media only screen and (max-width: 1480px) {
       font-size: 100px;
       line-height: 100px;
     }
+
     @media only screen and (max-width: 1050px) {
       font-size: 80px;
       line-height: 80px;
     }
+
     @media only screen and (max-width: 860px) {
       font-size: 60px;
       line-height: 60px;
     }
+
     @media only screen and (max-width: 630px) {
       font-size: 50px;
       line-height: 50px;
       text-align: center;
     }
+
     @media only screen and (max-width: 575px) {
       display: none;
     }
@@ -694,9 +738,11 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+
   @media only screen and (max-width: 630px) {
     margin-top: 25px;
   }
+
   @media only screen and (max-width: 575px) {
     margin-top: 15px;
     display: block;
@@ -706,6 +752,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
 
 .call-to-action-content {
   width: 60%;
+
   @media only screen and (max-width: 575px) {
     width: 100%;
   }
@@ -832,6 +879,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     position: absolute;
     top: 7%;
     right: 7%;
+
     @media only screen and (max-width: 1666px) {
       display: none;
     }
@@ -842,6 +890,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     top: 20%;
     left: 7%;
     transform: rotate(-180deg);
+
     @media only screen and (max-width: 1666px) {
       display: none;
     }
@@ -868,6 +917,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     width: 1px;
     height: 100%;
     background: #9DBAFE10;
+
     @media only screen and (max-width: 575px) {
       display: none;
     }
@@ -1012,6 +1062,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
       .title {
         font-size: 40px;
         font-weight: 700;
+
         @media only screen and (max-width: 991px) {
           font-size: 28px;
         }
@@ -1020,6 +1071,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
       &.two {
         .title {
           font-size: 32px;
+
           @media only screen and (max-width: 991px) {
             font-size: 24px;
           }
@@ -1036,6 +1088,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     .service-bottom-content {
       .title {
         font-size: 28px !important;
+
         @media only screen and (max-width: 991px) {
           font-size: 18px;
         }
@@ -1053,7 +1106,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
         }
 
         p {
-          color: $color__text;
+          color: #1C1C1C;
         }
 
         .service-btn {
@@ -1070,6 +1123,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
       padding: 30px 40px;
       margin-top: 30px;
       margin-bottom: 30px;
+
       @media only screen and (max-width: 991px) {
         padding: 30px;
       }
@@ -1100,6 +1154,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
             @media only screen and (max-width: 991px) {
               display: block;
             }
+
             @media only screen and (max-width: 575px) {
               display: none;
             }
@@ -1112,6 +1167,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
       .title {
         font-size: 30px;
         font-weight: 600;
+
         @media only screen and (max-width: 991px) {
           font-size: 22px;
         }
@@ -1132,6 +1188,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
         width: 100%;
         height: 100%;
         border-right: 1px dashed #535353;
+
         @media only screen and (max-width: 575px) {
           display: none;
         }
@@ -1149,6 +1206,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
           font-size: 18px;
           font-weight: 500;
           margin-bottom: 3px;
+
           @media only screen and (max-width: 991px) {
             font-size: 16px;
           }
@@ -1206,6 +1264,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
             line-height: 1.5;
             font-weight: 700;
             margin-bottom: 0;
+
             @media only screen and (max-width: 991px) {
               font-size: 18px !important;
             }
@@ -1262,6 +1321,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
 
 .service-btn {
   margin-top: 30px;
+
   @media only screen and (max-width: 991px) {
     margin-top: 20px;
   }
@@ -1273,6 +1333,7 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
 
 div[class*="col"]:nth-of-type(4n + 2) .service-item {
   margin-top: 80px;
+
   @media only screen and (max-width: 1199px) {
     margin-top: 0;
   }
@@ -1280,6 +1341,7 @@ div[class*="col"]:nth-of-type(4n + 2) .service-item {
 
 div[class*="col"]:nth-of-type(4n + 4) .service-item {
   margin-top: 80px;
+
   @media only screen and (max-width: 1199px) {
     margin-top: 0;
   }
@@ -1333,6 +1395,7 @@ div[class*="col"]:nth-of-type(4n + 4) .service-item {
     top: 25%;
     right: 10%;
     animation: horizontal-move 3s linear infinite;
+
     @media only screen and (max-width: 1800px) {
       display: none;
     }
@@ -1344,6 +1407,7 @@ div[class*="col"]:nth-of-type(4n + 4) .service-item {
     right: 18%;
     opacity: .5;
     animation: scroll-down 3s linear infinite;
+
     @media only screen and (max-width: 1800px) {
       display: none;
     }
@@ -1354,6 +1418,7 @@ div[class*="col"]:nth-of-type(4n + 4) .service-item {
     top: 80%;
     right: 35%;
     animation: horizontal-move 3s linear infinite;
+
     @media only screen and (max-width: 1800px) {
       display: none;
     }
@@ -1364,6 +1429,7 @@ div[class*="col"]:nth-of-type(4n + 4) .service-item {
   .title {
     font-weight: 700;
     margin-top: -10px;
+    text-transform: capitalize;
   }
 
   .statistics-left-btn {
@@ -1386,6 +1452,7 @@ div[class*="col"]:nth-of-type(4n + 4) .service-item {
 }
 
 .statistics-item-area {
+
   .statistics-item {
     background-color: $bg--base;
     padding: 60px 30px;
@@ -1404,6 +1471,7 @@ div[class*="col"]:nth-of-type(4n + 4) .service-item {
         font-size: 24px;
         font-weight: 600;
         line-height: 1.5;
+
         @media only screen and (max-width: 991px) {
           font-size: 20px;
         }
@@ -1416,6 +1484,7 @@ div[class*="col"]:nth-of-type(4n + 4) .service-item {
       font-weight: 700;
       font-size: 55px;
       margin-bottom: 0px;
+
       @media only screen and (max-width: 991px) {
         font-size: 30px;
       }
@@ -1451,6 +1520,51 @@ div[class*="col"]:nth-of-type(4n + 4) .service-item {
       }
     }
   }
+
+  .icon-box-items {
+    background: #fff;
+    padding: 50px 50px 50px;
+    filter: drop-shadow(0px 20px 20px rgba(50, 73, 179, 0.1));
+
+    .odo-title {
+      display: inline-block;
+      color: $color__heading;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 1.6;
+      margin-bottom: 0px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 30px;
+      }
+    }
+
+    .odo-area {
+      .title {
+        display: inline-block;
+        font-size: 22px;
+        line-height: 1.6;
+        color: $color__heading;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+    }
+
+    .icon {
+      margin-bottom: 15px;
+    }
+
+    .content {
+      p {
+        font-size: 22px;
+        line-height: 1.6;
+        color: $color__heading;
+        font-family: $font_heading;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 /*-------------------------------------------------
@@ -1469,6 +1583,7 @@ div[class*="col"]:nth-of-type(4n + 4) .service-item {
     background-image: url(../images/icon/icon-26.png);
     background-repeat: no-repeat;
     background-position: top right;
+
     @media only screen and (max-width: 575px) {
       display: none;
     }
@@ -1647,6 +1762,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     position: absolute;
     top: 30%;
     left: 0;
+
     @media only screen and (max-width: 1666px) {
       display: none;
     }
@@ -1673,6 +1789,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   background-color: #F9FBFF;
   border-radius: 10px;
   padding: 60px;
+
   @media only screen and (max-width: 991px) {
     padding: 25px;
   }
@@ -1680,6 +1797,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   .title {
     margin-bottom: 15px;
     font-weight: 700;
+    text-transform: capitalize;
   }
 
   .overview-btn {
@@ -1688,15 +1806,17 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 }
 
 /*-------------------------------------------------
-    [ ### about block ]
-*/
+            [ ### about block ]
+---------------------------------------------------*/
 .about-section {
   position: relative;
 
   &.two {
     background-color: #F5F8FF;
 
-    .box1, .box2, .box3 {
+    .box1,
+    .box2,
+    .box3 {
       background-color: rgba($white, 0.30);
     }
   }
@@ -1788,9 +1908,11 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 
   &.two {
     margin-bottom: 120px;
+
     @media only screen and (max-width: 1199px) {
       margin-bottom: 40px;
     }
+
     @media only screen and (max-width: 991px) {
       margin-bottom: 0;
     }
@@ -1803,6 +1925,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 
   &.three {
     margin-bottom: 85px;
+
     @media only screen and (max-width: 1300px) {
       margin-bottom: 0;
     }
@@ -1821,6 +1944,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     margin-left: 60px;
     position: relative;
     z-index: 9;
+
     @media only screen and (max-width: 575px) {
       margin-left: 0;
     }
@@ -1844,6 +1968,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
       background-color: $bg--base;
       border-radius: 10px;
       padding: 40px;
+
       @media only screen and (max-width: 575px) {
         display: none;
       }
@@ -1865,6 +1990,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     left: -10%;
     z-index: -1;
     animation: scroll-down 3s linear infinite;
+
     @media only screen and (max-width: 991px) {
       display: none;
     }
@@ -1876,6 +2002,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     right: -10%;
     z-index: -1;
     animation: scroll-down 5s linear infinite;
+
     @media only screen and (max-width: 991px) {
       display: none;
     }
@@ -1884,6 +2011,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 
 .about-content {
   margin-left: 30px;
+
   @media only screen and (max-width: 991px) {
     margin-left: 0;
   }
@@ -1892,16 +2020,19 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     font-weight: 700;
     margin-bottom: 20px;
     margin-top: -5px;
+    text-transform: capitalize;
   }
 
   p {
     margin-bottom: 30px;
+
     @media only screen and (max-width: 575px) {
       margin-bottom: 20px;
     }
 
     &.para {
       font-weight: 600;
+      color: #2a2727;
     }
   }
 
@@ -1912,6 +2043,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 
 .about-btn {
   margin-top: 60px;
+
   @media only screen and (max-width: 575px) {
     margin-top: 40px;
   }
@@ -1920,15 +2052,18 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
     @media only screen and (max-width: 400px) {
       display: block;
     }
 
     span {
       margin-left: 30px;
+
       @media only screen and (max-width: 1199px) {
         margin-left: 10px;
       }
+
       @media only screen and (max-width: 400px) {
         margin-left: 0;
         margin-top: 20px;
@@ -1940,9 +2075,11 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
         font-size: 20px;
         font-weight: 700;
         margin-left: 10px;
+
         @media only screen and (max-width: 1199px) {
           font-size: 20px;
         }
+
         @media only screen and (max-width: 575px) {
           font-size: 16px;
           margin-left: 5px;
@@ -1958,6 +2095,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   height: 450px;
   left: 0;
   top: 0;
+
   @media only screen and (max-width: 575px) {
     display: none;
   }
@@ -1965,7 +2103,9 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   &.two {
     width: 490px;
 
-    .box1, .box2, .box3 {
+    .box1,
+    .box2,
+    .box3 {
       border: 1px dashed $border--base;
     }
 
@@ -1978,7 +2118,9 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   }
 }
 
-.box1, .box2, .box3 {
+.box1,
+.box2,
+.box3 {
   border-radius: 50%;
   border: 1px solid $border--base;
   position: absolute;
@@ -1987,6 +2129,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+
   @media only screen and (max-width: 1300px) {
     display: none;
   }
@@ -2001,6 +2144,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   animation-delay: 1s;
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
+
   @media only screen and (max-width: 1300px) {
     width: 400px;
     height: 400px;
@@ -2010,6 +2154,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     position: absolute;
     top: 20px;
     right: 100px;
+
     @media only screen and (max-width: 1300px) {
       display: none;
     }
@@ -2045,6 +2190,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   animation-delay: 1s;
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
+
   @media only screen and (max-width: 1300px) {
     width: 250px;
     height: 250px;
@@ -2066,6 +2212,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 .box3 {
   width: 300px;
   height: 300px;
+
   @media only screen and (max-width: 1300px) {
     width: 100px;
     height: 100px;
@@ -2086,7 +2233,6 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     .plan-item {
       background-color: $white;
       border: 1px solid transparent;
-      box-shadow: 0 15px 30px rgba(50, 73, 179, 0.15);
 
       &:hover {
         background-color: $bg--base;
@@ -2117,6 +2263,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   border-radius: 10px;
   padding: 30px;
   transition: all 0.5s;
+
   @media only screen and (max-width: 340px) {
     padding: 20px;
   }
@@ -2191,6 +2338,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     color: $color__heading;
     margin: 5px;
     display: initial;
+
     @media only screen and (max-width: 340px) {
       font-size: 14px;
       padding: 6px 15px;
@@ -2203,8 +2351,9 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 
   .price-title {
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 700;
     color: $text--base;
+
     @media only screen and (max-width: 340px) {
       font-size: 30px;
     }
@@ -2214,6 +2363,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
       font-size: 16px;
       font-weight: 400;
       margin-left: 5px;
+
       @media only screen and (max-width: 340px) {
         font-size: 14px;
       }
@@ -2230,6 +2380,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     position: relative;
     padding-left: 25px;
     padding-bottom: 20px;
+
     @media only screen and (max-width: 340px) {
       font-size: 14px;
     }
@@ -2255,9 +2406,11 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   .nav-tabs {
     border: none;
     padding: 0;
+
     @media only screen and (max-width: 991px) {
       display: flex;
     }
+
     @media only screen and (max-width: 340px) {
       margin-bottom: 40px;
     }
@@ -2271,10 +2424,12 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
       font-family: $font_body;
       padding: 7px 20px;
       margin-right: 12px;
+
       @media only screen and (max-width: 991px) {
         width: auto;
         margin-bottom: 0;
       }
+
       @media only screen and (max-width: 340px) {
         font-size: 14px;
       }
@@ -2299,6 +2454,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   margin: -10px;
   margin-bottom: 50px;
   text-align: center;
+
   @media only screen and (max-width: 991px) {
     margin-bottom: 40px;
   }
@@ -2323,6 +2479,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   &.two {
     margin: -15px;
     margin-bottom: 40px;
+
     @media only screen and (max-width: 991px) {
       margin-bottom: 40px;
     }
@@ -2359,18 +2516,22 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   padding: 15px;
   margin: 0;
   width: 33.33%;
+
   @media only screen and (max-width: 767px) {
     width: 50%;
   }
+
   @media only screen and (max-width: 575px) {
     width: 100%;
   }
 
   &:last-child {
-    width: 33.33%;
+    width: 66.66%;
+
     @media only screen and (max-width: 767px) {
       width: 50%;
     }
+
     @media only screen and (max-width: 575px) {
       width: 100%;
     }
@@ -2378,9 +2539,11 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 
   &.two {
     width: 33.33%;
+
     @media only screen and (max-width: 767px) {
       width: 50%;
     }
+
     @media only screen and (max-width: 575px) {
       width: 100%;
     }
@@ -2466,6 +2629,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 
     .gallery-content-area {
       padding-top: 60px;
+
       @media only screen and (max-width: 991px) {
         padding-top: 30px;
       }
@@ -2477,6 +2641,8 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
       .title {
         font-size: 30px;
         margin-bottom: 20px;
+        text-transform: capitalize;
+
         @media only screen and (max-width: 991px) {
           font-size: 22px;
         }
@@ -2487,6 +2653,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
       background-color: #DEE8FF;
       border-radius: 10px;
       padding: 50px;
+
       @media only screen and (max-width: 991px) {
         padding: 25px;
       }
@@ -2535,7 +2702,8 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   .gallery-widget-item-slider {
     overflow: hidden;
 
-    .slider-prev, .slider-next {
+    .slider-prev,
+    .slider-next {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -2547,6 +2715,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
       font-weight: 600;
       font-family: $font_heading;
       color: #A8B3E2;
+
       @media only screen and (max-width: 1430px) {
         display: none;
       }
@@ -2572,6 +2741,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
     @media only screen and (max-width: 400px) {
       display: block;
       text-align: center;
@@ -2582,6 +2752,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
       height: 120px;
       border-radius: 10px;
       overflow: hidden;
+
       @media only screen and (max-width: 400px) {
         width: 100%;
       }
@@ -2597,6 +2768,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     .gallery-widget-content {
       width: calc(100% - 120px);
       padding-left: 30px;
+
       @media only screen and (max-width: 400px) {
         width: 100%;
         padding-left: 0;
@@ -2646,6 +2818,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     position: absolute;
     left: 0;
     bottom: -90%;
+
     @media only screen and (max-width: 1199px) {
       display: none;
     }
@@ -2668,6 +2841,8 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     margin-top: -13px;
     font-weight: 700;
     line-height: 1.5;
+    text-transform: capitalize;
+
     @media only screen and (max-width: 575px) {
       font-size: 22px;
     }
@@ -2681,9 +2856,11 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   margin-top: 80px;
   position: relative;
   z-index: 9;
+
   @media only screen and (max-width: 1199px) {
     margin-top: 40px;
   }
+
   @media only screen and (max-width: 991px) {
     margin-top: 30px;
     padding: 30px;
@@ -2696,6 +2873,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
         font-size: 18px;
         font-weight: 400;
         line-height: 1.5;
+
         @media only screen and (max-width: 991px) {
           font-size: 16px;
         }
@@ -2721,6 +2899,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
         height: 24px;
         background-color: #F8D458;
         border-radius: 50%;
+
         @media only screen and (max-width: 991px) {
           display: none;
         }
@@ -2740,6 +2919,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
         font-weight: 400;
         font-family: $font_body;
         margin-bottom: 0;
+
         @media only screen and (max-width: 991px) {
           font-size: 20px;
         }
@@ -2759,6 +2939,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     top: 50%;
     right: 12%;
     animation: horizontal-move-two 5s linear infinite;
+
     @media only screen and (max-width: 1740px) {
       display: none;
     }
@@ -2773,9 +2954,11 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   z-index: 2;
   box-shadow: 10px 0 40px rgba($bg--base, 0.30);
   overflow: hidden;
+
   @media only screen and (max-width: 991px) {
     padding: 0 40px;
   }
+
   @media only screen and (max-width: 575px) {
     padding: 0 30px;
   }
@@ -2789,6 +2972,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     height: 700px;
     background-color: $white;
     border-radius: 50%;
+
     @media only screen and (max-width: 1199px) {
       display: none;
     }
@@ -2800,6 +2984,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     left: 30px;
     width: 35%;
     transform: translateY(-50%);
+
     @media only screen and (max-width: 1199px) {
       display: none;
     }
@@ -2809,6 +2994,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     position: absolute;
     top: 30px;
     right: 30px;
+
     @media only screen and (max-width: 991px) {
       display: none;
     }
@@ -2816,6 +3002,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 
   .subscribe-content {
     padding: 120px 0;
+
     @media only screen and (max-width: 991px) {
       padding: 60px 0 60px 0;
     }
@@ -2823,6 +3010,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     .title {
       color: $white;
       margin-top: -10px;
+
       @media only screen and (max-width: 991px) {
         font-size: 28px;
       }
@@ -2836,6 +3024,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   .subscribe-form {
     position: relative;
     margin-top: 50px;
+
     @media only screen and (max-width: 991px) {
       margin-top: 20px;
     }
@@ -2845,6 +3034,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
       top: 26px;
       left: 28px;
       opacity: .2;
+
       @media only screen and (max-width: 991px) {
         top: 18px;
       }
@@ -2856,6 +3046,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
       font-size: 18px;
       border: none;
       height: 80px;
+
       @media only screen and (max-width: 991px) {
         height: 60px;
         padding: 10px 15px 10px 80px;
@@ -2916,6 +3107,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     border-radius: 6px;
     transition: all 0.3s;
     margin-bottom: 20px;
+
     @media only screen and (max-width: 575px) {
       padding: 20px;
     }
@@ -2928,6 +3120,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
       flex-wrap: wrap;
       align-items: center;
       margin-bottom: 0;
+
       @media only screen and (max-width: 575px) {
         font-size: 17px;
       }
@@ -2938,6 +3131,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
         font-family: $font_heading;
         font-weight: 600;
         margin-bottom: 0;
+        text-transform: capitalize;
 
         span {
           color: $text--base;
@@ -3047,6 +3241,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
       border-radius: 10px;
       position: relative;
       overflow: hidden;
+
       @media only screen and (max-width: 991px) {
         padding: 25px;
       }
@@ -3057,6 +3252,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
         left: 20px;
         opacity: .5;
         animation: scroll-down 3s linear infinite;
+
         @media only screen and (max-width: 1199px) {
           display: none;
         }
@@ -3068,6 +3264,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
         left: 340px;
         opacity: .5;
         animation: scroll-down 3s linear infinite;
+
         @media only screen and (max-width: 1199px) {
           display: none;
         }
@@ -3088,12 +3285,14 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 
       .left {
         width: 75%;
+
         @media only screen and (max-width: 767px) {
           width: 100%;
         }
 
         .title {
           font-weight: 700;
+          text-transform: capitalize;
         }
       }
 
@@ -3121,6 +3320,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 
     .contact-form {
       margin-top: 40px;
+
       @media only screen and (max-width: 767px) {
         margin-bottom: 20px;
       }
@@ -3150,12 +3350,14 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
+
         @media only screen and (max-width: 1199px) {
           display: block;
         }
 
         .custom-check-group {
           margin-bottom: 0;
+
           @media only screen and (max-width: 1199px) {
             margin-bottom: 30px;
           }
@@ -3164,6 +3366,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
             margin-bottom: 0;
             font-size: 15px;
             font-weight: 400;
+
             @media only screen and (max-width: 380px) {
               font-size: 12px;
             }
@@ -3178,6 +3381,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     left: 2%;
     top: 25%;
     animation: scroll-down 3s linear infinite;
+
     @media only screen and (max-width: 1650px) {
       display: none;
     }
@@ -3188,6 +3392,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     right: 5%;
     top: 65%;
     animation: horizontal-move 3s linear infinite;
+
     @media only screen and (max-width: 1650px) {
       display: none;
     }
@@ -3198,6 +3403,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     left: 60%;
     bottom: 10%;
     animation: horizontal-move 2s linear infinite;
+
     @media only screen and (max-width: 1650px) {
       display: none;
     }
@@ -3208,6 +3414,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     left: 50%;
     top: -5%;
     animation: rotate 3s linear infinite;
+
     @media only screen and (max-width: 1650px) {
       display: none;
     }
@@ -3290,6 +3497,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     top: 20%;
     left: 7%;
     animation: scroll-down 3s linear infinite;
+
     @media only screen and (max-width: 991px) {
       display: none;
     }
@@ -3300,6 +3508,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     top: 30%;
     right: 5%;
     animation: horizontal-move 3s linear infinite;
+
     @media only screen and (max-width: 991px) {
       display: none;
     }
@@ -3497,6 +3706,8 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     font-weight: 500;
   }
 }
+
+
 /*-------------------------------------------------
     Customer Severice Section Styling Here
 ---------------------------------------------------*/
@@ -3818,6 +4029,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     }
   }
 }
+
 /*-------------------------------------------------
     Happy Client Section Styling Here
 ---------------------------------------------------*/
@@ -3906,8 +4118,9 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     }
   }
 }
+
 /*-------------------------------------------------
-   Home 03 Blog Section Styling Here
+   Blog Section Styling Here
 ---------------------------------------------------*/
 .blog-section {
   margin-top: 120px;
