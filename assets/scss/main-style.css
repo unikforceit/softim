@@ -12537,6 +12537,218 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
 }
 
 /*-------------------------------------------------
+    Customer Severice Section Styling Here
+---------------------------------------------------*/
+.customer-service-section {
+  margin-top: 120px;
+}
+.customer-service-section .rmt-60 {
+  margin-top: 60px;
+}
+.customer-service-section .section-header {
+  margin-bottom: 97px;
+}
+
+.service-single-item {
+  background-color: #F9FBFF;
+  padding: 36px;
+  position: relative;
+  z-index: 0;
+  padding-top: 65px;
+}
+.service-single-item:hover .icon {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.service-single-item .icon {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  -webkit-filter: drop-shadow(0px 10px 20px rgba(50, 73, 179, 0.08));
+          filter: drop-shadow(0px 10px 20px rgba(50, 73, 179, 0.08));
+  position: absolute;
+  top: -50px;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+.service-single-item .content .title {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #1C1C1C;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+.service-single-item .content .title:hover {
+  color: #3249B3;
+}
+.service-single-item .content p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #4B4B4B;
+  margin-bottom: 0;
+}
+.service-single-item .content .more-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 34px;
+}
+.service-single-item .content .more-btn:hover .icons i {
+  -webkit-animation: arrow 0.5s linear alternate;
+          animation: arrow 0.5s linear alternate;
+}
+.service-single-item .content .more-btn span {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #1C1C1C;
+  margin-bottom: 0px;
+}
+.service-single-item .content .more-btn .icons {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  background: #3249B3;
+  color: #fff;
+  margin-left: 15px;
+  overflow: hidden;
+}
+.service-single-item .content .more-btn .icons i {
+  font-size: 17px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/*-------------------------------------------------
+    Case Study Section Styling Here
+---------------------------------------------------*/
+.case-study-section {
+  margin-top: 90px;
+  margin-bottom: 120px;
+}
+.case-study-section .case-study-slider-wrapper {
+  background: #3249B3;
+  padding: 60px;
+  position: relative;
+  right: -70px;
+}
+.case-study-section .case-study-slider-wrapper .case-study-slider {
+  overflow: hidden;
+}
+.case-study-section .case-study-slider-wrapper .case-study-slider .prev-text {
+  position: absolute;
+  bottom: 50px;
+  left: 60px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #F9FBFF;
+  opacity: 50%;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.case-study-section .case-study-slider-wrapper .case-study-slider .prev-text:hover {
+  opacity: 100%;
+}
+.case-study-section .case-study-slider-wrapper .case-study-slider .next-text {
+  position: absolute;
+  bottom: 50px;
+  right: 33%;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #F9FBFF;
+  opacity: 50%;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.case-study-section .case-study-slider-wrapper .case-study-slider .next-text:hover {
+  opacity: 100%;
+}
+.case-study-section .case-study-slider-wrapper .swiper-pagination-progressbar {
+  width: 60%;
+  background: #D4D4D4;
+  margin-top: 50px;
+  margin-left: 60px;
+}
+.case-study-section .case-study-single-item {
+  position: relative;
+}
+.case-study-section .case-study-single-item:hover .thumbnail::after {
+  opacity: 1;
+  visibility: visible;
+}
+.case-study-section .case-study-single-item:hover .content {
+  opacity: 1;
+  visibility: visible;
+}
+.case-study-section .case-study-single-item .thumbnail {
+  position: relative;
+  z-index: 0;
+}
+.case-study-section .case-study-single-item .thumbnail::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#00000000), to(#000000)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.case-study-section .case-study-single-item .content {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  width: calc(100% - 80px);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.case-study-section .case-study-single-item .content .title {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #fff;
+}
+.case-study-section .case-study-single-item .content p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 0;
+  font-family: "Poppins", sans-serif;
+}
+.case-study-section .nav-pills .nav-item .nav-link {
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #1C1C1C;
+}
+.case-study-section .nav-pills .nav-item .nav-link.active {
+  color: #3249B3;
+  font-weight: 600;
+}
+
+/*-------------------------------------------------
     team hero Section Styling Here
 ---------------------------------------------------*/
 .team-hero-section {

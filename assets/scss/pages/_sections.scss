@@ -3356,6 +3356,250 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 }
 
 /*-------------------------------------------------
+    Customer Severice Section Styling Here
+---------------------------------------------------*/
+
+.customer-service-section {
+  margin-top: 120px;
+
+  .rmt-60 {
+    margin-top: 60px;
+  }
+
+  .section-header {
+    margin-bottom: 97px;
+  }
+}
+
+.service-single-item {
+  background-color: #F9FBFF;
+  padding: 36px;
+  position: relative;
+  z-index: 0;
+  padding-top: 65px;
+
+  &:hover {
+    .icon {
+      transform: rotateY(180deg);
+    }
+  }
+
+  .icon {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    filter: drop-shadow(0px 10px 20px rgba(50, 73, 179, 0.08));
+    position: absolute;
+    top: -50px;
+    transition: .5s all ease;
+  }
+
+  .content {
+    .title {
+      font-size: 24px;
+      line-height: 1.5;
+      font-weight: 700;
+      color: $color__heading;
+      transition: .5s all ease;
+
+      &:hover {
+        color: $bg--base;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 400;
+      color: #4B4B4B;
+      margin-bottom: 0;
+    }
+
+    .more-btn {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 34px;
+
+      &:hover {
+        .icons {
+          i {
+            animation: arrow .5s linear alternate;
+          }
+        }
+      }
+
+      span {
+        font-size: 16px;
+        line-height: 1.5;
+        font-family: $font_body;
+        font-weight: 500;
+        color: $color__heading;
+        margin-bottom: 0px;
+      }
+
+      .icons {
+        width: 26px;
+        height: 26px;
+        text-align: center;
+        background: #3249B3;
+        color: #fff;
+        margin-left: 15px;
+        overflow: hidden;
+
+        i {
+          font-size: 17px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+/*-------------------------------------------------
+    Case Study Section Styling Here
+---------------------------------------------------*/
+
+.case-study-section {
+  margin-top: 90px;
+  margin-bottom: 120px;
+
+  .case-study-slider-wrapper {
+    background: $bg--base;
+    padding: 60px;
+    position: relative;
+    right: -70px;
+
+    .case-study-slider {
+      overflow: hidden;
+
+      .prev-text {
+        position: absolute;
+        bottom: 50px;
+        left: 60px;
+        font-size: 14px;
+        font-family: $font_body;
+        font-weight: 500;
+        color: #F9FBFF;
+        opacity: 50%;
+        transition: .3s all ease;
+
+        &:hover {
+          opacity: 100%;
+        }
+      }
+
+      .next-text {
+        position: absolute;
+        bottom: 50px;
+        right: 33%;
+        font-size: 14px;
+        font-family: $font_body;
+        font-weight: 500;
+        color: #F9FBFF;
+        opacity: 50%;
+        transition: .3s all ease;
+
+        &:hover {
+          opacity: 100%;
+        }
+      }
+    }
+
+    .swiper-pagination-progressbar {
+      width: 60%;
+      background: #D4D4D4;
+      margin-top: 50px;
+      margin-left: 60px;
+    }
+  }
+
+  .case-study-single-item {
+    position: relative;
+
+    &:hover {
+      .thumbnail {
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      .content {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .thumbnail {
+      position: relative;
+      z-index: 0;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
+        transition: .3s all ease;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    .content {
+      position: absolute;
+      left: 40px;
+      bottom: 40px;
+      width: calc(100% - 80px);
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s all ease;
+
+      .title {
+        font-size: 24px;
+        line-height: 1.5;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: 400;
+        color: #fff;
+        margin-bottom: 0;
+        font-family: $font_body;
+      }
+    }
+  }
+
+  .nav-pills {
+    .nav-item {
+      .nav-link {
+        background-color: transparent;
+        font-size: 16px;
+        line-height: 1.6;
+        font-family: $font_body;
+        font-weight: 600;
+        color: $color__heading;
+
+        &.active {
+          color: $bg--base;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+
+/*-------------------------------------------------
     team hero Section Styling Here
 ---------------------------------------------------*/
 
