@@ -3356,6 +3356,148 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 }
 
 /*-------------------------------------------------
+    Experience Section Styling Here
+---------------------------------------------------*/
+
+.experience-secction {
+  margin-top: 120px;
+  margin-bottom: 90px;
+
+  .experience-content {
+    .title {
+      font-size: 21px;
+      line-height: 1.72;
+      font-family: $font_heading;
+      font-weight: 700;
+      color: $color__heading;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+/*-------------------------------------------------
+        Development Section Styling Here
+---------------------------------------------------*/
+
+.development-section {
+  background: #F5F8FF;
+  padding-top: 120px;
+  padding-bottom: 90px;
+  position: relative;
+  z-index: 0;
+
+  .shape-01 {
+    position: absolute;
+    top: 82px;
+    left: 19%;
+    z-index: -1;
+    animation: scroll-down 5s linear infinite;
+  }
+
+  .shape-02 {
+    position: absolute;
+    bottom: 79px;
+    left: 44%;
+    z-index: -1;
+    animation: scroll-down 5s linear infinite;
+  }
+
+  .content {
+    margin-top: 30px;
+
+    .title {
+      font-size: 40px;
+      line-height: 1.46;
+      font-family: $font_heading;
+      font-weight: 700;
+      color: $color__heading;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      font-family: $font_body;
+      font-weight: 400;
+      color: #4B4B4B;
+      margin-bottom: 25px;
+    }
+
+    .more-btn {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+
+      &:hover {
+        .icon {
+          i {
+            animation: arrow .5s linear alternate;
+          }
+        }
+      }
+
+      span {
+        font-size: 16px;
+        line-height: 1.5;
+        font-family: $font_body;
+        font-weight: 500;
+        color: $color__heading;
+        margin-bottom: 0px;
+      }
+
+      .icon {
+        width: 26px;
+        height: 26px;
+        text-align: center;
+        background: #3249B3;
+        color: #fff;
+        margin-left: 15px;
+        overflow: hidden;
+
+        i {
+          font-size: 17px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .thumbnail {
+    position: relative;
+    z-index: 0;
+
+    .about-thumb-video {
+      position: absolute;
+      top: 37%;
+      left: 23%;
+      background-color: #F9FBFF;
+      border-radius: 50%;
+      padding: 35px;
+
+      @media only screen and (max-width: 575px) {
+        display: none;
+      }
+
+      .circle svg {
+        width: auto;
+        left: -102%;
+      }
+
+      .video-icon {
+        font-size: 20px;
+        background-color: #9DBAFE;
+        color: #fff;
+      }
+    }
+  }
+
+  .plan-list li {
+    font-weight: 500;
+  }
+}
+/*-------------------------------------------------
     Customer Severice Section Styling Here
 ---------------------------------------------------*/
 
