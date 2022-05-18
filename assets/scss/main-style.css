@@ -5990,6 +5990,52 @@ option {
   background-color: transparent;
   padding: 0 !important;
 }
+.header-bottom-area .navbar-expand-xl.home-three .home-three-logo {
+  display: none;
+}
+.header-bottom-area .navbar-expand-xl.home-three .logo-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.header-bottom-area .navbar-expand-xl.home-three .touch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.header-bottom-area .navbar-expand-xl.home-three .touch:hover .icon i {
+  -webkit-animation: arrow 0.5s linear alternate;
+          animation: arrow 0.5s linear alternate;
+}
+.header-bottom-area .navbar-expand-xl.home-three .touch span {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #1C1C1C;
+}
+.header-bottom-area .navbar-expand-xl.home-three .touch .icon {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  background: #3249B3;
+  color: #fff;
+  margin-left: 15px;
+  overflow: hidden;
+}
+.header-bottom-area .navbar-expand-xl.home-three .touch .icon i {
+  font-size: 17px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 3px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
 @media (max-width: 1199px) {
   .header-bottom-area .navbar-collapse {
     background-color: #fff !important;
@@ -6487,6 +6533,50 @@ option {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+.navbar-toggler.home-three .toggle-bar, .menu-toggler.home-three .toggle-bar {
+  background-color: #3249B3;
+  width: 30px;
+}
+.navbar-toggler.home-three .toggle-bar::before, .menu-toggler.home-three .toggle-bar::before {
+  background-color: #3249B3;
+  width: 20px;
+}
+.navbar-toggler.home-three .toggle-bar::after, .menu-toggler.home-three .toggle-bar::after {
+  background-color: #3249B3;
+  width: 15px;
+}
+.navbar-toggler.home-three:hover, .menu-toggler.home-three:hover {
+  background-color: #3249B3;
+  border: 1px solid #3249B3;
+}
+.navbar-toggler.home-three:hover .toggle-bar, .menu-toggler.home-three:hover .toggle-bar {
+  background-color: #fff;
+}
+.navbar-toggler.home-three:hover .toggle-bar::before, .menu-toggler.home-three:hover .toggle-bar::before {
+  background-color: #fff;
+  width: 100%;
+}
+.navbar-toggler.home-three:hover .toggle-bar::after, .menu-toggler.home-three:hover .toggle-bar::after {
+  background-color: #fff;
+  width: 100%;
+}
+.navbar-toggler.style-01, .menu-toggler.style-01 {
+  border: none;
+}
+.navbar-toggler.style-01:hover, .menu-toggler.style-01:hover {
+  background-color: #3249B3;
+}
+.navbar-toggler.style-01:hover .toggle-bar, .menu-toggler.style-01:hover .toggle-bar {
+  background-color: #fff;
+}
+.navbar-toggler.style-01:hover .toggle-bar::before, .menu-toggler.style-01:hover .toggle-bar::before {
+  background-color: #fff;
+  width: 100%;
+}
+.navbar-toggler.style-01:hover .toggle-bar::after, .menu-toggler.style-01:hover .toggle-bar::after {
+  background-color: #fff;
+  width: 100%;
+}
 @media only screen and (max-width: 1199px) {
   .navbar-toggler, .menu-toggler {
     display: none;
@@ -6642,6 +6732,29 @@ option {
   color: #fff;
 }
 
+.header-bottom-area .menu-toggler-wrapper {
+  position: absolute;
+  right: 8%;
+  top: -200%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header-bottom-area .menu-toggler-wrapper.home-three {
+  left: 80px;
+  right: unset;
+}
+@media only screen and (max-width: 1199px) {
+  .header-bottom-area .menu-toggler-wrapper {
+    position: unset;
+    width: 100%;
+  }
+}
+.header-bottom-area .menu-toggler-wrapper .main-menu.style-01 li a {
+  color: #1C1C1C;
+}
+.header-bottom-area .menu-toggler-wrapper .main-menu li a {
+  color: #fff;
+}
 .header-bottom-area .search-bar {
   opacity: 1;
   visibility: visible;
@@ -6663,6 +6776,10 @@ option {
 .header-bottom-area.open .menu-toggler {
   -webkit-transform: translateX(280px);
           transform: translateX(280px);
+}
+.header-bottom-area.open .menu-toggler.home-three {
+  -webkit-transform: none;
+          transform: none;
 }
 @media only screen and (max-width: 1700px) {
   .header-bottom-area.open .menu-toggler {

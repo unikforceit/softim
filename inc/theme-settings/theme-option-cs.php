@@ -455,6 +455,48 @@ if (class_exists('CSF')) {
             ),
         )
     ));
+
+    /* Header Style 04 */
+    CSF::createSection($prefix . '_theme_options', array(
+        'title' => esc_html__('Header Four', 'softim'),
+        'id' => 'theme_header_four_options',
+        'icon' => 'fas fa-image',
+        'parent' => 'headers_settings',
+        'fields' => array(
+            array(
+                'type' => 'subheading',
+                'content' => '<h3>' . esc_html__('Navbar Options', 'softim') . '</h3>'
+            ),
+            array(
+                'id' => 'header_four_logo',
+                'type' => 'media',
+                'title' => esc_html__('Logo', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> logo</mark> here it will overwrite customizer uploaded logo', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'header_four_navbar_button',
+                'type' => 'switcher',
+                'title' => esc_html__('Header Button', 'softim'),
+                'default' => true,
+                'desc' => wp_kses(__('you can <mark> show/hide</mark> navbar button of header three', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'header_four_navbar_title',
+                'type' => 'text',
+                'title' => esc_html__('Button Title', 'softim'),
+                'default' => esc_html__('GET STARTED', 'softim'),
+                'dependency' => array('header_three_navbar_button', '==', 'true')
+            ),
+            array(
+                'id' => 'header_four_navbar_url',
+                'type' => 'text',
+                'title' => esc_html__('Button URL', 'softim'),
+                'default' => '#',
+                'dependency' => array('header_three_navbar_button', '==', 'true')
+            ),
+        )
+    ));
     /* Breadcrumb */
     CSF::createSection($prefix . '_theme_options', array(
         'title' => esc_html__('Breadcrumb', 'softim'),
