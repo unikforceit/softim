@@ -28,7 +28,7 @@
 
         .banner-image {
             position: absolute;
-            right: 0;
+            left: 40%;
             top: 244px;
         }
     }
@@ -695,6 +695,7 @@
             z-index: 0;
             padding-top: 65px;
             padding-left: 130px;
+            max-width: 500px;
 
             // &::after {
             //     content: '';

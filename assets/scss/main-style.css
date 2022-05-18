@@ -5935,6 +5935,10 @@ option {
   background: #fff;
 }
 
+.header-section.home-three.header-fixed {
+  background: #fff;
+}
+
 @media (max-width: 1199px) {
   .header-section .header-bottom-area .navbar-collapse {
     background: #3249B3 !important;
@@ -6986,7 +6990,7 @@ option {
 }
 .banner-section .home-three-banner .banner-image {
   position: absolute;
-  right: 0;
+  left: 40%;
   top: 244px;
 }
 @media only screen and (max-width: 991px) {
@@ -7649,6 +7653,7 @@ option {
   z-index: 0;
   padding-top: 65px;
   padding-left: 130px;
+  max-width: 500px;
 }
 .banner-section .banner-area {
   background-color: #fff;
