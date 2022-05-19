@@ -467,7 +467,7 @@ if (!class_exists('Softim_Helper_Functions')) {
                                                             <?php endif; ?>
                                                             <div class="blog-content">
                                                                 <div class="blog-post-meta">
-                                                                    <span class="user"><?php echo esc_html('By :'); ?><?php the_author(); ?></span>
+                                                                    <span class="user"><?php echo esc_html('By: '); ?><?php the_author(); ?></span>
                                                                     <span class="category two"><?php the_date('F j, Y'); ?></span>
                                                                 </div>
                                                                 <h3 class="title"><a
