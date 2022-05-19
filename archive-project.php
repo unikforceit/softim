@@ -42,7 +42,6 @@ $categories = get_terms($tax_args);
                     <?php if (have_posts()) : ?>
 
                         <?php
-                        var_dump($wp_query);
                         /* Start the Loop */
                         while (have_posts()) :
                             the_post();

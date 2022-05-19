@@ -3730,7 +3730,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   position: relative;
   z-index: 0;
   padding-top: 65px;
-
+  margin-bottom: 60px;
   &:hover {
     .icon {
       transform: rotateY(180deg);
@@ -4188,6 +4188,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
         font-weight: 400;
         font-family: 'Roboto';
         color: #fff;
+        text-transform: capitalize;
       }
 
       .date {
@@ -4241,6 +4242,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
         font-weight: 400;
         font-family: 'Roboto';
         color: #757575;
+        text-transform: capitalize;
       }
 
       .date {
