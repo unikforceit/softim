@@ -60,6 +60,18 @@
         }
     }
 }
+.quoteContent-before{
+    position: relative;
+}
+.quoteContent-before::before{
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 13px;
+    width: 50px;
+    height: 1px;
+    background-color: #707070;
+}
 .blog-category{
     background-color: #f0f4ff;
     color: $text--base;

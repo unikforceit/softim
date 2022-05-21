@@ -2567,6 +2567,10 @@ label[for=wp-comment-cookies-consent] {
   background-color: #3249B3;
 }
 
+.widget .widget-headline:after {
+  background-color: #3249B3 !important;
+}
+
 .wp-block-search__label {
   font-size: 20px;
   font-weight: 700;
@@ -7901,6 +7905,9 @@ option {
 .banner-widget-wrapper .banner-widget-content p span {
   color: #9DBAFE;
   font-weight: 700;
+}
+.banner-widget-wrapper .banner-widget-right {
+  margin-bottom: -6px;
 }
 @media only screen and (max-width: 475px) {
   .banner-widget-wrapper .banner-widget-right {
@@ -13508,6 +13515,20 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
   background-color: transparent;
   color: #fff;
   font-size: 30px;
+}
+
+.quoteContent-before {
+  position: relative;
+}
+
+.quoteContent-before::before {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 13px;
+  width: 50px;
+  height: 1px;
+  background-color: #707070;
 }
 
 .blog-category {
