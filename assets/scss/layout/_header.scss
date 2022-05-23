@@ -1405,3 +1405,37 @@
     margin-right: 50px;
   }
 }
+
+
+// Home Three Banner Slider
+
+.banner-three-slider {
+  .swiper-slide-active {
+    .banner-content-two {
+      .title {
+        animation: fadeInLeft 2s .5s both;
+      }
+
+      span {
+        &::after {
+          width: 299px;
+        }
+      }
+
+      p {
+        animation: fadeInLeft 2s .5s both;
+      }
+    }
+  }
+}
+
+
+@keyframes arrow {
+  from {
+    transform: rotate(-45deg) translate(-30px);
+  }
+
+  to {
+    transform: rotate(-45deg) translate(0px);
+  }
+}

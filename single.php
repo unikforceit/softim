@@ -19,7 +19,7 @@ if ($softim->is_softim_core_active()){
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Blog
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-    <section class="blog-section ptb-120">
+    <section class="blog-section ptb-120 m-0">
         <div class="container">
             <div class="row justify-content-center mb-60-none">
                 <div class="col-xl-8 col-lg-8 mb-60">
