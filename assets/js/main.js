@@ -351,6 +351,15 @@ $('.menu-toggler').on('click', function(){
   $('.header-bottom-area').toggleClass('open');
 });
 
+// Home Three Menu Opem
+  $('.menu-toggler.home-three').on('click', function () {
+    $('.menu-open').addClass('open');
+  });
+
+  $('.close-btn').on('click', function () {
+    $('.menu-open').removeClass('open');
+  });
+
 // init Isotope
 var $grid = $('.grid').isotope({
   // options

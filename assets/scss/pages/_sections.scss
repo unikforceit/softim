@@ -1522,9 +1522,15 @@ div[class*="col"]:nth-of-type(4n + 4) .service-item {
   }
 
   .icon-box-items {
-    background: #fff;
-    padding: 50px 50px 50px;
+    background: #F8D458;
+    padding: 25px 20px 20px 20px;
     filter: drop-shadow(0px 20px 20px rgba(50, 73, 179, 0.1));
+    display: flex;
+    justify-content: space-between;
+
+    &.style-01 {
+      background: #9DBAFE;
+    }
 
     .odo-title {
       display: inline-block;
@@ -1548,10 +1554,6 @@ div[class*="col"]:nth-of-type(4n + 4) .service-item {
         font-weight: 700;
         margin-bottom: 0;
       }
-    }
-
-    .icon {
-      margin-bottom: 15px;
     }
 
     .content {
@@ -3797,7 +3799,9 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
       .icons {
         width: 26px;
         height: 26px;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background: #3249B3;
         color: #fff;
         margin-left: 15px;
