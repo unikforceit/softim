@@ -19,15 +19,9 @@
     list-style: none;
 
     li {
-      margin: 8px 0;
       display: block;
       -ms-word-wrap: break-word;
       word-break: break-word;
-
-      + li {
-        margin-top: 10px;
-      }
-
       &:before {
         display: none;
       }
@@ -362,37 +356,6 @@
     }
   }
 }
-
-.widget {
-  ul.widget_categories {
-    li {
-      + {
-        li {
-          margin-top: 15px;
-        }
-      }
-    }
-  }
-}
-
-//.widget_archive {
-//  ul {
-//    li {
-//      a {
-//        &:before {
-//          color: var(--main-color-one);
-//          position: static;
-//          content: "\f054";
-//          font-weight: 900;
-//          font-size: 10px;
-//          font-family: "Font Awesome 5 Free";
-//          padding-right: 8px;
-//        }
-//      }
-//    }
-//  }
-//}
-
 
 //== footer widget
 .widget.footer-widget.widget_calendar table {
@@ -1213,25 +1176,21 @@
     background-color: #3249B3;
   }
 }
-.wp-block-group__inner-container ul.wp-block-categories-list.wp-block-categories li,
-.wp-block-group__inner-container ul.wp-block-archives-list.wp-block-archives li,
-.wp-block-group__inner-container ul.wp-block-latest-posts__list.wp-block-latest-posts li {
+.sidebar .widget ul > li a {
   position:relative;
   font-size: 15px;
   border-bottom: 1px dashed #C9C9C9;
   padding-bottom: 15px;
   margin-bottom: 15px;
   padding-left:20px;
-}
-.wp-block-group__inner-container ul.wp-block-categories-list.wp-block-categories li::before,
-.wp-block-group__inner-container ul.wp-block-archives-list.wp-block-archives li::before,
-.wp-block-group__inner-container ul.wp-block-latest-posts__list.wp-block-latest-posts li::before {
-  content: '\f105';
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 700;
-  background-color: transparent;
+  &::before {
+    content: '\f105';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    background-color: transparent;
+  }
 }

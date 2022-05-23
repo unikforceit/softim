@@ -36,7 +36,7 @@ if (class_exists('CSF')) {
                 'id' => 'main_color',
                 'type' => 'color',
                 'title' => esc_html__('Theme Main Color One', 'softim'),
-                'default' => '#DCBB87',
+                'default' => '#3249B3',
                 'desc' => esc_html__('This is theme primary color one, means it will affect most of elements that have default color of our theme primary color', 'softim')
             ),
             array(
@@ -161,13 +161,13 @@ if (class_exists('CSF')) {
                 'id' => 'header_02_top_bar_icon_color',
                 'type' => 'color',
                 'title' => esc_html__('Menu Info Icon Color', 'softim'),
-                'default' => '#DCBB87'
+                'default' => '#3249B3'
             ),
             array(
                 'id' => 'header_02_top_bar_hover_color',
                 'type' => 'color',
                 'title' => esc_html__('Menu Info Hover Color', 'softim'),
-                'default' => '#DCBB87'
+                'default' => '#3249B3'
             ),
             array(
                 'type' => 'subheading',
@@ -217,7 +217,7 @@ if (class_exists('CSF')) {
                 'id' => 'header_02_nav_bar_hover_color',
                 'type' => 'color',
                 'title' => esc_html__('Nav Bar Hover Text Color', 'softim'),
-                'default' => '#DCBB87'
+                'default' => '#3249B3'
             ),
             array(
                 'type' => 'subheading',
@@ -296,7 +296,7 @@ if (class_exists('CSF')) {
                 'id' => 'header_03_nav_bar_hover_color',
                 'type' => 'color',
                 'title' => esc_html__('Nav Bar Hover Text Color', 'softim'),
-                'default' => '#DCBB87'
+                'default' => '#3249B3'
             ),
             array(
                 'type' => 'subheading',
@@ -352,7 +352,7 @@ if (class_exists('CSF')) {
                 'id' => 'header_03_top_bar_hover_color',
                 'type' => 'color',
                 'title' => esc_html__('Menu Info Hover Color', 'softim'),
-                'default' => '#DCBB87'
+                'default' => '#3249B3'
             ),
             array(
                 'type' => 'subheading',
@@ -362,7 +362,7 @@ if (class_exists('CSF')) {
                 'id' => 'header_03_menu_btn_bg_color',
                 'type' => 'color',
                 'title' => esc_html__('Nav Bar Button Background Color', 'softim'),
-                'default' => '#DCBB87'
+                'default' => '#3249B3'
             ),
             array(
                 'id' => 'header_03_menu_btn_color',
@@ -403,7 +403,7 @@ if (class_exists('CSF')) {
                 'id' => 'header_04_nav_bar_color',
                 'type' => 'color',
                 'title' => esc_html__('Nav Bar Text Color', 'softim'),
-                'default' => '#DCBB87'
+                'default' => '#3249B3'
             ),
             array(
                 'id' => 'header_04_nav_bar_hover_color',
@@ -459,7 +459,7 @@ if (class_exists('CSF')) {
                 'id' => 'header_04_top_bar_hover_color',
                 'type' => 'color',
                 'title' => esc_html__('Menu Search Hover Color', 'softim'),
-                'default' => '#DCBB87'
+                'default' => '#3249B3'
             ),
             array(
                 'type' => 'subheading',
@@ -469,7 +469,7 @@ if (class_exists('CSF')) {
                 'id' => 'header_04_menu_btn_bg_color',
                 'type' => 'color',
                 'title' => esc_html__('Nav Bar Button Background Color', 'softim'),
-                'default' => '#DCBB87'
+                'default' => '#3249B3'
             ),
             array(
                 'id' => 'header_04_menu_btn_color',
@@ -513,7 +513,7 @@ if (class_exists('CSF')) {
                 'id' => 'sidebar_widget_title_bottom_border_color',
                 'type' => 'color',
                 'title' => esc_html__('Sidebar Widget Border Color', 'softim'),
-                'default' => '#DCBB87'
+                'default' => '#3249B3'
             ),
             array(
                 'id' => 'sidebar_widget_text_color',
@@ -567,7 +567,7 @@ if (class_exists('CSF')) {
                 'id' => 'footer_widget_text_hover_color',
                 'type' => 'color',
                 'title' => esc_html__('Footer Widget Text Hover Color', 'softim'),
-                'default' => '#DCBB87'
+                'default' => '#3249B3'
             ),
             array(
                 'type' => 'subheading',
@@ -626,7 +626,7 @@ if (class_exists('CSF')) {
                 'id' => 'footer_two_menu_contact_title_color',
                 'type' => 'color',
                 'title' => esc_html__('Footer Top Menu Title Color', 'softim'),
-                'default' => '#DCBB87'
+                'default' => '#3249B3'
             ),
             array(
                 'id' => 'footer_two_menu_text_color',
@@ -670,7 +670,7 @@ if (class_exists('CSF')) {
                 'id' => 'footer_two_widget_text_hover_color',
                 'type' => 'color',
                 'title' => esc_html__('Footer Widget Text Hover Color', 'softim'),
-                'default' => '#DCBB87'
+                'default' => '#3249B3'
             ),
             array(
                 'type' => 'subheading',
@@ -778,7 +778,7 @@ if (class_exists('CSF')) {
                 'id' => 'footer_three_widget_title_color',
                 'type' => 'color',
                 'title' => esc_html__('Footer Widget Title Color', 'softim'),
-                'default' => '#DCBB87'
+                'default' => '#3249B3'
             ),
             array(
                 'id' => 'footer_three_widget_text_color',
@@ -790,7 +790,7 @@ if (class_exists('CSF')) {
                 'id' => 'footer_three_widget_text_hover_color',
                 'type' => 'color',
                 'title' => esc_html__('Footer Widget Text Hover Color', 'softim'),
-                'default' => '#DCBB87'
+                'default' => '#3249B3'
             ),
             array(
                 'type' => 'subheading',
