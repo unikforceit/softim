@@ -21,6 +21,9 @@ if (!class_exists('Softim_Helper_Functions')) {
 
         public function __construct()
         {
+            add_filter('wp_list_categories', [$this, 'softim_cat_count_span']);
+            add_filter('get_archives_link', [$this, 'softim_style_the_archive_count']);
+
         }
 
         /**
@@ -698,6 +701,18 @@ if (!class_exists('Softim_Helper_Functions')) {
         {
             return defined('SOFTIM_CORE_SELF_PATH');
         }
+
+        public function softim_cat_count_span($links) {
+            $links = str_replace('</a> (', '</a> <span class="cat-num">(', $links);
+            $links = str_replace(')', ')</span>', $links);
+            return $links;
+        }
+        public function softim_style_the_archive_count($links) {
+            $links = str_replace('</a>&nbsp;(', '</a> <span class="cat-num">(', $links);
+            $links = str_replace(')', ')</span>', $links);
+            return $links;
+        }
+
 
         /**
          * Comment Count

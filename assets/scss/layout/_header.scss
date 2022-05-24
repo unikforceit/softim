@@ -608,7 +608,7 @@
       &:hover {
         background-color: $bg--base;
 
-        a {
+        > a {
           color: $white;
           margin-left: 10px;
         }

@@ -19,9 +19,9 @@ get_header();
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <section class="blog-section ptb-120">
         <div class="container">
-            <div class="row justify-content-center mb-60-none">
+            <div class="row mb-60-none">
                 <div class="col-xl-8 col-lg-8 mb-60">
-                    <div class="row justify-content-center mb-60-none">
+                    <div class="row mb-60-none">
                         <?php
                         if (have_posts()) :
 
