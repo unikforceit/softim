@@ -13380,6 +13380,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
   border-top: 1px dashed #e5e5e5;
   padding-top: 20px;
   margin-top: 30px;
+  clear: both;
 }
 .blog-tag-wrapper span {
   color: #1C1C1C;
