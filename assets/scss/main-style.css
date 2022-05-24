@@ -1780,7 +1780,15 @@ label[for=wp-comment-cookies-consent] {
 .widget ul li,
 .comments-area .comment-list li,
 .comments-area .comment-list li.comment {
+  position: relative;
   padding-left: 0;
+}
+.widget ul li span.cat-num,
+.comments-area .comment-list li span.cat-num,
+.comments-area .comment-list li.comment span.cat-num {
+  position: absolute;
+  right: 50px;
+  top: 5px;
 }
 
 .comments-area .comment-list li:before,
@@ -2554,6 +2562,7 @@ label[for=wp-comment-cookies-consent] {
   padding-bottom: 15px;
   margin-bottom: 15px;
   padding-left: 20px;
+  display: block;
 }
 .sidebar .widget ul > li a::before {
   content: "\f105";
@@ -6003,7 +6012,7 @@ option {
 .header-bottom-area .navbar-collapse .main-menu li .sub-menu li:hover {
   background-color: #3249B3;
 }
-.header-bottom-area .navbar-collapse .main-menu li .sub-menu li:hover a {
+.header-bottom-area .navbar-collapse .main-menu li .sub-menu li:hover > a {
   color: #fff;
   margin-left: 10px;
 }
