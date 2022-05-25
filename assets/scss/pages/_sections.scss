@@ -40,6 +40,24 @@
     }
   }
 
+  &.two {
+    background-color: #F9FBFF;
+    border: none;
+    border-radius: 0;
+
+    img {
+      filter: grayscale(100%);
+    }
+
+    &:hover {
+      border: none;
+
+      img {
+        filter: grayscale(0%);
+      }
+    }
+  }
+
   img {
     display: inline-block;
     width: auto;
@@ -128,10 +146,24 @@
       display: none;
     }
   }
+
+  .project-element-five {
+    position: absolute;
+    top: 8%;
+    right: 1%;
+    animation: horizontal-move 3s linear infinite;
+    @media only screen and (max-width: 1700px) {
+      display: none;
+    }
+  }
 }
 
 .project-item-wrapper {
   margin: -30px;
+
+  &.two {
+    margin: 0;
+  }
 
   @media only screen and (max-width: 991px) {
     margin: 0;
@@ -235,6 +267,76 @@
     .project-overlay {
       opacity: 1;
       visibility: visible;
+    }
+  }
+}
+
+.project-item-two {
+  background-color: #9DBAFE;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 95px 40px;
+  overflow: hidden;
+  position: relative;
+  @media only screen and (max-width: 1199px) {
+    display: block;
+    padding: 30px 20px;
+  }
+
+  .project-content {
+    width: 50%;
+    @media only screen and (max-width: 1199px) {
+      width: 100%;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 35px;
+      color: $white;
+      margin-bottom: 10px;
+      @media only screen and (max-width: 991px) {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      color: $white;
+    }
+  }
+
+  .project-thumb {
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    @media only screen and (max-width: 1199px) {
+      position: unset;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+
+  &.style {
+    background-color: #F8D458;
+    display: block;
+    padding: 30px 20px;
+
+    .project-content {
+      width: 100%;
+      text-align: center;
+
+      .title {
+        color: $color__heading;
+      }
+
+      p {
+        color: $color__heading;
+      }
+    }
+
+    .project-thumb {
+      position: unset;
+      margin-bottom: 25px;
     }
   }
 }
@@ -842,6 +944,16 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     }
   }
 
+  &.four {
+    background-color: #F5F8FF;
+
+    .section-header {
+      .section-title {
+        font-weight: 800;
+      }
+    }
+  }
+
   .service-element-one {
     position: absolute;
     left: 3%;
@@ -910,6 +1022,15 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     }
   }
 
+  .service-element-six {
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    @media only screen and (max-width: 1666px) {
+      display: none;
+    }
+  }
+
   .service-shape {
     position: absolute;
     top: 0;
@@ -968,6 +1089,21 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
     &.shape-6 {
       left: 85%;
     }
+  }
+}
+
+.service-slider-two {
+  overflow: hidden;
+
+  .swiper-pagination-bullet {
+    background-color: #9DBAFE;
+    border: none;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 25px;
+    border-radius: 999px;
+    background-color: $bg--base;
   }
 }
 
@@ -1035,6 +1171,29 @@ div[class*="col"]:nth-of-type(2n + 2) .project-item {
           }
         }
       }
+    }
+  }
+
+  &.four {
+    border-radius: 10px;
+    padding: 50px 20px;
+
+    &:hover {
+      box-shadow: 0 15px 30px rgba($bg--base, 0.2);
+    }
+
+    .service-icon {
+      margin-bottom: 40px;
+    }
+  }
+
+  &.five {
+    background-color: #F5F8FF;
+    border-radius: 10px;
+    padding: 40px 20px;
+
+    .service-icon {
+      margin-bottom: 30px;
     }
   }
 
@@ -3733,6 +3892,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
   z-index: 0;
   padding-top: 65px;
   margin-bottom: 60px;
+
   &:hover {
     .icon {
       transform: rotateY(180deg);
@@ -4114,7 +4274,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
           font-size: 17px;
           color: #F68300;
 
-          +i {
+          + i {
             margin-left: 8px;
           }
         }
@@ -4221,7 +4381,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 
 .blog-single-item-02 {
   .content {
-    +.content {
+    + .content {
       border-top: 1px dashed #CCCCCC;
       margin-top: 24px;
       padding-top: 20px;

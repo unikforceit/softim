@@ -2,10 +2,10 @@
     [ ## Heading ]
 */
 h1, h2, h3, h4, h5, h6 {
-	clear: both;
-	line-height: $font__line-height-heading;
-	color: $color__heading;
-	font-weight: 600;
+  clear: both;
+  line-height: $font__line-height-heading;
+  color: $color__heading;
+  font-weight: 600;
   -webkit-font-smoothing: antialiased;
   font-family: $font_heading;
 }
@@ -78,6 +78,13 @@ h4 a:hover {
     }
   }
 }
+.sub-title{
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $text--base;
+  margin-bottom: 20px;
+}
 .section-header{
   margin-bottom: 50px;
   position: relative;
@@ -101,6 +108,7 @@ h4 a:hover {
     position: relative;
     font-weight: 700;
     margin-top: -8px;
+    text-transform: capitalize;
     @media only screen and (max-width: 991px) {
       margin-top: -5px;
     }
