@@ -369,49 +369,4 @@ if (class_exists('CSF')) {
         )
     ));
 
-    //	Packages Meta Box
-    CSF::createMetabox($prefix . '_packages_options', array(
-        'title' => esc_html__('Packages Options', 'softim'),
-        'post_type' => 'packages',
-    ));
-    CSF::createSection($prefix . '_packages_options', array(
-        'fields' => array(
-            array(
-                'id' => 'packages_icon',
-                'default' => 'flaticon-protection',
-                'type' => 'icon',
-                'title' => esc_html__('Icon', 'softim'),
-                'desc' => wp_kses(__('Select Your Icon', 'softim'), $allowed_html)
-            ),
-            array(
-                'id' => 'packages_duration_option',
-                'type' => 'text',
-                'title' => esc_html__('Packages Duration', 'softim'),
-                'default' => esc_html__('2 hours 25 min', 'softim'),
-            ),
-            array(
-                'id' => 'packages_price_option',
-                'type' => 'text',
-                'title' => esc_html__('Packages Price', 'softim'),
-                'default' => esc_html__('$115.00', 'softim'),
-            ),
-            array(
-                'id' => 'packages_date_option',
-                'type' => 'text',
-                'title' => esc_html__('Packages Date', 'softim'),
-                'default' => esc_html__('Thursday, Nov 4, 2021', 'softim'),
-            ),
-            array(
-                'id' => 'packages_number_option',
-                'type' => 'text',
-                'title' => esc_html__('Packages Person Number', 'softim'),
-            ),
-            array(
-                'id' => 'packages_video_link',
-                'type' => 'text',
-                'title' => esc_html__('Packages Video Link', 'softim'),
-            )
-        )
-    ));
-
 }//endif
