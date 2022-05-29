@@ -28,7 +28,7 @@
 
         .banner-image {
             position: absolute;
-            left: 40%;
+            right: 0;
             top: 244px;
         }
     }
@@ -206,6 +206,105 @@
 
     &.three{
         background: #F5F8FF;
+    }
+    &.five{
+        background: #F5F8FF;
+        padding-top: 200px;
+        padding-bottom: 0;
+        .banner-element-thirty{
+            position: absolute;
+            bottom: 10%;
+            left: 7%;
+            animation: scroll-ver 2s linear infinite;
+            @media only screen and (max-width: 991px) {
+                display: none;
+            }
+        }
+        .banner-element-thirty-one{
+            position: absolute;
+            top: 40%;
+            left: 5%;
+            animation: rotate 25s linear infinite;
+            @media only screen and (max-width: 991px) {
+                display: none;
+            }
+        }
+        .banner-element-thirty-two{
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            animation: scroll-down 2s linear infinite;
+            @media only screen and (max-width: 991px) {
+                display: none;
+            }
+        }
+        .banner-element-thirty-three{
+            position: absolute;
+            top: 53%;
+            right: 15%;
+            width: 22%;
+            animation: scroll-down 2s linear infinite;
+            @media only screen and (max-width: 991px) {
+                display: none;
+            }
+        }
+        .banner-element-thirty-four{
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            width: 22%;
+            animation: scroll-down 2s linear infinite;
+            @media only screen and (max-width: 991px) {
+                display: none;
+            }
+        }
+        .banner-element-thirty-five{
+            position: absolute;
+            top: 40%;
+            left: 15%;
+            width: 70%;
+            @media only screen and (max-width: 991px) {
+                display: none;
+            }
+        }
+        .banner-content{
+            text-align: center;
+            .title{
+                font-weight: 700 !important;
+                width: 80%;
+                margin: 0 auto;
+            }
+            .banner-btn{
+                margin: -10px;
+                margin-top: 40px;
+                a{
+                    margin: 10px;
+                    &.two{
+                        background-color: #9DBAFE;
+                        border: 1px solid #9DBAFE;
+                        &:hover{
+                            border: 1px solid $bg--base;
+                        }
+                    }
+                }
+            }
+        }
+        .banner-thumb{
+            margin-top: 40px;
+            position: relative;
+            img{
+                width: 100%;
+            }
+            .banner-thumb-element{
+                position: absolute;
+                width: 50%;
+                bottom: -5%;
+                right: -10%;
+                img{
+                    animation: scroll-ver 3s linear infinite;
+                }
+            }
+        }
     }
 
     .banner-text {
@@ -694,11 +793,35 @@
                 margin-bottom: 0;
             }
         }
+        &.three{
+            .sub-title{
+                font-size: 14px;
+                font-weight: 600;
+                color: $text--base;
+                text-transform: uppercase;
+            }
+            .title{
+                font-size: 70px;
+                font-weight: 800;
+                line-height: 1.2em;
+                margin-bottom: 20px;
+                @media only screen and (max-width: 1199px) {
+                    font-size: 50px;
+                }
+                @media only screen and (max-width: 575px) {
+                    font-size: 30px;
+                }
+            }
+            p{
+                color: $color__text;
+                width: 100%;
+            }
+        }
     }
 
     .banner-content-two {
         .title {
-            font-size: 110px;
+            font-size: 115px;
             font-weight: 700;
             line-height: 1.2;
             color: $color__heading;
@@ -733,7 +856,6 @@
             z-index: 0;
             padding-top: 65px;
             padding-left: 130px;
-            max-width: 500px;
 
             // &::after {
             //     content: '';
@@ -1070,7 +1192,6 @@
     }
 
     .banner-widget-right {
-        margin-bottom: -6px;
         @media only screen and (max-width: 475px) {
             width: 100%;
         }
