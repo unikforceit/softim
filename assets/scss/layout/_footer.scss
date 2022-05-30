@@ -320,9 +320,9 @@ div[class*="col"]:nth-of-type(3n + 3) .footer-contact-list {
     background-color: #9DBAFE;
     border-radius: 5px;
     color: $white;
-    padding: 15px 30px;
-    margin-bottom: 15px;
-    display: inline-block;
+    padding: 15px 30px !important;
+    margin-bottom: 15px !important;
+    display: inline-block !important;
     font-weight: 500;
     transition: all 0.5s;
     &:hover{
