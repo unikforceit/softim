@@ -2,10 +2,10 @@
     [ ## Heading ]
 */
 h1, h2, h3, h4, h5, h6 {
-  clear: both;
-  line-height: $font__line-height-heading;
-  color: $color__heading;
-  font-weight: 600;
+	clear: both;
+	line-height: $font__line-height-heading;
+	color: $color__heading;
+	font-weight: 600;
   -webkit-font-smoothing: antialiased;
   font-family: $font_heading;
 }
@@ -84,6 +84,9 @@ h4 a:hover {
   font-weight: 600;
   color: $text--base;
   margin-bottom: 20px;
+  @media only screen and (max-width: 575px) {
+    font-size: 12px;
+  }
 }
 .section-header{
   margin-bottom: 50px;
@@ -114,6 +117,9 @@ h4 a:hover {
     }
     span{
       color: $text--base;
+    }
+    &.two{
+      text-transform: unset;
     }
   }
   p{
