@@ -132,12 +132,13 @@ $shortcodes_right_content = cs_get_option('header_three_top_right_info_bar_short
                 <ul class="footer-social">
                     <h6 class="title"><?php echo esc_html(cs_get_option('header_three_social_title')); ?></h6>
                     <?php
-                        foreach (cs_get_option('header_three_social_link') as $icon) {
-                            ?>
-                            <li>
-                                <a href="<?php echo esc_url($icon['url']); ?>"><i class="<?php echo esc_attr($icon['image']); ?>"></i></a>
-                            </li>
-                        <?php }
+                    foreach (cs_get_option('header_three_social_link') as $icon) {
+                        ?>
+                        <li>
+                            <a href="<?php echo esc_url($icon['url']); ?>"><i
+                                        class="<?php echo esc_attr($icon['image']); ?>"></i></a>
+                        </li>
+                    <?php }
                     ?>
                 </ul>
             </div>
