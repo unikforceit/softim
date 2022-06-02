@@ -1419,7 +1419,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   -moz-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
-  color: var(--main-color-one);
+  color: #3249B3;
   font-size: 14px;
 }
 .comments-area .comment-list li .single-comment-wrap .content .comment-reply-link:after {
@@ -1432,7 +1432,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   font-weight: 900;
 }
 .comments-area .comment-list li .single-comment-wrap .content .comment-reply-link:hover {
-  color: var(--main-color-one);
+  color: #3249B3;
 }
 .comments-area .comment-list li.comment {
   margin-bottom: 30px;
@@ -12176,7 +12176,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
     [ ### plan block ]
 */
 .plan-section.two {
-  background-color: #F5F8FF;
+  background-color: #F5F8FF !important;
 }
 .plan-section.two .section-header {
   margin-bottom: 40px;
@@ -17641,6 +17641,39 @@ ul.blocks-gallery-grid li:before {
 .blog-pagination ul li span.current {
   background-color: var(--main-color-one);
   color: #fff;
+}
+
+.home-three-menu .menu-open.open .navigation-three li a {
+  transition: 0.8s all ease;
+}
+.home-three-menu .menu-open.open .navigation-three li a:hover {
+  transform: skewX(10deg) !important;
+  letter-spacing: 2.5px;
+  color: #fff;
+}
+
+.pagination .page-item a.next, .pagination .page-item a.prev {
+  border-width: 0;
+}
+
+.postIcon ul li .elementor-icon-list-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+}
+.postIcon ul li .elementor-icon-list-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(50, 73, 179, 0.1);
+  border-radius: 50%;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main-style.css.map */

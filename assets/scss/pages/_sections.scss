@@ -2405,7 +2405,7 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
 */
 .plan-section {
     &.two {
-        background-color: #F5F8FF;
+        background-color: #F5F8FF !important;
 
         .section-header {
             margin-bottom: 40px;
