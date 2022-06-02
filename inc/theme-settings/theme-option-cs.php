@@ -257,7 +257,8 @@ if (class_exists('CSF')) {
                     '' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/01.png',
                     'style-01' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/02.png',
                     'style-02' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/03.png',
-                    'style-03' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/04.png'
+                    'style-03' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/04.png',
+                    'style-04' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/05.png'
                 ),
                 'default' => '',
                 'desc' => wp_kses(__('you can set <mark>navbar type</mark> it will show in every page except you select specific navbar type form page settings.', 'softim'), $allowed_html),
@@ -274,7 +275,8 @@ if (class_exists('CSF')) {
                     '' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/01.png',
                     'style-01' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/02.png',
                     'style-02' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/03.png',
-                    'style-03' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/04.png'
+                    'style-03' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/04.png',
+                    'style-04' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/05.png'
                 ),
                 'default' => '',
                 'desc' => wp_kses(__('you can set <mark>footer type</mark> it will show in every page except you select specific navbar type form page settings.', 'softim'), $allowed_html),
@@ -319,7 +321,7 @@ if (class_exists('CSF')) {
                 'id' => 'header_navbar_title',
                 'type' => 'text',
                 'title' => esc_html__('Button Title', 'softim'),
-                'default' => esc_html__('Book Now', 'softim'),
+                'default' => esc_html__('GET STARTED', 'softim'),
                 'dependency' => array('header_navbar_button', '==', 'true')
             ),
             array(
