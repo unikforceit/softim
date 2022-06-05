@@ -60,7 +60,7 @@ $service_meta = get_post_meta(get_the_ID(), 'softim_service_options', true);
                             </div>
                             <div class="service-bottom-content">
                                 <h2 class="title"><?php echo esc_html('Service Description'); ?></h2>
-                                <?php echo $service_meta['description'];?>
+                                <?php echo esc_html($service_meta['description']);?>
                                 <div class="sevice-inner-item-area">
                                     <div class="row justify-content-center mb-30-none">
                                         <?php
@@ -94,7 +94,7 @@ $service_meta = get_post_meta(get_the_ID(), 'softim_service_options', true);
                                         </div>
                                     </div>
                                 </blockquote>
-                                <?php echo $service_meta['description2'];?>
+                                <?php echo esc_html($service_meta['description2']);?>
 
                                 <div class="contact-section two">
                                     <div class="contact-area">

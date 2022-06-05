@@ -55,6 +55,9 @@ if (!class_exists('Softim_Woocomerce_Customize')){
             add_action('woocommerce_after_single_product_summary',array($this,'woocommerce_before_single_product_summary_wrapper_end'),9);
             add_action('woocommerce_before_account_navigation',array($this,'woocommerce_before_account_navigation_wrapper_start'),10);
             add_action('woocommerce_account_content',array($this,'woocommerce_before_account_navigation_wrapper_end'),30);
+
+            add_filter('loop_shop_columns', [$this, 'softim_loop_columns'], 999);
+            add_filter( 'loop_shop_per_page', [$this, 'softim_loop_shop_per_page'], 30 );
         }
 
 
@@ -67,6 +70,15 @@ if (!class_exists('Softim_Woocomerce_Customize')){
                 self::$instance = new self();
             }
             return self::$instance;
+        }
+
+        public function softim_loop_columns() {
+            return 4; // 4 products per row
+        }
+
+        function softim_loop_shop_per_page( $products ) {
+            $products = 8;
+            return $products;
         }
 
         /**

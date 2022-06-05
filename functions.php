@@ -16,6 +16,7 @@
 define('SOFTIM_THEME_ROOT',get_template_directory());
 define('SOFTIM_THEME_ROOT_URL',get_template_directory_uri());
 define('SOFTIM_INC',SOFTIM_THEME_ROOT .'/inc');
+define('SOFTIM_WOO_SWATCHES',SOFTIM_INC .'/woo-swatches');
 define('SOFTIM_THEME_SETTINGS',SOFTIM_INC.'/theme-settings');
 define('SOFTIM_THEME_SETTINGS_IMAGES',SOFTIM_THEME_ROOT_URL.'/inc/theme-settings/images');
 define('SOFTIM_TGMA',SOFTIM_INC.'/plugins/tgma');
@@ -34,6 +35,9 @@ define('SOFTIM_DEV',true);
  */
 if (file_exists(SOFTIM_INC .'/theme-init.php')){
 	require_once SOFTIM_INC .'/theme-init.php';
+}
+if (file_exists(SOFTIM_WOO_SWATCHES .'/index.php')){
+	require_once SOFTIM_WOO_SWATCHES .'/index.php';
 }
 
 
