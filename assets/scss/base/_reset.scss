@@ -885,7 +885,7 @@ blockquote {
 }
 
 .swiper-pagination {
-    position: relative;
+    position: relative !important;
     display: flex;
     justify-content: center;
     margin-top: 60px;

@@ -4,8 +4,8 @@
  * @package softim
  * @since 1.0.0
  */
-$shortcodes_right_content = cs_get_option('header_three_top_right_info_bar_shortcode');
 
+$shortcodes_right_content = cs_get_option('header_three_top_right_info_bar_shortcode');
 ?>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Header
@@ -26,8 +26,10 @@ $shortcodes_right_content = cs_get_option('header_three_top_right_info_bar_short
                             printf('<a class="site-title" href="%1$s">%2$s</a>', esc_url(get_home_url()), esc_html(get_bloginfo('title')));
                         }
                         ?>
-                        <button class="navbar-toggler d-block d-xl-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler d-block d-xl-none ml-auto" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent"
+                                aria-controls="navbarSupportedContent" aria-expanded="false"
+                                aria-label="Toggle navigation">
                             <span class="toggle-bar"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
@@ -37,7 +39,7 @@ $shortcodes_right_content = cs_get_option('header_three_top_right_info_bar_short
                                 'menu_class' => 'navbar-nav',
                                 'container' => false,
                                 'fallback_cb' => 'softim_theme_fallback_menu',
-                                'items_wrap'           => '<ul id="%1$s" class="%2$s navbar-nav main-menu">%3$s</ul>',
+                                'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav main-menu">%3$s</ul>',
                             ));
                             ?>
                             <div class="header-right">

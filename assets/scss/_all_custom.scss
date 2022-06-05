@@ -1,0 +1,35 @@
+//Home 3
+.home-three-menu .menu-open.open .navigation-three li a {
+  transition: 0.8s all ease;
+  &:hover {
+    transform: skewX(10deg) !important;
+    letter-spacing: 2.5px;
+    color: #fff;
+  }
+}
+
+//Blog page pagination
+.pagination .page-item a.next, .pagination .page-item a.prev {
+  border-width: 0;
+}
+
+//Blog Post icon
+.postIcon ul li .elementor-icon-list-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(50,73,179,0.1);
+    border-radius: 50%;
+    text-align: center;
+  }
+}

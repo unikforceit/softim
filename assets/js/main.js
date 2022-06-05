@@ -77,6 +77,20 @@ window.addEventListener('resize', function () {
   }
 }, true);
 
+// navbar-click
+  $(".navigation-three li a").on("click", function () {
+    var element = $(this).parent("li");
+    if (element.hasClass("show")) {
+      element.removeClass("show");
+      element.children("ul").slideUp(500);
+    } else {
+      element.siblings("li").removeClass('show');
+      element.addClass("show");
+      element.siblings("li").find("ul").slideUp(500);
+      element.children('ul').slideDown(500);
+    }
+  });
+
 //Odometer
 if ($(".statistics-item").length) {
   $(".statistics-item").each(function () {

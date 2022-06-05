@@ -117,20 +117,29 @@ $shortcodes_right_content = cs_get_option('header_three_top_right_info_bar_short
             ?>
             <div class="address-wrapper">
                 <div class="address">
-                    <h6 class="title">Address</h6>
-                    <p>72 Main Drive, Calibry, FL</p>
+                    <h6 class="title"><?php echo esc_html(cs_get_option('header_three_social_title')); ?></h6>
+                    <p><?php echo esc_html(cs_get_option('header_three_address_info')); ?></p>
                 </div>
                 <div class="contact">
-                    <h6 class="title">Contact</h6>
-                    <p><a href="tel:+1 (900) 696 3600">+1 (900) 696 3600</a></p>
-                    <p><a href="mailto:">softim@gmail.com</a></p>
+                    <h6 class="title"><?php echo esc_html(cs_get_option('header_three_contact_title')); ?></h6>
+                    <p>
+                        <a href="tel:<?php echo esc_html(cs_get_option('header_three_contact_number_url')); ?>"><?php echo esc_html(cs_get_option('header_three_contact_number_title')); ?></a>
+                    </p>
+                    <p>
+                        <a href="mailto:<?php echo esc_html(cs_get_option('header_three_contact_email_url')); ?>"><?php echo esc_html(cs_get_option('header_three_contact_email_title')); ?></a>
+                    </p>
                 </div>
                 <ul class="footer-social">
-                    <h6 class="title">Follow Us</h6>
-                    <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li>
-                    <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
+                    <h6 class="title"><?php echo esc_html(cs_get_option('header_three_social_title')); ?></h6>
+                    <?php
+                    foreach (cs_get_option('header_three_social_link') as $icon) {
+                        ?>
+                        <li>
+                            <a href="<?php echo esc_url($icon['url']); ?>"><i
+                                        class="<?php echo esc_attr($icon['image']); ?>"></i></a>
+                        </li>
+                    <?php }
+                    ?>
                 </ul>
             </div>
         </div>
