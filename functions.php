@@ -36,9 +36,6 @@ define('SOFTIM_DEV',true);
 if (file_exists(SOFTIM_INC .'/theme-init.php')){
 	require_once SOFTIM_INC .'/theme-init.php';
 }
-if (file_exists(SOFTIM_WOO_SWATCHES .'/index.php')){
-	require_once SOFTIM_WOO_SWATCHES .'/index.php';
-}
 
 
 /**
