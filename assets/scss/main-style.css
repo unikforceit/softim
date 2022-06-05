@@ -266,7 +266,7 @@ code {
   left: 0;
   top: 0;
   font-family: "fontawesome";
-  content: "";
+  content: "\f00c";
   color: var(--main-color-one);
 }
 
@@ -286,7 +286,7 @@ code {
   left: 0;
   top: 0;
   font-family: "fontawesome";
-  content: "";
+  content: "\f105";
   color: var(--main-color-one);
 }
 
@@ -1424,7 +1424,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 .comments-area .comment-list li .single-comment-wrap .content .comment-reply-link:after {
   position: static;
-  content: "";
+  content: "\f3e5";
   font-family: "Font Awesome 5 Free";
   font-size: 14px;
   line-height: 1;
@@ -1527,7 +1527,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   position: absolute;
   right: 15px;
   top: 50%;
-  content: "";
+  content: "\f105";
   z-index: 1;
   transform: translateY(-50%);
   font-family: "Font Awesome 5 Free";
@@ -1536,13 +1536,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   opacity: 0.5;
 }
 .comment-form .form-group:first-child:after {
-  content: "";
+  content: "\f007";
 }
 .comment-form .form-group:nth-child(2):after {
-  content: "";
+  content: "\f0e0";
 }
 .comment-form .form-group:nth-child(3):after {
-  content: "";
+  content: "\f57d";
 }
 .comment-form .comment-form-cookies-consent {
   display: flex;
@@ -1708,9 +1708,6 @@ label[for=wp-comment-cookies-consent] {
   border-top: none;
   box-shadow: none;
   margin-top: 10px;
-}
-.widget ul li ul.sub-menu li a {
-  padding: 0 0 0 10px;
 }
 .widget ul li ul.sub-menu li a:hover {
   background-color: transparent;
@@ -2565,7 +2562,7 @@ label[for=wp-comment-cookies-consent] {
   display: block;
 }
 .sidebar .widget ul > li a::before {
-  content: "";
+  content: "\f105";
   position: absolute;
   top: 0;
   left: 0;
@@ -6816,7 +6813,7 @@ option {
   top: 15%;
   right: 30%;
   width: 1px;
-  height: calc(100% - 30%);
+  height: 70%;
   background-color: rgba(255, 255, 255, 0.2);
 }
 .home-three-menu .menu-open.open {
@@ -12380,7 +12377,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
   color: #3249B3;
   top: 0;
   left: 0;
-  content: "";
+  content: "\f00c";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 14px;
@@ -13247,7 +13244,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
   margin-top: 20px;
 }
 .list-items-02 .list-parent .list-child::after {
-  content: "";
+  content: "\f00c";
   font-family: "Font Awesome 5 Free";
   font-weight: 700;
   position: absolute;
@@ -14459,7 +14456,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
   text-align: center;
   top: 3px;
   left: 0;
-  content: "";
+  content: "\f00c";
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 12px;
@@ -15530,7 +15527,7 @@ div[class*=col]:nth-of-type(3n + 3) .process-item.two::after {
   text-align: center;
   top: 2px;
   left: 0;
-  content: "";
+  content: "\f00c";
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 12px;
@@ -16017,7 +16014,7 @@ div[class*=col]:nth-of-type(3n + 3) .process-item.two::after {
   position: absolute;
   top: 0;
   left: 0;
-  content: "";
+  content: "\f00c";
   font-family: "Font Awesome 5 Free";
   width: 25px;
   height: 25px;
@@ -16508,7 +16505,7 @@ li.menu-item-has-children {
     transition: height 500ms;
   }
   .navbar-area .custom-container .navbar-nav ul li.page_item_has_children .children .children .page_item_has_children:before {
-    content: "";
+    content: "\f067";
   }
   .navbar-area .custom-container .navbar-nav ul li.page_item_has_children .children li {
     padding: 0;
@@ -16740,7 +16737,7 @@ li.menu-item-has-children {
 }
 
 .wp-block-search button[type=submit]::before, .wp-block-search input[type=submit]::before {
-  content: "";
+  content: "\f002";
   position: absolute;
   top: 75%;
   right: 0;
@@ -16824,7 +16821,7 @@ ul.wp-block-latest-posts__list li:before,
   position: absolute;
   left: 0;
   top: 10px;
-  content: "";
+  content: "\f149";
   font-family: "flaticon";
   font-size: 30px;
   color: var(--main-color-one);
@@ -17110,7 +17107,7 @@ figcaption a {
   border-radius: 3px;
 }
 .post-navigation-inner .content-area {
-  width: calc(100% / 2);
+  width: 50%;
 }
 .post-navigation-inner div .title {
   font-size: 18px;
