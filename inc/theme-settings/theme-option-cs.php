@@ -258,7 +258,8 @@ if (class_exists('CSF')) {
                     'style-01' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/02.png',
                     'style-02' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/03.png',
                     'style-03' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/04.png',
-                    'style-04' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/05.png'
+                    'style-04' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/05.png',
+                    'style-05' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/06.png'
                 ),
                 'default' => '',
                 'desc' => wp_kses(__('you can set <mark>navbar type</mark> it will show in every page except you select specific navbar type form page settings.', 'softim'), $allowed_html),
@@ -276,7 +277,8 @@ if (class_exists('CSF')) {
                     'style-01' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/02.png',
                     'style-02' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/03.png',
                     'style-03' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/04.png',
-                    'style-04' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/05.png'
+                    'style-04' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/05.png',
+                    'style-05' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/06.png'
                 ),
                 'default' => '',
                 'desc' => wp_kses(__('you can set <mark>footer type</mark> it will show in every page except you select specific navbar type form page settings.', 'softim'), $allowed_html),
@@ -292,9 +294,9 @@ if (class_exists('CSF')) {
         'title' => esc_html__('Headers', 'softim'),
         'icon' => 'fas fa-home'
     ));
-    /* Header Style 01 */
+    /* Header Style Default */
     CSF::createSection($prefix . '_theme_options', array(
-        'title' => esc_html__('Header One', 'softim'),
+        'title' => esc_html__('Header Default', 'softim'),
         'id' => 'theme_header_one_options',
         'icon' => 'fas fa-image',
         'parent' => 'headers_settings',
@@ -334,9 +336,9 @@ if (class_exists('CSF')) {
         )
     ));
 
-    /* Header Style 02 */
+    /* Header Style 01 */
     CSF::createSection($prefix . '_theme_options', array(
-        'title' => esc_html__('Header Two', 'softim'),
+        'title' => esc_html__('Header One', 'softim'),
         'id' => 'theme_header_two_options',
         'icon' => 'fas fa-image',
         'parent' => 'headers_settings',
@@ -551,7 +553,7 @@ if (class_exists('CSF')) {
         'fields' => array(
             array(
                 'type' => 'subheading',
-                'content' => '<h3>' . esc_html__('Navbar Options', 'softim') . '</h3>'
+                'content' => '<h3>' . esc_html__('Logo Options', 'softim') . '</h3>'
             ),
             array(
                 'id' => 'header_four_logo',
@@ -561,25 +563,46 @@ if (class_exists('CSF')) {
                 'desc' => wp_kses(__('you can upload <mark> logo</mark> here it will overwrite customizer uploaded logo', 'softim'), $allowed_html),
             ),
             array(
-                'id' => 'header_four_navbar_button',
+                'id' => 'header_navbar_button',
                 'type' => 'switcher',
-                'title' => esc_html__('Header Button', 'softim'),
+                'title' => esc_html__('Info Button', 'softim'),
                 'default' => true,
-                'desc' => wp_kses(__('you can <mark> show/hide</mark> navbar button of header three', 'softim'), $allowed_html),
+                'desc' => wp_kses(__('you can <mark> show/hide</mark> navbar button of header two', 'softim'), $allowed_html),
             ),
             array(
                 'id' => 'header_four_navbar_title',
                 'type' => 'text',
                 'title' => esc_html__('Button Title', 'softim'),
                 'default' => esc_html__('GET STARTED', 'softim'),
-                'dependency' => array('header_three_navbar_button', '==', 'true')
+                'dependency' => array('header_navbar_button', '==', 'true')
             ),
             array(
                 'id' => 'header_four_navbar_url',
                 'type' => 'text',
                 'title' => esc_html__('Button URL', 'softim'),
                 'default' => '#',
-                'dependency' => array('header_three_navbar_button', '==', 'true')
+                'dependency' => array('header_navbar_button', '==', 'true')
+            ),
+        )
+    ));
+
+    /* Header Style 05 */
+    CSF::createSection($prefix . '_theme_options', array(
+        'title' => esc_html__('Header Five', 'softim'),
+        'id' => 'theme_header_five_options',
+        'icon' => 'fas fa-image',
+        'parent' => 'headers_settings',
+        'fields' => array(
+            array(
+                'type' => 'subheading',
+                'content' => '<h3>' . esc_html__('Logo Options', 'softim') . '</h3>'
+            ),
+            array(
+                'id' => 'header_five_logo',
+                'type' => 'media',
+                'title' => esc_html__('Logo', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> logo</mark> here it will overwrite customizer uploaded logo', 'softim'), $allowed_html),
             ),
         )
     ));

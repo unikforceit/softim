@@ -4,32 +4,28 @@
  * @package softim
  * @since 1.0.0
  */
-
 $shortcodes_right_content = cs_get_option('header_three_top_right_info_bar_shortcode');
+
 ?>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Start Header
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <header class="header-section two">
     <div class="header">
-        <div class="header-bottom-area">
+        <div class="header-bottom-area five">
             <div class="container custom-container">
                 <div class="header-menu-content">
                     <nav class="navbar navbar-expand-xl p-0">
                         <?php
-                        $header_three_logo = cs_get_option('header_three_logo');
-                        if (has_custom_logo() && empty($header_three_logo['id'])) {
+                        $header_four_logo = cs_get_option('header_five_logo');
+                        if (has_custom_logo() && empty($header_five_logo['id'])) {
                             the_custom_logo();
-                        } elseif (!empty($header_three_logo['id'])) {
-                            printf('<a class="site-logo site-title" href="%1$s"><img src="%2$s" alt="%3$s"/></a>', esc_url(get_home_url()), $header_three_logo['url'], $header_three_logo['alt']);
+                        } elseif (!empty($header_five_logo['id'])) {
+                            printf('<a class="site-logo site-title" href="%1$s"><img src="%2$s" alt="%3$s"/></a>', esc_url(get_home_url()), $header_five_logo['url'], $header_five_logo['alt']);
                         } else {
                             printf('<a class="site-title" href="%1$s">%2$s</a>', esc_url(get_home_url()), esc_html(get_bloginfo('title')));
                         }
                         ?>
-                        <button class="navbar-toggler d-block d-xl-none ml-auto" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent"
-                                aria-controls="navbarSupportedContent" aria-expanded="false"
-                                aria-label="Toggle navigation">
+                        <button class="navbar-toggler d-block d-xl-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="toggle-bar"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
@@ -43,13 +39,9 @@ $shortcodes_right_content = cs_get_option('header_three_top_right_info_bar_short
                             ));
                             ?>
                             <div class="header-right">
-                                <div class="header-action-area">
-                                    <div class="header-action">
-                                        <a href="<?php echo esc_url(cs_get_option('header_three_navbar_url')); ?>" class="btn--base">
-                                            <?php echo esc_html(cs_get_option('header_three_navbar_title')); ?>
-                                        </a>
-                                    </div>
-                                </div>
+                                <button class="menu-toggler five style-01 home-three ml-auto">
+                                    <span class="toggle-bar home-three"></span>
+                                </button>
                             </div>
                         </div>
                     </nav>
@@ -58,6 +50,3 @@ $shortcodes_right_content = cs_get_option('header_three_top_right_info_bar_short
         </div>
     </div>
 </header>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    End Header
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
