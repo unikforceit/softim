@@ -75,8 +75,8 @@ $copyright_text = str_replace('{year}', date('Y'), $copyright_text);
                 <div class="col-xl-12 text-center">
                     <div class="copyright-area">
                         <div class="footer-logo">
-                            <a class="site-logo site-title" href="index.html"><img src="assets/images/logo-two.png"
-                                                                                   alt="site-logo"></a>
+                            <a class="site-logo site-title" href="index.html">
+                                <img src="assets/images/logo-two.png" alt="site-logo"></a>
                         </div>
                         <p><?php
                             echo wp_kses($copyright_text, softim()->kses_allowed_html(array('a')));

@@ -166,7 +166,9 @@ if (!class_exists('Softim_Group_Fields')) {
                             '' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/01.png',
                             'style-01' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/02.png',
                             'style-02' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/03.png',
-                            'style-03' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/04.png'
+                            'style-03' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/04.png',
+                            'style-04' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/05.png',
+                            'style-05' => SOFTIM_THEME_SETTINGS_IMAGES . '/header/06.png'
                         ),
                         'default' => '',
                         'desc' => wp_kses(__('you can set <mark>navbar type</mark> transparent type or solid background.', 'softim'), $allowed_html),
@@ -180,6 +182,8 @@ if (!class_exists('Softim_Group_Fields')) {
                             'style-01' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/02.png',
                             'style-02' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/03.png',
                             'style-03' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/04.png',
+                            'style-04' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/05.png',
+                            'style-05' => SOFTIM_THEME_SETTINGS_IMAGES . '/footer/06.png',
                         ),
                         'default' => '',
                         'desc' => wp_kses(__('you can set <mark>footer type</mark> transparent type or solid background.', 'softim'), $allowed_html),
