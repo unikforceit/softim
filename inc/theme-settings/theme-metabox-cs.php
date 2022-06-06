@@ -357,11 +357,6 @@ if (class_exists('CSF')) {
                 'title' => esc_html__('Project Image', 'softim')
             ),
             array(
-                'id' => 'project_tag',
-                'type' => 'text',
-                'title' => esc_html__('Service Type', 'softim'),
-            ),
-            array(
                 'id' => 'url',
                 'type' => 'link',
                 'title' => esc_html__('Web Site Link', 'softim'),

@@ -439,6 +439,13 @@ if (class_exists('CSF')) {
                 'desc' => wp_kses(__('you can upload <mark> logo</mark> here it will overwrite customizer uploaded logo', 'softim'), $allowed_html),
             ),
             array(
+                'id' => 'header_three_logo_light',
+                'type' => 'media',
+                'title' => esc_html__('Logo Light', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> logo</mark> here it will overwrite customizer uploaded logo', 'softim'), $allowed_html),
+            ),
+            array(
                 'id' => 'header_three_navbar_button',
                 'type' => 'switcher',
                 'title' => esc_html__('Header Button', 'softim'),
@@ -478,46 +485,29 @@ if (class_exists('CSF')) {
                 'default' => esc_html__('Contact', 'softim'),
             ),
             array(
-                'id' => 'header_three_contact_number_switcher',
-                'type' => 'switcher',
-                'title' => esc_html__('Phone Number Switcher', 'softim'),
-                'default' => true,
-                'desc' => wp_kses(__('you can <mark> show/hide</mark> phone number of header three', 'softim'), $allowed_html),
-            ),
-            array(
                 'id' => 'header_three_contact_number_title',
                 'type' => 'text',
                 'title' => esc_html__('Contact Number', 'softim'),
                 'default' => esc_html__('+1 (900) 696 3600', 'softim'),
-                'dependency' => array('header_three_contact_number_switcher', '==', 'true')
             ),
             array(
                 'id' => 'header_three_contact_number_url',
                 'type' => 'text',
                 'title' => esc_html__('Contact Number URL', 'softim'),
                 'default' => '#',
-                'dependency' => array('header_three_contact_number_switcher', '==', 'true')
             ),
-            array(
-                'id' => 'header_three_contact_email_switcher',
-                'type' => 'switcher',
-                'title' => esc_html__('Email Switcher', 'softim'),
-                'default' => true,
-                'desc' => wp_kses(__('you can <mark> show/hide</mark> email of header three', 'softim'), $allowed_html),
-            ),
+
             array(
                 'id' => 'header_three_contact_email_title',
                 'type' => 'text',
                 'title' => esc_html__('Email', 'softim'),
                 'default' => esc_html__('softim@gmail.com', 'softim'),
-                'dependency' => array('header_three_contact_email_switcher', '==', 'true')
             ),
             array(
                 'id' => 'header_three_contact_email_url',
                 'type' => 'text',
                 'title' => esc_html__('Email URL', 'softim'),
                 'default' => '#',
-                'dependency' => array('header_three_contact_email_switcher', '==', 'true')
             ),
             array(
                 'id' => 'header_three_social_title',
@@ -603,6 +593,80 @@ if (class_exists('CSF')) {
                 'title' => esc_html__('Logo', 'softim'),
                 'library' => 'image',
                 'desc' => wp_kses(__('you can upload <mark> logo</mark> here it will overwrite customizer uploaded logo', 'softim'), $allowed_html),
+            ),
+            array(
+                'id' => 'header_five_logo_light',
+                'type' => 'media',
+                'title' => esc_html__('Logo Light', 'softim'),
+                'library' => 'image',
+                'desc' => wp_kses(__('you can upload <mark> logo</mark> here it will overwrite customizer uploaded logo', 'softim'), $allowed_html),
+            ),
+
+            array(
+                'id' => 'header_five_address_title',
+                'type' => 'text',
+                'title' => esc_html__('Address Title', 'softim'),
+                'default' => esc_html__('Address', 'softim'),
+            ),
+            array(
+                'id' => 'header_five_address_info',
+                'type' => 'text',
+                'title' => esc_html__('Address info', 'softim'),
+                'default' => esc_html__('72 Main Drive, Calibry, FL', 'softim'),
+            ),
+            array(
+                'id' => 'header_five_contact_title',
+                'type' => 'text',
+                'title' => esc_html__('Contact Title', 'softim'),
+                'default' => esc_html__('Contact', 'softim'),
+            ),
+            array(
+                'id' => 'header_five_contact_number_title',
+                'type' => 'text',
+                'title' => esc_html__('Contact Number', 'softim'),
+                'default' => esc_html__('+1 (900) 696 3600', 'softim'),
+            ),
+            array(
+                'id' => 'header_five_contact_number_url',
+                'type' => 'text',
+                'title' => esc_html__('Contact Number URL', 'softim'),
+                'default' => '#',
+            ),
+
+            array(
+                'id' => 'header_five_contact_email_title',
+                'type' => 'text',
+                'title' => esc_html__('Email', 'softim'),
+                'default' => esc_html__('softim@gmail.com', 'softim'),
+            ),
+            array(
+                'id' => 'header_five_contact_email_url',
+                'type' => 'text',
+                'title' => esc_html__('Email URL', 'softim'),
+                'default' => '#',
+            ),
+            array(
+                'id' => 'header_five_social_title',
+                'type' => 'text',
+                'title' => esc_html__('Social Title', 'softim'),
+                'default' => esc_html__('Follow Us', 'softim'),
+            ),
+            array(
+                'id' => 'header_five_social_link',
+                'type' => 'repeater',
+                'title' => esc_html__('Contact Social Item', 'softim'),
+                'fields' => array(
+                    array(
+                        'id' => 'image',
+                        'type' => 'icon',
+                        'title' => esc_html__('Icon', 'softim')
+                    ),
+                    array(
+                        'id' => 'url',
+                        'type' => 'text',
+                        'title' => esc_html__('URL', 'softim')
+                    ),
+                ),
             ),
         )
     ));

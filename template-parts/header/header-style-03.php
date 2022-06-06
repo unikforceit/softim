@@ -18,11 +18,11 @@ $shortcodes_right_content = cs_get_option('header_three_top_right_info_bar_short
                 <div class="header-menu-content">
                     <nav class="navbar home-three navbar-expand-xl p-0">
                         <?php
-                        $header_four_logo = cs_get_option('header_four_logo');
-                        if (has_custom_logo() && empty($header_four_logo['id'])) {
+                        $header_three_logo = cs_get_option('header_three_logo');
+                        if (has_custom_logo() && empty($header_three_logo['id'])) {
                             the_custom_logo();
-                        } elseif (!empty($header_four_logo['id'])) {
-                            printf('<a class="site-logo site-title home-three-logo" href="%1$s"><img src="%2$s" alt="%3$s"/></a>', esc_url(get_home_url()), $header_four_logo['url'], $header_four_logo['alt']);
+                        } elseif (!empty($header_three_logo['id'])) {
+                            printf('<a class="site-logo site-title home-three-logo" href="%1$s"><img src="%2$s" alt="%3$s"/></a>', esc_url(get_home_url()), $header_three_logo['url'], $header_three_logo['alt']);
                         } else {
                             printf('<a class="site-title" href="%1$s">%2$s</a>', esc_url(get_home_url()), esc_html(get_bloginfo('title')));
                         }
@@ -53,11 +53,11 @@ $shortcodes_right_content = cs_get_option('header_three_top_right_info_bar_short
                         </div>
                         <div class="logo-wrapper">
                             <?php
-                            $header_four_logo = cs_get_option('header_four_logo');
-                            if (has_custom_logo() && empty($header_four_logo['id'])) {
+                            $header_three_logo = cs_get_option('header_three_logo');
+                            if (has_custom_logo() && empty($header_three_logo['id'])) {
                                 the_custom_logo();
-                            } elseif (!empty($header_four_logo['id'])) {
-                                printf('<a class="site-title" href="%1$s"><img src="%2$s" alt="%3$s"/></a>', esc_url(get_home_url()), $header_four_logo['url'], $header_four_logo['alt']);
+                            } elseif (!empty($header_three_logo['id'])) {
+                                printf('<a class="site-title" href="%1$s"><img src="%2$s" alt="%3$s"/></a>', esc_url(get_home_url()), $header_three_logo['url'], $header_three_logo['alt']);
                             } else {
                                 printf('<a class="site-title" href="%1$s">%2$s</a>', esc_url(get_home_url()), esc_html(get_bloginfo('title')));
                             }
@@ -88,11 +88,11 @@ $shortcodes_right_content = cs_get_option('header_three_top_right_info_bar_short
         <div class="close-btn">
             <div class="logo">
                 <?php
-                $header_four_logo = cs_get_option('header_four_logo');
-                if (has_custom_logo() && empty($header_four_logo['id'])) {
+                $header_three_logo_light = cs_get_option('header_three_logo_light');
+                if (has_custom_logo() && empty($header_three_logo_light['id'])) {
                     the_custom_logo();
-                } elseif (!empty($header_four_logo['id'])) {
-                    printf('<a class="site-logo site-title home-three-logo" href="%1$s"><img src="%2$s" alt="%3$s"/></a>', esc_url(get_home_url()), $header_four_logo['url'], $header_four_logo['alt']);
+                } elseif (!empty($header_three_logo_light['id'])) {
+                    printf('<a class="site-logo site-title home-three-logo" href="%1$s"><img src="%2$s" alt="%3$s"/></a>', esc_url(get_home_url()), $header_three_logo_light['url'], $header_three_logo_light['alt']);
                 } else {
                     printf('<a class="site-title" href="%1$s">%2$s</a>', esc_url(get_home_url()), esc_html(get_bloginfo('title')));
                 }
@@ -132,13 +132,14 @@ $shortcodes_right_content = cs_get_option('header_three_top_right_info_bar_short
                 <ul class="footer-social">
                     <h6 class="title"><?php echo esc_html(cs_get_option('header_three_social_title')); ?></h6>
                     <?php
+                    if (cs_get_option('header_three_social_link')){
                     foreach (cs_get_option('header_three_social_link') as $icon) {
                         ?>
                         <li>
                             <a href="<?php echo esc_url($icon['url']); ?>"><i
                                         class="<?php echo esc_attr($icon['image']); ?>"></i></a>
                         </li>
-                    <?php }
+                    <?php } }
                     ?>
                 </ul>
             </div>

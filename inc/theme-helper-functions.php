@@ -732,3 +732,15 @@ if (!class_exists('Softim_Helper_Functions')) {
         Softim_Helper_Functions::getInstance();
     }
 }
+
+function softim_post_category($tax = 'project-cat'){
+    $categories = get_the_terms(get_the_ID(), $tax);
+    $output = '';
+    if ($categories){
+        foreach ($categories as $category){
+            $link = get_term_link($category->term_id, $tax);
+            $output.= "<a href='$link'>$category->name</a>";
+        }
+    }
+    return $output;
+}
