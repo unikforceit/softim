@@ -161,7 +161,9 @@
     right: 2%;
     opacity: .25;
     z-index: 3;
-    animation: rotate 5s linear infinite;
+    img{
+      animation: rotate 5s linear infinite;
+    }
   }
 }
 .footer-top-area{
