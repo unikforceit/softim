@@ -992,6 +992,15 @@ blockquote {
             line-height: 40px;
             display: block;
             margin: 0;
+            &.current,
+            &:hover{
+                background: #3249b3;
+                color: #fff;
+            }
+            &.next,&.prev{
+                background: transparent;
+                color: #555555;
+            }
 
             &:focus {
                 box-shadow: none;
