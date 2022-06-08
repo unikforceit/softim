@@ -50,3 +50,20 @@ if ( ! function_exists( 'cs_get_customize_option' ) && class_exists( 'CSF' )) {
 		return ( isset( $options[$option] ) ) ? $options[$option] : $default;
 	}
 }
+
+if ( ! function_exists( 'softim_get_post_meta' ) && class_exists( 'CSF' )) {
+
+	function softim_get_post_meta( $meta_key, $meta ) {
+		$options = get_post_meta( get_the_ID(), $meta_key, true ); // Attention: Set your unique id of the framework
+		if (isset($options[$meta]['id'])){
+            $output = $options[$meta]['id'];
+        } elseif ($options[$meta]['url']){
+            $output = $options[$meta]['url'];
+        } elseif ($options[$meta]){
+            $output = $options[$meta];
+        } else{
+            $output = '';
+        }
+        return $output;
+	}
+}

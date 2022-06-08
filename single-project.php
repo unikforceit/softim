@@ -56,11 +56,11 @@ $project_meta = get_post_meta(get_the_ID(), 'softim_project_options', true);
                                                 </li>
                                                 <li>
                                                     <h5 class="title"><?php echo esc_html('Service'); ?></h5>
-                                                    <span class="sub-title"><?php echo esc_html($project_meta['project_tag']); ?></span>
+                                                    <span class="sub-title"><?php echo esc_html(softim_get_post_meta('softim_project_options', 'project_tag')); ?></span>
                                                 </li>
                                                 <li>
                                                     <h5 class="title"><?php echo esc_html('Web'); ?></h5>
-                                                    <span class="sub-title"><?php echo esc_url($project_meta['url']['url']); ?></span>
+                                                    <span class="sub-title"><?php echo esc_html(softim_get_post_meta('softim_project_options', 'url')); ?></span>
                                                 </li>
                                             </ul>
                                         </div>
