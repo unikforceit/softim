@@ -48,19 +48,27 @@ $project_meta = get_post_meta(get_the_ID(), 'softim_project_options', true);
                                             <ul class="gallery-sidebar-widget-list">
                                                 <li>
                                                     <h5 class="title"><?php echo esc_html('Client'); ?></h5>
-                                                    <span class="sub-title"><?php the_author(); ?></span>
+                                                    <span class="sub-title">
+                                                        <?php echo esc_html($project_meta['client']); ?>
+                                                    </span>
                                                 </li>
                                                 <li>
                                                     <h5 class="title"><?php echo esc_html('Date'); ?></h5>
-                                                    <span class="sub-title"><?php echo get_the_time('F j, Y'); ?></span>
+                                                    <span class="sub-title">
+                                                        <?php echo get_the_time('F j, Y'); ?>
+                                                    </span>
                                                 </li>
                                                 <li>
                                                     <h5 class="title"><?php echo esc_html('Service'); ?></h5>
-                                                    <span class="sub-title"><?php echo esc_html($project_meta['project_tag']); ?></span>
+                                                    <span class="sub-title">
+                                                        <?php echo softim_post_category(); ?>
+                                                    </span>
                                                 </li>
                                                 <li>
                                                     <h5 class="title"><?php echo esc_html('Web'); ?></h5>
-                                                    <span class="sub-title"><?php echo esc_url($project_meta['url']['url']); ?></span>
+                                                    <span class="sub-title">
+                                                        <?php echo esc_url($project_meta['url']['url']); ?>
+                                                    </span>
                                                 </li>
                                             </ul>
                                         </div>

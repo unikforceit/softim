@@ -347,6 +347,11 @@ if (class_exists('CSF')) {
         'id' => 'softim-info',
         'fields' => array(
             array(
+                'id' => 'client',
+                'type' => 'text',
+                'title' => esc_html__('Client', 'softim')
+            ),
+            array(
                 'id' => 'icon_image',
                 'type' => 'media',
                 'title' => esc_html__('Icon Image', 'softim')
