@@ -44,3 +44,67 @@
 .breadcrumb-item+.breadcrumb-item::before{
   content: '>';
 }
+
+// Form subscribe
+.wpcf7 form.sent .wpcf7-response-output {
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 5px;
+  width: 80%;
+  margin-left: -1px;
+}
+.banner-form ~ .wpcf7 form.sent .wpcf7-response-output {
+  border: 1px solid #3249B3;
+  color: #3249B3;
+  border-radius: 5px;
+  width: 80%;
+  margin-left: -1px;
+}
+
+// checkout page
+.checkbox input[type="checkbox"]{
+  width: auto;
+  margin-right: 10px;
+}
+.woocommerce-NoticeGroup{
+  margin-left: -8px;
+}
+
+// home 02 contact form
+.contact-form-area .wpcf7 .wpcf7-response-output {
+  color: #3249B3 !important;
+  border: 1px solid #3249B3 !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .elementor-text-effect div {
+    color: #4b4b4b;
+  }
+  .elementor-text-effect div h4{
+    color: #1c1c1c !important;
+  }
+}
+
+// Home 03
+.icon img {
+  height: 50px;
+}
+
+// home 04 Banner form
+.banner-content .wpcf7 .wpcf7-response-output {
+  color: #3249B3 !important;
+  border: 1px solid #3249B3 !important;
+}
+
+// home 05 footer form
+.contactForm .wpcf7 .wpcf7-response-output {
+  color: #3249B3 !important;
+  border: 1px solid #3249B3 !important;
+}
+
+// contact page form
+.contactForm2 .wpcf7 .wpcf7-response-output {
+  color: #3249B3 !important;
+  border: 1px solid #3249B3 !important;
+  width: 40%;
+}
