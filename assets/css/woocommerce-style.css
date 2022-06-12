@@ -108,7 +108,7 @@ ul.products li.product {
 }
 
 ul.products li.product img {
-    display: block;
+    /*display: block;*/
     border-radius: 10px;
 }
 .woocommerce .content-area ul li + li{
@@ -491,11 +491,11 @@ p.stars.selected a:not(.active):before {
 }
 
 .form-row.woocommerce-validated input.input-text {
-    box-shadow: inset 2px 0 0 #0f834d;
+    box-shadow: inset 2px 0 0 transparent;
 }
 
 .form-row.woocommerce-invalid input.input-text {
-    box-shadow: inset 2px 0 0 #e2401c;
+    box-shadow: inset 2px 0 0 transparent;
 }
 
 .required {
@@ -518,6 +518,7 @@ p.no-comments {
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 10px;
+    margin-left: -8px;
 }
 
 .woocommerce-noreviews {
@@ -1077,6 +1078,8 @@ p.no-comments {
 
 .woocommmerce-product-single-page-top-content-wrap .summary.entry-summary .quantity {
     display: inline-block;
+    vertical-align: middle;
+    padding-top: 10px;
 }
 .single-product div.product .summary.entry-summary input[type='number']{
     text-align: center;
@@ -1099,6 +1102,7 @@ p.no-comments {
     transition: all ease 0.3s;
     border: 1px solid #DEDEDE;
     border-radius: 10px;
+    padding: 0;
 }
 
 .woocommmerce-product-single-page-top-content-wrap .summary.entry-summary .single_add_to_cart_button:hover {
@@ -2541,10 +2545,10 @@ button[name="save_account_details"]:hover {
 .single-product div.product .summary.entry-summary input[type='search'],
 .single-product div.product .summary.entry-summary textarea,
 .single-product div.product .summary.entry-summary input-text {
-    padding: 10px 20px;
+    padding: 10px 0px 10px 50px;
     font-size: 15px;
-    width: 100%;
-    border: 1px solid #e3e3e3;
+    width: 50%;
+    border: 1px solid transparent;
 }
 
 .single-product div.product .summary.entry-summary select {
@@ -2565,7 +2569,7 @@ button[name="save_account_details"]:hover {
 }
 
 .single-product div.product .summary.entry-summary button[type=submit] {
-    margin-left: 20px;
+    margin-left: -50px;
     text-align: center;
     border: none;
     cursor: pointer;

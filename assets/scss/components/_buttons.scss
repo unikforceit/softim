@@ -178,6 +178,9 @@ input::-moz-focus-inner {
             color: $white;
             border: 1px solid $bg--base;
         }
+        &:focus{
+            color: #fff;
+        }
     }
     &:focus,
     &:hover {

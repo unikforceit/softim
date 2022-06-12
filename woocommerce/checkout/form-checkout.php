@@ -35,7 +35,7 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
     <?php if ($checkout->get_checkout_fields()) : ?>
     <div class="row">
         <?php do_action('woocommerce_checkout_before_customer_details'); ?>
-        <div class="col-6">
+        <div class="col-lg-6">
 
             <div class="" id="customer_details">
                 <?php do_action('woocommerce_checkout_billing'); ?>
@@ -46,7 +46,7 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
 
             <?php endif; ?>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6">
             <?php do_action('woocommerce_checkout_before_order_review_heading'); ?>
 
             <h3 id="order_review_heading"><?php esc_html_e('Your order', 'softim'); ?></h3>

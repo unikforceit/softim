@@ -67,7 +67,7 @@ $project_meta = get_post_meta(get_the_ID(), 'softim_project_options', true);
                                                 <li>
                                                     <h5 class="title"><?php echo esc_html('Web'); ?></h5>
                                                     <span class="sub-title">
-                                                        <?php echo esc_url($project_meta['url']['url']); ?>
+                                                        <?php echo esc_html($project_meta['web_link']); ?>
                                                     </span>
                                                 </li>
                                             </ul>
