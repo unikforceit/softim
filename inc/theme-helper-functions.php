@@ -739,7 +739,7 @@ function softim_post_category($tax = 'project-cat'){
     if ($categories){
         foreach ($categories as $category){
             $link = get_term_link($category->term_id, $tax);
-            $output.= "<a href='$link'>$category->name</a>";
+            $output.= "<a href='$link'>$category->name</a>, ";
         }
     }
     return $output;
