@@ -19,8 +19,9 @@
 
 
 get_header();
+    $service_layout = cs_get_option('service_single_layout');
 
-    if (isset($_GET['layout'] ) && $_GET['layout'] == '2') {
+    if (isset($_GET['layout'] ) && $_GET['layout'] == '2' || $service_layout == 'layout-2') {
         get_template_part('template-parts/content-service-single-layout', '2');
     }else{
         get_template_part('template-parts/content-service-single-layout', '1');

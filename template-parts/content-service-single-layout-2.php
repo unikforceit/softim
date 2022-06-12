@@ -1,5 +1,5 @@
 <?php
-    $service_meta = get_post_meta(get_the_ID(), 'softim_service_options', true);
+$service_meta = get_post_meta(get_the_ID(), 'softim_service_options', true);
 ?>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Service
@@ -11,90 +11,67 @@
                 <div class="service-item three details">
                     <?php if (has_post_thumbnail()) { ?>
                         <div class="service-thumb">
-                            <?php the_post_thumbnail('full');?>
+                            <?php the_post_thumbnail('full'); ?>
                         </div>
                     <?php } ?>
                     <div class="service-content two">
-                        <h2 class="title"><?php the_title();?></h2>
-                        <p><?php the_excerpt();?></p>
+                        <h2 class="title"><?php the_title(); ?></h2>
+                        <p><?php the_excerpt(); ?></p>
                         <div class="service-widget-item-area two">
                             <div class="row justify-content-center mb-30-none">
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-30">
-                                    <div class="service-widget-item">
-                                        <div class="service-widget-icon">
-                                            <img src="assets/images/icon/icon-20.png" alt="icon">
+                                <?php
+                                if ($service_meta['service_info_widget']) {
+                                    foreach ($service_meta['service_info_widget'] as $service_item) {
+                                        ?>
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-30">
+                                            <div class="service-widget-item">
+                                                <div class="service-widget-icon">
+                                                    <?php echo wp_get_attachment_image($service_item['image']['id'], 'full'); ?>
+                                                </div>
+                                                <div class="service-widget-content">
+                                                    <h5 class="title"><?php echo esc_html($service_item['title']); ?></h5>
+                                                    <span class="sub-title"><?php echo esc_html($service_item['text']); ?></span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="service-widget-content">
-                                            <h5 class="title">SEO FRIENDLY</h5>
-                                            <span class="sub-title">Development</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-30">
-                                    <div class="service-widget-item">
-                                        <div class="service-widget-icon">
-                                            <img src="assets/images/icon/icon-18.png" alt="icon">
-                                        </div>
-                                        <div class="service-widget-content">
-                                            <h5 class="title">IN TIME RESULT</h5>
-                                            <span class="sub-title">Developer Time</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-30">
-                                    <div class="service-widget-item">
-                                        <div class="service-widget-icon">
-                                            <img src="assets/images/icon/icon-19.png" alt="icon">
-                                        </div>
-                                        <div class="service-widget-content">
-                                            <h5 class="title">PIXEL PERFECT</h5>
-                                            <span class="sub-title">Design Time</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <?php }
+                                } ?>
                             </div>
                         </div>
                         <div class="service-bottom-content two">
-                            <h2 class="title">Service Description</h2>
-                            <p><?php the_content();?></p>
+                            <h2 class="title"><?php echo esc_html('Service Description'); ?></h2>
+                            <?php echo esc_html($service_meta['description']); ?>
                             <div class="sevice-inner-item-area two">
                                 <div class="row justify-content-center mb-30-none">
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-30">
-                                        <div class="service-inner-item">
-                                            <div class="service-inner-icon">
-                                                <img src="assets/images/icon/icon-14.png" alt="icon">
+                                    <?php
+                                    if ($service_meta['service_item']) {
+                                        foreach ($service_meta['service_item'] as $service_item2) {
+                                            ?>
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-30">
+                                                <div class="service-inner-item">
+                                                    <div class="service-inner-icon">
+                                                        <?php echo wp_get_attachment_image($service_item2['image']['id'], 'full'); ?>
+                                                    </div>
+                                                    <div class="service-inner-content">
+                                                        <h4 class="title"><?php echo esc_html($service_item2['title']); ?></h4>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="service-inner-content">
-                                                <h4 class="title">Over 1500 DVSA certified Develop web product</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-30">
-                                        <div class="service-inner-item">
-                                            <div class="service-inner-icon">
-                                                <img src="assets/images/icon/icon-16.png" alt="icon">
-                                            </div>
-                                            <div class="service-inner-content">
-                                                <h4 class="title">Successful Project Delivery System in our
-                                                    team</h4>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        <?php }
+                                    } ?>
                                 </div>
                             </div>
                             <blockquote class="two">
                                 <div class="quote-area d-flex flex-wrap">
                                     <div class="quote-icon">
-                                        <img src="assets/images/client/quote-2.png" alt="quote">
+                                        <?php echo wp_get_attachment_image($service_meta['quoteImage1']['id'], 'full'); ?>
                                     </div>
                                     <div class="quote-content-area">
-                                        <p class="quote-content">Web optimization alludes to an umbrella of
-                                            strategies that upgrade your site’s positioning for significant list
-                                            items. A higher positioning in list items.</p>
+                                        <p class="quote-content"><?php echo esc_html($service_meta['quoteText']); ?></p>
                                     </div>
                                 </div>
                             </blockquote>
-                            <p><?php the_content();?></p>
+                            <?php echo esc_html($service_meta['description2']); ?>
                         </div>
                     </div>
                 </div>
@@ -103,14 +80,16 @@
                 <div class="service-sidebar">
                     <div class="category-widget-box mb-30">
                         <ul class="category-list two">
-                            <li><a href="#0"><i class="fas fa-chevron-right"></i> Web Design</a></li>
-                            <li><a href="#0"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
-                            <li><a href="#0"><i class="fas fa-chevron-right"></i> Search SEO</a></li>
-                            <li><a href="#0"><i class="fas fa-chevron-right"></i> Web Development</a></li>
-                            <li><a href="#0"><i class="fas fa-chevron-right"></i> IT Management</a></li>
-                            <li><a href="#0"><i class="fas fa-chevron-right"></i> Data Security</a></li>
-                            <li><a href="#0"><i class="fas fa-chevron-right"></i> Business Analysis</a></li>
-                            <li><a href="#0"><i class="fas fa-chevron-right"></i> QA & Testing</a></li>
+                            <?php
+                            $tax_args = array(
+                                'taxonomy' => 'service-cat',
+                                'number' => 7,
+                            );
+                            $categories = get_terms($tax_args);
+                            if ($categories){
+                            foreach ($categories as $category) { ?>
+                            <li><a href="<?php echo esc_url(get_term_link($category->term_id, 'service-cat'))?>"><i class="fas fa-chevron-right"></i> <?php echo esc_html($category->name); ?></a></li>
+                            <?php } } ?>
                         </ul>
                     </div>
                     <div class="widget-box mb-30">

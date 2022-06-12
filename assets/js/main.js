@@ -160,34 +160,6 @@ $('.plan-tab-switcher').on('click', function () {
   $('.plan-area').toggleClass('change-subs-duration');
 });
 
-
-
-// slider
-// var swiper = new Swiper('.brand-slider', {
-//   slidesPerView: 4,
-//   spaceBetween: 30,
-//   loop: true,
-//   autoplay: {
-//     speeds: 2000,
-//     delay: 4000,
-//   },
-//   speed: 1000,
-//   breakpoints: {
-//     991: {
-//       slidesPerView: 3,
-//     },
-//     767: {
-//       slidesPerView: 2,
-//     },
-//     575: {
-//       slidesPerView: 1,
-//     },
-//     420: {
-//       slidesPerView: 1,
-//     },
-//   }
-// });
-
 var swiper = new Swiper('.feature-slider', {
   slidesPerView: 3,
   spaceBetween: 30,
@@ -427,22 +399,5 @@ function galleryMasonaryTwo(){
     });
   });
 }
-  //menu
-  // $(".menu-toggler").click(function(){
-  //   $(".header-bottom-area").addClass("show");
-  //   $(".search-bar,.header-links-area,.header-action-area").addClass("ds-none");
-  //   $(this).addClass('nextclick');
-
-  // });
-
-
-  //   $(".menu-toggler-two").click(function(){
-  //     $(".header-menu-content").addClass("open");
-  //   $(".search-bar,.header-links-area,.header-action-area").removeClass("ds-none");
-  //   $(".menu-toggler-wrapper").addClass("ds-none");
-    
-  // });
-  
-  
 
 })(jQuery);
