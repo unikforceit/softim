@@ -8,7 +8,7 @@
  */
 
 ?>
-<div class="col-xl-12 mb-60">
+<div <?php post_class('col-xl-12 mb-60');?>>
     <div class="blog-item">
         <?php if (has_post_thumbnail()) { ?>
             <div class="blog-thumb">

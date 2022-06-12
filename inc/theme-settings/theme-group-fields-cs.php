@@ -375,7 +375,7 @@ if (!class_exists('Softim_Group_Fields')) {
                     'text_on' => esc_html__('Yes', 'softim'),
                     'text_off' => esc_html__('No', 'softim'),
                     'default' => true
-                )
+                ),
             );
 
             if ('blog_post' == $prefix) {
@@ -387,6 +387,16 @@ if (!class_exists('Softim_Group_Fields')) {
                     'text_on' => esc_html__('Yes', 'softim'),
                     'text_off' => esc_html__('No', 'softim'),
                     'default' => true
+                );
+                $fields[] =  array(
+                    'id'          => 'blog_archive_layout',
+                    'type'        => 'select',
+                    'title'       => 'Select Blog Archive Layout',
+                    'options'     => array(
+                        'layout-1'  => 'Layout 1',
+                        'layout-2'  => 'Layout 2',
+                    ),
+                    'default'     => 'layout-1'
                 );
                 $fields[] = array(
                     'id' => $prefix . '_readmore_btn',

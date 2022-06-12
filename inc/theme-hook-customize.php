@@ -167,16 +167,28 @@ if (!class_exists('Softim_Customize')) {
                             <div class="banner-content two">
                                 <div class="banner-content-header">
                                     <?php
-                                    if (is_archive()) {
-                                        the_archive_title('<h2 class="title">', '</h2>');
+                                    if (is_post_type_archive('post')) {
+                                        printf('<h2 class="title">%1$s</h2>', esc_html__('Blog', 'softim'));
+                                    } elseif (is_post_type_archive('product')) {
+                                        printf('<h2 class="title">%1$s</h2>', esc_html__('Our Products', 'softim'));
+                                    } elseif (is_post_type_archive('project')) {
+                                        printf('<h2 class="title">%1$s</h2>', esc_html__('Our Projects', 'softim'));
+                                    } elseif (is_post_type_archive('team')) {
+                                        printf('<h2 class="title">%1$s</h2>', esc_html__('Our Teams', 'softim'));
+                                    } elseif (is_post_type_archive('service')) {
+                                        printf('<h2 class="title">%1$s</h2>', esc_html__('Services', 'softim'));
                                     } elseif (is_404()) {
                                         printf('<h2 class="title">%1$s</h2>', esc_html__('Error 404', 'softim'));
                                     } elseif (is_search()) {
                                         printf('<h2 class="title">%1$s %2$s</h2>', esc_html__('Search Results for:', 'softim'), get_search_query());
                                     } elseif (is_singular('post')) {
-                                        printf('<h2 class="title">%1$s </h2>', get_the_title());
+                                        printf('<h2 class="title">%1$s </h2>', 'Blog Single');
                                     }elseif (is_singular('service')) {
-                                        printf('<h2 class="title">%1$s </h2>', get_the_title());
+                                        printf('<h2 class="title">%1$s </h2>', 'Service Single');
+                                    }elseif (is_singular('project')) {
+                                        printf('<h2 class="title">%1$s </h2>', 'Project Single');
+                                    } elseif (is_singular('team')) {
+                                        printf('<h2 class="title">%1$s </h2>', 'Team Single');
                                     } elseif (is_singular('page')) {
                                         if ($page_header_meta['page_title']) {
                                             printf('<h2 class="title">%1$s </h2>', get_the_title());

@@ -1451,6 +1451,16 @@ if (class_exists('CSF')) {
         'icon' => 'fas fa-archive',
         'fields' => array(
             array(
+                'id'          => 'service_single_layout',
+                'type'        => 'select',
+                'title'       => 'Select Service Single Layout',
+                'options'     => array(
+                    'layout-1'  => 'Layout 1',
+                    'layout-2'  => 'Layout 2',
+                ),
+                'default'     => 'layout-1'
+            ),
+            array(
                 'id' => 'service_bg1',
                 'title' => esc_html__('Element Image 1', 'softim'),
                 'type' => 'media',
