@@ -20,7 +20,7 @@ table.shop_table_responsive thead {
 }
 
 table.shop_table_responsive tbody th {
-    display: none;
+    /*display: none;*/
     border: none;
     border-bottom: 1px dashed #CBCBCB;
 }
@@ -1440,7 +1440,8 @@ p.no-comments {
 
 .woocommerce-cart-form td.product-remove .remove {
     font-size: 18px;
-    color: red;
+    color: #505050 !important;
+    text-decoration: none;
 }
 
 .woocommerce-cart-form td.product-remove {
@@ -1519,6 +1520,12 @@ p.no-comments {
     border-radius: 4px;
     font-size: 14px;
     padding: 0 20px;
+}
+@media screen and (max-width: 575px) {
+    .checkout_coupon.woocommerce-form-coupon .form-row input[type=text],
+    .woocommerce-cart-form td.actions .coupon input[type=text] {
+        width: 150px;
+    }
 }
 
 .checkout_coupon.woocommerce-form-coupon .form-row button[type=submit],
@@ -2362,7 +2369,7 @@ button[name="save_account_details"]:hover {
     }
 
     .woocommerce-cart-form td.actions .coupon button[type=submit] {
-        margin-top: 10px;
+        /*margin-top: 10px;*/
     }
 }
 
