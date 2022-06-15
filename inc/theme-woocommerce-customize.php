@@ -59,6 +59,7 @@ if (!class_exists('Softim_Woocomerce_Customize')){
             add_filter('loop_shop_columns', [$this, 'softim_loop_columns'], 999);
             add_filter( 'loop_shop_per_page', [$this, 'softim_loop_shop_per_page'], 30 );
             add_action('wp_footer', [$this, 'softim_quanity_script']);
+            add_action('woocommerce_single_product_summary', [$this, 'softim_before_title'], 4);
         }
         
 
@@ -78,9 +79,15 @@ if (!class_exists('Softim_Woocomerce_Customize')){
             return 4; // 4 products per row
         }
 
-        function softim_loop_shop_per_page( $products ) {
+        public function softim_loop_shop_per_page( $products ) {
             $products = 8;
             return $products;
+        }
+
+        public function softim_before_title(){
+            ?>
+                <span class="stock">In Stock</span>
+            <?php
         }
 
         /**
