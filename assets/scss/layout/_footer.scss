@@ -66,10 +66,10 @@
     }
   }
   .footer-element-one{
-    position: absolute;
+    position: absolute !important;
     top: 10%;
-    left: 10%;
-    animation: zoominoutsinglefeatured 5s linear infinite;
+    left: 10% !important;
+    animation: zoominoutsinglefeatured 10s linear infinite;
     @media only screen and (max-width: 991px) {
       display: none;
     }
@@ -136,7 +136,7 @@
       }
   }
   .footer-element-seven{
-    position: absolute;
+    position: absolute !important;
     top: 47%;
     left: 13%;
     opacity: .35;
@@ -148,7 +148,7 @@
       left: 2%;
     }
     &.three{
-      left: 60px;
+      left: 60px !important;
       opacity: 1;
     }
     img{

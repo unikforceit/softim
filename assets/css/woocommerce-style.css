@@ -772,6 +772,24 @@ p.no-comments {
     flex: 0 0 22%;
     max-width: 22%;
 }
+@media screen and (max-width: 1024px) {
+    .wc-page-content-inner .products.columns-4 li.product {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .wc-page-content-inner .products.columns-4 li.product {
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+}
+@media screen and (max-width: 575px) {
+    .wc-page-content-inner .products.columns-4 li.product {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
 
 .wc-page-content-inner .products.columns-3 li.product {
     flex: 0 0 29.333%;

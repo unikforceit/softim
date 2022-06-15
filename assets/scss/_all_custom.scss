@@ -87,7 +87,7 @@
 
 // Home 03
 .icon img {
-  height: 50px;
+  height: 50px !important;
 }
 
 // home 04 Banner form
@@ -107,4 +107,77 @@
   color: #3249B3 !important;
   border: 1px solid #3249B3 !important;
   width: 40%;
+}
+
+// From Theme customizing 
+.elementor-613 .elementor-element.elementor-element-77a55f4 .elementor-social-icon {
+  display: flex;
+}
+.page-id-11 li.menu-item-has-children::after{
+color:#fff;
+}
+/* ul.wp-block-categories-list.wp-block-categories li {
+position:relative;
+  font-size: 15px;
+  border-bottom: 1px dashed #C9C9C9;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+padding-left:20px;
+}
+ul.wp-block-categories-list.wp-block-categories li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+} */
+.footerFourList ul li{
+position:relative;
+}
+.footerFourList ul li::after{
+    position: absolute;
+  content: "";
+  top: 0px;
+  right: -20px !important;
+  width: 1px;
+  height: 15px !important;
+  background-color: rgba(75, 75, 75, 0.4);
+}
+.footerFourList ul li:last-child::after{
+display:none;
+}
+.download-list{
+margin-top:33px !important;
+}
+.download-list li {
+  background-color: #9DBAFE;
+  border-radius: 5px;
+  color: #fff;
+  padding: 15px 30px !important;
+  margin-bottom: 15px !important;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+.download-list li .elementor-icon-list-icon{
+order:2;
+padding-left:10px;
+vertical-align: middle;
+}
+
+/* Menu css */
+.navbar-nav ul li {
+  line-height: initial;
+  display: block;
+}
+
+/* Social Icon Footer 5 */
+.social_icon_f5 i{
+color: #727272 !important;
+}
+.social_icon_f5 a:hover i{
+color: #fff !important;
+}
+
+.footer_3_white p,
+.footer_3_white i{
+color: #fff !important;
 }
