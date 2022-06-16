@@ -1059,6 +1059,12 @@ blockquote {
                     color: $color__text;
                 }
             }
+            a.prev.page-numbers,
+            a.next.page-numbers {
+                background-color: transparent;
+                border-color: transparent;
+                color: #555555;
+            }
 
             &.prev {
                 a {

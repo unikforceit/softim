@@ -312,9 +312,10 @@
   .comment-form-cookies-consent{
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     input{
       width: 20px;
+      margin-top: 6px;
     }
     label{
       padding: 0;

@@ -1535,10 +1535,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .comment-form .comment-form-cookies-consent {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 .comment-form .comment-form-cookies-consent input {
   width: 20px;
+  margin-top: 6px;
 }
 .comment-form .comment-form-cookies-consent label {
   padding: 0;
@@ -3613,6 +3614,13 @@ blockquote .quote-icon {
 .pagination .page-item.active.next a, .pagination .page-item:hover.next a {
   background-color: transparent;
   color: #4B4B4B;
+}
+.pagination .page-item.active a.prev.page-numbers,
+.pagination .page-item.active a.next.page-numbers, .pagination .page-item:hover a.prev.page-numbers,
+.pagination .page-item:hover a.next.page-numbers {
+  background-color: transparent;
+  border-color: transparent;
+  color: #555555;
 }
 .pagination .page-item.active.prev a, .pagination .page-item:hover.prev a {
   background-color: transparent;
@@ -15798,6 +15806,14 @@ div[class*=col]:nth-of-type(3n + 3) .process-item.two::after {
 }
 .blog-item.details:hover .blog-thumb img {
   transform: none;
+}
+
+.blog-item > .blog-thumb {
+  max-height: 250px;
+}
+
+.blog-item.details > .blog-thumb {
+  max-height: inherit;
 }
 
 .blog-thumb {

@@ -128,6 +128,12 @@
         }
     }
 }
+.blog-item > .blog-thumb{
+    max-height: 250px;
+}
+.blog-item.details > .blog-thumb{
+    max-height: inherit;
+}
 .blog-thumb{
     overflow: hidden;
     border-radius: 10px;
