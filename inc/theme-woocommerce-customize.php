@@ -34,10 +34,8 @@ if (!class_exists('Softim_Woocomerce_Customize')){
             add_action('woocommerce_before_shop_loop',array($this,'woocommerce_before_shop_header_wrap_start'),12);
             add_action('woocommerce_before_shop_loop',array($this,'woocommerce_before_shop_header_wrap_end'),32);
             add_action('woocommerce_before_shop_loop_item_title',array($this,'woocommerce_before_shop_loop_item_thumbnail_wrap_start'),9);
-
             add_action('woocommerce_before_shop_loop_item_title','woocommerce_template_loop_product_link_open',9);
             add_action('woocommerce_before_shop_loop_item_title','woocommerce_template_loop_product_link_close',10);
-
             add_action('woocommerce_before_shop_loop_item_title',array($this,'woocommerce_before_shop_loop_item_ul_start'),11);
             if (defined('YITH_WCQV_VERSION')){
                 add_filter('yith_add_quick_view_button_html','__return_false');
@@ -55,7 +53,6 @@ if (!class_exists('Softim_Woocomerce_Customize')){
             add_action('woocommerce_after_single_product_summary',array($this,'woocommerce_before_single_product_summary_wrapper_end'),9);
             add_action('woocommerce_before_account_navigation',array($this,'woocommerce_before_account_navigation_wrapper_start'),10);
             add_action('woocommerce_account_content',array($this,'woocommerce_before_account_navigation_wrapper_end'),30);
-
             add_filter('loop_shop_columns', [$this, 'softim_loop_columns'], 999);
             add_filter( 'loop_shop_per_page', [$this, 'softim_loop_shop_per_page'], 30 );
             add_action('wp_footer', [$this, 'softim_quanity_script']);
