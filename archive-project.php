@@ -32,7 +32,13 @@ $categories = get_terms($tax_args);
     <section class="gallery-section ptb-120">
         <div class="container">
             <div class="gallery-filter-wrapper">
-                <div class="row">
+                <div class="button-group filter-btn-group two">
+                    <button class="active" data-filter="*">All</button>
+                    <?php foreach ($categories as $category) { ?>
+                        <button data-filter=".<?php echo esc_attr($category->slug); ?>"><?php echo esc_html($category->name); ?></button>
+                    <?php } ?>
+                </div>
+                <div class="grid two">
                     <?php if (have_posts()) : ?>
 
                         <?php
