@@ -119,6 +119,10 @@ ul.products li.product img {
     padding-left: 0;
 }
 
+.softim-product-single-page-item .woocommerce-Tabs-panel > ul li {
+    padding-left: 15px;
+}
+
 .woocommerce .content-area table th,
 .woocommerce .content-area table td{
     border: none;
@@ -1239,13 +1243,15 @@ p.no-comments {
 #yith-quick-view-content .summary-content table td .reset_variations[style="visibility: visible;"],
 .woocommmerce-product-single-page-top-content-wrap .variations_form .reset_variations[style="visibility: visible;"] {
     display: inline-block;
-    padding: 6px 15px;
-    background-color: var(--main-color-one);
+    padding: 5px 10px;
+    background-color: #3249b3;
     color: #fff;
     font-size: 14px;
     font-weight: 600;
-    border-radius: 0;
+    text-decoration: none;
+    border-radius: 10px;
     margin-top: 10px;
+    margin-left: 25px;
     transition: all 500ms ease-in;
 }
 
@@ -1259,7 +1265,7 @@ p.no-comments {
     display: none;
 }
 
-.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper ul {
+.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper > ul {
     margin: 0;
     padding: 0;
     font-size: 0px;
@@ -1272,13 +1278,13 @@ p.no-comments {
     justify-content: center;
 }
 
-.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper ul li {
+.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper > ul > li {
     display: inline-block;
     transition: all 300ms;
     padding-left: 0;
     position: relative;
 }
-.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper ul li::after {
+.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper > ul > li::after {
     content: "";
     position: absolute;
     left: 0;
@@ -1289,14 +1295,14 @@ p.no-comments {
     transition: 0.3s all ease;
 }
 
-.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper ul li:before {
+.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper > ul > li:before {
     display: none;
 }
 
-.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper ul li + li {
+.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper > ul > li + li {
 }
 
-.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper ul li a {
+.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper > ul > li > a {
     padding: 8px 20px;
     background: transparent;
     font-size: 16px;
@@ -1308,10 +1314,10 @@ p.no-comments {
     z-index: 0;
 }
 
-.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper ul li.active {
+.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper > ul > li.active {
     color: #3249B3;
 }
-.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper ul li.active::after {
+.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper > ul > li.active::after {
     width: 100%;
 }
 
