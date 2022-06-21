@@ -284,6 +284,24 @@ div[class*="col"]:nth-of-type(3n + 3) .footer-contact-list {
       }
     }
   }
+  .title2{
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      bottom: -22px;
+      left: 0;
+      width: 60px;
+      height: 1px;
+      background-color: #fff;
+    }
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 40px;
+      &::after{
+        bottom: -20px;
+      }
+    }
+  }
   &.widget--style{
     background-color: #9DBAFE;
     padding: 80px 30px !important;
@@ -514,6 +532,7 @@ div[class*="col"]:nth-of-type(3n + 3) .footer-contact-list {
   }
   input{
     padding-right: 70px;
+    color: #000 !important;
     @media only screen and (max-width: 1499px) {
       border: 1px solid $border--base;
     }
