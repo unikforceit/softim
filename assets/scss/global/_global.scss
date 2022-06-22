@@ -688,8 +688,12 @@ code {
 
 //== padding both
 .padding-120 {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 120px !important;
+  padding-bottom: 120px !important;
+  @media screen and (max-width: 991px) {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
 }
 
 .padding-110 {

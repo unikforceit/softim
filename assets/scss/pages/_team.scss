@@ -347,6 +347,9 @@
     padding-top: 60px;
     transition: all 0.5s;
     position: relative;
+    img{
+        max-height: 506px;
+    }
 
     &:hover {
         box-shadow: 0 0 20px #F9AC6C;
