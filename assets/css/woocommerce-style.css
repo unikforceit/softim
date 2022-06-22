@@ -526,6 +526,14 @@ p.no-comments {
     border-radius: 10px;
     margin-left: -8px;
 }
+@media screen and (max-width: 991px) {
+    .woocommerce-message,
+    .woocommerce-info,
+    .woocommerce-error,
+    p.no-comments {
+        margin-left: 0;
+    }
+}
 
 .woocommerce-noreviews {
     font-weight: 500;
@@ -1544,7 +1552,9 @@ p.no-comments {
 .woocommerce-cart-form {
     margin-bottom: 50px;
 }
-
+.wc-proceed-to-checkout{
+    text-align: right;
+}
 .woocommerce-cart-form table thead tr th {
     font-size: 18px;
     border: none;
@@ -1686,6 +1696,11 @@ p.no-comments {
 
 .woocommerce-billing-fields,.woocommerce-additional-fields {
     margin-left: -10px;
+}
+@media screen and (max-width: 991px) {
+    .woocommerce-billing-fields,.woocommerce-additional-fields {
+        margin-left: 0;
+    }
 }
 .woocommerce-additional-fields {
     padding-top: 20px;
@@ -1854,7 +1869,7 @@ p.no-comments {
 }
 
 .woocommerce-checkout-review-order table td {
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
 
 h3#order_review_heading {
@@ -2040,7 +2055,9 @@ ul.wc-item-meta li::before{
     padding: 8px 20px;
     color: rgba(255, 255, 255, .8);
 }
-
+.woocommerce form .form-row .required {
+    text-decoration: none;
+}
 .woocommerce-MyAccount-navigation ul li:before {
     display: none;
 }
