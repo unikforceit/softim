@@ -53,7 +53,7 @@ $shortcodes_right_content = cs_get_option('header_two_top_right_info_bar_shortco
                                             foreach ($header_links_repeater as $item) {
                                                 ?>
                                                 <li>
-                                                    <a href="<?php echo esc_url($item['sidebar_social_icon_item_url']['url']); ?>">
+                                                    <a href="<?php echo esc_url($item['sidebar_social_icon_item_url']); ?>">
                                                         <div class="links-thumb">
                                                             <?php echo wp_get_attachment_image($item['header_two_icon']['id'], 'full'); ?>
                                                         </div>
