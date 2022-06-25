@@ -40,10 +40,6 @@
   }
 }
 
-.grid-item:last-child{
-  width: 33.33%;
-}
-
 .breadcrumb-item+.breadcrumb-item::before{
   content: '>';
 }

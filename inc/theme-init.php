@@ -132,7 +132,9 @@ if (!class_exists('Softim_Init')) {
             //add image sizes
             add_image_size('softim_classic', 750, 400, true);
             add_image_size('softim_grid', 370, 270, true);
-            add_image_size('softim_project', 370, 360, true);
+            add_image_size('softim_project', 350, 340, true);
+            add_image_size('softim_project_max_height', 350, 709, true);
+            add_image_size('softim_project_max_width', 770, 360, true);
             add_image_size('softim_medium', 550, 380, true);
 
             self::load_theme_dependency_files();

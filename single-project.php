@@ -92,22 +92,9 @@ $project_meta = get_post_meta(get_the_ID(), 'softim_project_options', true);
 //setup query
 $args = array(
     'post_type' => 'project',
-    'posts_per_page' => $total_posts,
-    'order' => $order,
-    'orderby' => $orderby,
     'post_status' => 'publish',
     'ignore_sticky_posts' => 1,
 );
-
-if (!empty($category)) {
-    $args['tax_query'] = array(
-        array(
-            'taxonomy' => 'project-cat',
-            'field' => 'project_id',
-            'terms' => $category
-        )
-    );
-}
 $post_data = new \WP_Query($args);
 ?>
     <section class="gallery-widget-item-section ptb-120">
@@ -119,7 +106,6 @@ $post_data = new \WP_Query($args);
                             <?php if ($post_data->have_posts()) {
                                 while ($post_data->have_posts()) {
                                     $post_data->the_post();
-                                    $team_meta = get_post_meta(get_the_ID(), 'softim_team_options', true);
                                     ?>
                                     <div class="swiper-slide">
                                         <div class="gallery-widget-item">
@@ -152,7 +138,16 @@ $post_data = new \WP_Query($args);
         End Gallery-widget-item
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-
+<?php
+//setup query
+$args2 = array(
+    'post_type' => 'project',
+    'post_status' => 'publish',
+    'ignore_sticky_posts' => 1,
+    'posts_per_page' => 3,
+);
+$post_data2 = new \WP_Query($args2);
+?>
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Related project
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -166,60 +161,32 @@ $post_data = new \WP_Query($args);
                 </div>
             </div>
             <div class="row justify-content-center mb-30-none">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
-                    <div class="gallery-item">
-                        <div class="gallery-thumb">
-                            <img src="assets/images/gallery/gallery-10.png" alt="gallery">
-                            <div class="gallery-thumb-overlay">
-                                <div class="gallery-icon">
-                                    <a class="img-popup" data-rel="lightcase:myCollection"
-                                       href="assets/images/gallery/gallery-10.png"><img
-                                                src="assets/images/icon/icon-21.png" alt="icon"></a>
+            <?php if ($post_data2->have_posts()) {
+                while ($post_data2->have_posts()) {
+                    $post_data2->the_post();
+                    ?>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                        <div class="gallery-item">
+                            <div class="gallery-thumb">
+                                <?php if (has_post_thumbnail()) { ?>
+                                    <?php the_post_thumbnail('full'); ?>
+                                <?php } ?>
+                                <div class="gallery-thumb-overlay">
+                                    <div class="gallery-icon">
+                                        <a href="<?php the_post_thumbnail_url();?>">
+                                            <?php echo wp_get_attachment_image(softim_get_post_meta('softim_project_options', 'icon_image'), 'full'); ?>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="gallery-content">
-                            <span class="sub-title">BRANDING ILLUSTRATION</span>
-                            <h3 class="title"><a href="project-details.html">Modern Technology</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
-                    <div class="gallery-item">
-                        <div class="gallery-thumb">
-                            <img src="assets/images/gallery/gallery-2.png" alt="gallery">
-                            <div class="gallery-thumb-overlay">
-                                <div class="gallery-icon">
-                                    <a class="img-popup" data-rel="lightcase:myCollection"
-                                       href="assets/images/gallery/gallery-2.png"><img
-                                                src="assets/images/icon/icon-21.png" alt="icon"></a>
-                                </div>
+                            <div class="gallery-content">
+                                <span class="sub-title"><?php echo softim_post_category(); ?></span>
+                                <h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                             </div>
                         </div>
-                        <div class="gallery-content">
-                            <span class="sub-title">BRANDING ILLUSTRATION</span>
-                            <h3 class="title"><a href="project-details.html">Corporate Software Solutions</a></h3>
-                        </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
-                    <div class="gallery-item">
-                        <div class="gallery-thumb">
-                            <img src="assets/images/gallery/gallery-3.png" alt="gallery">
-                            <div class="gallery-thumb-overlay">
-                                <div class="gallery-icon">
-                                    <a class="img-popup" data-rel="lightcase:myCollection"
-                                       href="assets/images/gallery/gallery-3.png"><img
-                                                src="assets/images/icon/icon-21.png" alt="icon"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-content">
-                            <span class="sub-title">BRANDING ILLUSTRATION</span>
-                            <h3 class="title"><a href="project-details.html">Ecommerce Solutions</a></h3>
-                        </div>
-                    </div>
-                </div>
+                <?php }
+            } ?>
             </div>
         </div>
     </section>
