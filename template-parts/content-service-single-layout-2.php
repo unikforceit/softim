@@ -120,7 +120,7 @@ $service_meta = get_post_meta(get_the_ID(), 'softim_service_options', true);
                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
                                 </div>
                                 <div class="form-group text-center">
-                                    <button type="submit" class="btn--base"></i>Request a quotes</button>
+                                    <button type="submit" class="btn--base">Request a quotes</button>
                                 </div>
                             </form>
                         </div>
