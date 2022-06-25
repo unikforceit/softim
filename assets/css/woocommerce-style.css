@@ -976,6 +976,7 @@ p.no-comments {
     line-height: 40px;
     font-weight: 600;
     margin-bottom: 35px;
+    text-align: center;
 }
 
 .softim-product-single-page-item .related.products .products li.product .woocommerce-thumbnail-wrap {
@@ -1197,6 +1198,8 @@ p.no-comments {
     position: relative;
     z-index: 0;
     margin-left: 5px;
+    color: #8A8A8A;
+    text-transform: capitalize;
 }
 
 .woocommmerce-product-single-page-top-content-wrap .product_meta .posted_in a:after {
@@ -1321,10 +1324,11 @@ p.no-comments {
     color: #505050;
     border-radius: 0px;
     position: relative;
+    text-transform: uppercase;
     z-index: 0;
 }
 
-.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper > ul > li.active {
+.softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper > ul > li.active a{
     color: #3249B3;
 }
 .softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper > ul > li.active::after {
@@ -1332,24 +1336,30 @@ p.no-comments {
 }
 
 .softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper {
-    margin-top: 40px;
+    margin-top: 55px;
     margin-bottom: 54px;
     text-align: center;
+    border-top: 1px dashed #cbcbcb;
+    padding-top: 52px;
 }
 
 .softim-product-single-page-item .woocommerce-Tabs-panel {
     text-align: left;
 }
 
-.softim-product-single-page-item .woocommerce-Tabs-panel h2 {
+.softim-product-single-page-item .woocommerce-Tabs-panel h2,.pTitle {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 30px;
     margin-bottom: 0px;
+    color: #1c1c1c;
 }
 
 .softim-product-single-page-item .woocommerce-tabs .panel h2:first-of-type {
     margin-bottom: 20px;
+}
+.softim-product-single-page-item .woocommerce-tabs .panel h2:first-of-type ~ p {
+    margin-bottom: 36px;
 }
 
 .softim-product-single-page-item .woocommerce-tabs .panel table {
@@ -2768,7 +2778,41 @@ table.shop_table.woocommerce-checkout-review-order-table {
     border-radius: 50px;
     color: #fff;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 17px;
     display: inline-block;
+}
+.label label,
+.label label{
+    margin-left: -8px !important;
+    font-weight: bold !important;
+}
+.softim-variation-swatches__item {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+}
+.pFeature_list li{
+    position: relative;
+    padding-left: 30px !important;
+    margin-bottom: 22px !important;
+}
+.pFeature_list li:last-child{
+    margin-bottom: 0px !important;
+}
+.pFeature_list li:before{
+    content: "\f00c" !important;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    position: absolute !important;
+    font-size: 10px;
+    left: 0 !important;
+    top: 2px !important;
+    width: 20px !important;
+    height: 20px !important;
+    line-height: 19px;
+    background: rgba(41, 98, 255, 0.12) !important;
+    border-radius: 50% !important;
+    text-align: center;
+    color: #3249B3;
 }
