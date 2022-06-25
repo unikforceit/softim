@@ -2816,3 +2816,11 @@ table.shop_table.woocommerce-checkout-review-order-table {
     text-align: center;
     color: #3249B3;
 }
+
+.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td::before {
+    content: attr(data-label);
+    margin-right: auto;
+    color: #3249B3;
+    width: 50%;
+    text-align: left;
+}
