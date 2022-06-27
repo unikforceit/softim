@@ -342,7 +342,7 @@ ul.products li.product img {
     height: 2em;
     line-height: 1.618;
     font-size: 1em;
-    width: 110px;
+    width: 160px;
     font-family: 'Font Awesome 5 Free';
     font-weight: 400;
 }
@@ -365,6 +365,7 @@ ul.products li.product img {
     position: absolute;
     padding-top: 1.5em;
     font-size: 25px;
+    font-weight: 900;
 }
 
 .star-rating span:before {
@@ -870,9 +871,15 @@ p.no-comments {
     text-decoration: line-through;
 }
 
+.products li .woocommerce-thumbnail-wrap .softim_product_wishlist_button .action-text{
+    font-size: 0;
+    display: none;
+}
+
 .softim-single-product-item:hover .woocommerce-thumbnail-wrap .add_to_cart_button,
 .softim-single-product-item:hover .woocommerce-thumbnail-wrap .product_type_grouped,
 .softim-single-product-item:hover .woocommerce-thumbnail-wrap .product_type_external,
+.products li:hover .woocommerce-thumbnail-wrap .softim_product_wishlist_button,
 .softim-single-product-item:hover .woocommerce-thumbnail-wrap .added_to_cart {
     visibility: visible;
     opacity: 1;
@@ -881,6 +888,7 @@ p.no-comments {
 .softim-single-product-item .woocommerce-thumbnail-wrap .add_to_cart_button,
 .softim-single-product-item .woocommerce-thumbnail-wrap .product_type_grouped,
 .softim-single-product-item .woocommerce-thumbnail-wrap .product_type_external,
+.products li .woocommerce-thumbnail-wrap .softim_product_wishlist_button,
 .softim-single-product-item .woocommerce-thumbnail-wrap .added_to_cart {
     background-color: #3249B3;
     display: inline-block;
@@ -898,20 +906,24 @@ p.no-comments {
 }
 
 .softim-single-product-item .woocommerce-thumbnail-wrap .add_to_cart_button:hover,
+.softim-single-product-item .woocommerce-thumbnail-wrap .softim_product_wishlist_button:hover,
 .softim-single-product-item .woocommerce-thumbnail-wrap .product_type_external:hover,
 .softim-single-product-item .woocommerce-thumbnail-wrap .product_type_grouped:hover {
     background-color: #3249B3;
     color: #fff;
 }
 
+.products li .woocommerce-thumbnail-wrap .softim_product_wishlist_button:after,
 .softim-single-product-item .woocommerce-thumbnail-wrap .add_to_cart_button:after {
     color: #fff;
 }
 
+.products li .product-content-wrap .softim_product_wishlist_button,
 .softim-single-product-item .product-content-wrap .added_to_cart {
     background-color: var(--secondary-color);
 }
 
+.products li .product-content-wrap .softim_product_wishlist_button:hover,
 .softim-single-product-item .product-content-wrap .added_to_cart:hover {
     background-color: var(--main-color-one);
 }
@@ -1094,7 +1106,7 @@ p.no-comments {
     margin-right: 30px;
     position: relative;
     z-index: 0;
-    width: calc(100% / 2);
+    width: calc(80% / 2);
 }
 
 .woocommmerce-product-single-page-top-content-wrap .woocommerce-product-details__short-description {
@@ -1353,6 +1365,7 @@ p.no-comments {
     line-height: 30px;
     margin-bottom: 0px;
     color: #1c1c1c;
+    font-family: "Jost", sans-serif;
 }
 
 .softim-product-single-page-item .woocommerce-tabs .panel h2:first-of-type {
@@ -1475,7 +1488,7 @@ p.no-comments {
 }
 
 .woocommmerce-product-single-page-top-content-wrap .summary.entry-summary {
-    width: calc(100% / 2);
+    width: calc(90% / 2);
 }
 
 .woocommerce-cart-form td.product-thumbnail img {
@@ -2410,7 +2423,7 @@ button[name="save_account_details"]:hover {
     .wc-page-content-inner .products .softim-single-product-item,
     .wc-page-content-inner .products.columns-3 .softim-single-product-item,
     .softim-product-single-page-item .related.products .products li.product {
-        width: 100%;
+        width: 99%;
         margin-left: 0 !important;
     }
 
@@ -2664,7 +2677,7 @@ button[name="save_account_details"]:hover {
 .single-product div.product .summary.entry-summary input[type='search'],
 .single-product div.product .summary.entry-summary textarea,
 .single-product div.product .summary.entry-summary input-text {
-    padding: 10px 0px 10px 50px;
+    padding: 7px 0px 10px 50px;
     font-size: 15px;
     width: 50%;
     border: 1px solid transparent;
@@ -2785,12 +2798,14 @@ table.shop_table.woocommerce-checkout-review-order-table {
 .label label,
 .label label{
     margin-left: -8px !important;
-    font-weight: bold !important;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--heading-color);
 }
 .softim-variation-swatches__item {
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
 }
 .pFeature_list li{
     position: relative;
@@ -2823,4 +2838,10 @@ table.shop_table.woocommerce-checkout-review-order-table {
     color: #3249B3;
     width: 50%;
     text-align: left;
+}
+@media only screen and (max-width: 767px) {
+    .softim-product-single-page-item .woocommerce-tabs.wc-tabs-wrapper > ul {
+        gap: 20px;
+        flex-direction: column;
+    }
 }

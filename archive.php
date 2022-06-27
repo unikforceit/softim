@@ -23,12 +23,12 @@ $page_layout_options = Softim_Group_Fields_Value::page_layout_options('archive')
 ?>
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Start Blog
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            Start Blog
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <section class="blog-section ptb-120">
         <div class="container">
             <div class="row mb-60-none">
-                <div class="col-xl-8 col-lg-8 mb-60">
+                <div class="<?php echo esc_attr($page_layout_options['content_column_class']);?> mb-60">
                     <div class="row mb-60-none">
                         <?php
                         if (have_posts()) :
@@ -41,7 +41,13 @@ $page_layout_options = Softim_Group_Fields_Value::page_layout_options('archive')
                                  * If you want to override this in a child theme, then include a file
                                  * called content-___.php (where ___ is the Post Type name) and that will be used instead.
                                  */
-                                get_template_part('template-parts/content', get_post_format());
+                                $blog_layout = cs_get_option('blog_archive_layout');
+
+                                if (isset($_GET['layout'] ) && $_GET['layout'] == '2' || $blog_layout == 'layout-2') {
+                                    get_template_part('template-parts/content-layout', '2');
+                                }else{
+                                    get_template_part('template-parts/content', get_post_format());
+                                }
 
                             endwhile;
 
@@ -53,9 +59,11 @@ $page_layout_options = Softim_Group_Fields_Value::page_layout_options('archive')
                         ?>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 mb-60">
-                    <?php get_sidebar(); ?>
-                </div>
+                <?php if ($page_layout_options['sidebar_enable']):?>
+                    <div class="<?php echo esc_attr($page_layout_options['sidebar_column_class']);?> mb-60">
+                        <?php get_sidebar();?>
+                    </div>
+                <?php endif;?>
             </div>
             <nav>
                 <?php softim()->post_pagination(); ?>

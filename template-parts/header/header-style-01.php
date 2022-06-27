@@ -39,9 +39,10 @@ $shortcodes_right_content = cs_get_option('header_two_top_right_info_bar_shortco
                             <div class="header-right">
 
                                 <div class="search-bar">
-                                    <form class="header-search-form">
-                                        <input type="search" name="keyword" id="header_search" placeholder="Search...">
+                                    <form id="searchform" class="searchbox header-search-form" action="<?php echo home_url('/');?>"  method="get">
+                                        <input type="text" id="search" placeholder="Search" class="input" name="s" value=""/>
                                         <button class="header-search-btn"><i class="las la-search"></i></button>
+                                        <input type="hidden" name="post_type" value="post" />
                                     </form>
                                 </div>
                                 <div class="header-links-area">
@@ -49,7 +50,7 @@ $shortcodes_right_content = cs_get_option('header_two_top_right_info_bar_shortco
                                         <?php
                                         $header_links_icon = cs_get_option('header_links_icon');
                                         $header_links_repeater = cs_get_option('header_links_repeater');
-                                        if ($header_links_icon) {
+                                        if ($header_links_repeater) {
                                             foreach ($header_links_repeater as $item) {
                                                 ?>
                                                 <li>

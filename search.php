@@ -10,47 +10,57 @@
 get_header();
 $page_layout_options = Softim_Group_Fields_Value::page_layout_options('search');
 ?>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           Start Blog
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <section class="blog-section search-page-content ptb-120">
+        <div class="container">
+            <div class="row mb-60-none">
+                <div class="<?php echo esc_attr($page_layout_options['content_column_class']);?> mb-60">
+                    <div class="row mb-60-none">
+                        <?php
+                        if (have_posts()) :
 
-    <section id="primary" class="content-area search-page-content-area padding-120">
-        <main id="main" class="site-main">
-            <div class="container">
-                <div class="row">
-                    <div class="<?php echo esc_attr($page_layout_options['content_column_class']);?>">
-						<?php if ( have_posts() ) : ?>
-							<?php
-							/* Start the Loop */
-							while ( have_posts() ) :
-								the_post();
+                            /* Start the Loop */
+                            while (have_posts()) :
+                                the_post();
+                                /*
+                                 * Include the Post-Type-specific template for the content.
+                                 * If you want to override this in a child theme, then include a file
+                                 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+                                 */
+                                $blog_layout = cs_get_option('blog_archive_layout');
 
-								/**
-								 * Run the loop for the search to output the results.
-								 * If you want to overload this in a child theme then include a file
-								 * called content-search.php and that will be used instead.
-								 */
-								get_template_part( 'template-parts/content', 'search' );
+                                if (isset($_GET['layout'] ) && $_GET['layout'] == '2' || $blog_layout == 'layout-2') {
+                                    get_template_part('template-parts/content-layout', '2');
+                                }else{
+                                    get_template_part('template-parts/content', get_post_format());
+                                }
 
-							endwhile;
-							?>
-                            <div class="blog-pagination">
-								<?php softim()->post_pagination(); ?>
-                            </div>
-						<?php
-						else :
+                            endwhile;
 
-							get_template_part( 'template-parts/content', 'none' );
+                        else :
 
-						endif;
-						?>
+                            get_template_part('template-parts/content', 'none');
+
+                        endif;
+                        ?>
                     </div>
-					<?php if ($page_layout_options['sidebar_enable']):?>
-                        <div class="<?php echo esc_attr($page_layout_options['sidebar_column_class']);?>">
-							<?php get_sidebar();?>
-                        </div>
-					<?php endif;?>
                 </div>
+                <?php if ($page_layout_options['sidebar_enable']):?>
+                    <div class="<?php echo esc_attr($page_layout_options['sidebar_column_class']);?> mb-60">
+                        <?php get_sidebar();?>
+                    </div>
+                <?php endif;?>
             </div>
-        </main><!-- #main -->
-    </section><!-- #primary -->
+            <nav>
+                <?php softim()->post_pagination(); ?>
+            </nav>
+        </div>
+    </section>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        End Blog
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <?php
 

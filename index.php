@@ -13,6 +13,8 @@
  */
 
 get_header();
+
+$page_layout_options = Softim_Group_Fields_Value::page_layout_options('blog');
 ?>
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Blog
@@ -20,7 +22,7 @@ get_header();
     <section class="blog-section ptb-120">
         <div class="container">
             <div class="row mb-60-none">
-                <div class="col-xl-8 col-lg-8 mb-60">
+                <div class="<?php echo esc_attr($page_layout_options['content_column_class']);?> mb-60">
                     <div class="row mb-60-none">
                         <?php
                         if (have_posts()) :
@@ -51,9 +53,11 @@ get_header();
                         ?>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 mb-60">
-                    <?php get_sidebar(); ?>
-                </div>
+                <?php if ($page_layout_options['sidebar_enable']):?>
+                    <div class="<?php echo esc_attr($page_layout_options['sidebar_column_class']);?> mb-60">
+                        <?php get_sidebar();?>
+                    </div>
+                <?php endif;?>
             </div>
             <nav>
                 <?php softim()->post_pagination(); ?>
