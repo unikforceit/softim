@@ -202,3 +202,9 @@ color: #fff !important;
     bottom: 50px;
   }
 }
+table.variations {
+  tr, td, th, .lable, label{
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -56,6 +56,8 @@ if (!class_exists('Softim_Woocomerce_Customize')) {
             add_filter('loop_shop_per_page', [$this, 'softim_loop_shop_per_page'], 30);
             add_action('wp_footer', [$this, 'softim_quanity_script']);
             add_action('woocommerce_single_product_summary', [$this, 'softim_before_title'], 4);
+            add_action( 'woocommerce_after_add_to_cart_button', [$this, 'softim_yith_wcwl_add_to_wishlist'], 10 );
+
         }
 
 
@@ -251,9 +253,9 @@ if (!class_exists('Softim_Woocomerce_Customize')) {
 
                 }
 
-
-
-
+                public function softim_yith_wcwl_add_to_wishlist(){
+                    echo do_shortcode('[yith_wcwl_add_to_wishlist]');
+                }
 
                 /**
                  * add ul after thumbnail wrap end

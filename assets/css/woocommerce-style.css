@@ -1106,7 +1106,7 @@ p.no-comments {
     margin-right: 30px;
     position: relative;
     z-index: 0;
-    width: calc(80% / 2);
+    width: calc(75% / 2);
 }
 
 .woocommmerce-product-single-page-top-content-wrap .woocommerce-product-details__short-description {
@@ -1121,11 +1121,6 @@ p.no-comments {
     font-size: 14px;
 }
 
-.woocommmerce-product-single-page-top-content-wrap .summary.entry-summary .quantity {
-    display: inline-block;
-    vertical-align: middle;
-    padding-top: 10px;
-}
 .single-product div.product .summary.entry-summary input[type='number']{
     text-align: center;
 }
@@ -1190,7 +1185,7 @@ p.no-comments {
     display: block;
     font-size: 16px;
     line-height: 1.72;
-    font-weight: 500;
+    font-weight: 600;
     color: #1C1C1C;
 }
 
@@ -1236,11 +1231,36 @@ p.no-comments {
 }
 
 .woocommmerce-product-single-page-top-content-wrap .variations_form table {
-    margin-bottom: 20px;
+    margin-bottom: 45px;
+}
+
+i.yith-wcwl-icon.fa {
+    font-family: 'FontAwesome';
+}
+
+.yith-wcwl-add-to-wishlist {
+    padding-left: 10px;
+}
+
+.wishlist_table tr td.product-remove {
+    padding-top: 40px;
+}
+
+.wishlist_table tr td.product-name a {
+    padding-top: 15px;
 }
 
 .woocommmerce-product-single-page-top-content-wrap .variations_form td.label label {
     margin-bottom: 0;
+}
+
+.woocommmerce-product-single-page-top-content-wrap .variations_form table tr {
+    margin-bottom: 15px;
+    display: block;
+}
+
+.woocommmerce-product-single-page-top-content-wrap .variations_form table tr th {
+    padding-right: 30px;
 }
 
 .woocommmerce-product-single-page-top-content-wrap .variations_form td.value select {
@@ -1488,7 +1508,7 @@ p.no-comments {
 }
 
 .woocommmerce-product-single-page-top-content-wrap .summary.entry-summary {
-    width: calc(90% / 2);
+    width: calc(100% / 2);
 }
 
 .woocommerce-cart-form td.product-thumbnail img {
@@ -2699,9 +2719,10 @@ button[name="save_account_details"]:hover {
     background-position-x: 95%;
     color: var(--paragraph-color);
 }
-
+.woocommerce-variation-add-to-cart {
+    display: flex;
+}
 .single-product div.product .summary.entry-summary button[type=submit] {
-    margin-left: -50px;
     text-align: center;
     border: none;
     cursor: pointer;
@@ -2797,10 +2818,13 @@ table.shop_table.woocommerce-checkout-review-order-table {
 }
 .label label,
 .label label{
-    margin-left: -8px !important;
+    margin-left: -8px;
     font-size: 16px;
     font-weight: 600;
     color: var(--heading-color);
+}
+form ~ .yith-wcwl-add-to-wishlist {
+    display: none;
 }
 .softim-variation-swatches__item {
     width: 20px;

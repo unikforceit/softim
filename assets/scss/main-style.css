@@ -17461,7 +17461,7 @@ figcaption a {
 }
 .content-area table th {
   border: 1px solid #e3e3e3;
-  padding: 8px 8px 0 !important;
+  padding: 8px 8px 0;
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
@@ -17914,6 +17914,10 @@ ul.wp-block-categories-list.wp-block-categories li:last-child {
   .scrollToTop.active {
     bottom: 50px;
   }
+}
+table.variations tr, table.variations td, table.variations th, table.variations .lable, table.variations label {
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=main-style.css.map */
