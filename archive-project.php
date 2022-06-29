@@ -22,9 +22,15 @@ get_header();
 
 $tax_args = array(
     'taxonomy' => 'project-cat',
-    'number' => 4,
+    'number' => 5,
 );
 $categories = get_terms($tax_args);
+$args = [
+    'post_type'      => 'project',
+    'posts_per_page' => 6
+];
+$query = new WP_Query($args);
+
 ?>
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Start Gallery
@@ -39,12 +45,12 @@ $categories = get_terms($tax_args);
                     <?php } ?>
                 </div>
                 <div class="grid two">
-                    <?php if (have_posts()) : ?>
+                    <?php if ($query->have_posts()) : ?>
 
                         <?php
                         /* Start the Loop */
-                        while (have_posts()) :
-                            the_post();
+                        while ($query->have_posts()) :
+                            $query->the_post();
 
                             get_template_part('template-parts/content', 'project');
 

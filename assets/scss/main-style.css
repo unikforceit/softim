@@ -12598,7 +12598,7 @@ div[class*=col]:nth-of-type(4n + 4) .process-item .process-icon-area .process-ic
     width: 100%;
   }
 }
-.grid-item:last-child {
+.grid-item.width {
   width: 66.66%;
 }
 @media only screen and (max-width: 767px) {

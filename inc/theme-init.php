@@ -94,7 +94,7 @@ if (!class_exists('Softim_Init')) {
                 'caption',
             ));
             //woocommerce support
-            add_theme_support('woocommerce',
+            add_theme_support('softim',
                 ['single_image_width' => 500]
         );
             add_theme_support('wc-product-gallery-zoom');

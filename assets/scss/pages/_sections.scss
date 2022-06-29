@@ -2815,10 +2815,10 @@ div[class*="col"]:nth-of-type(4n + 4) .process-item {
     @media only screen and (max-width: 575px) {
         width: 100%;
     }
-
-    &:last-child {
+    &.width{
         width: 66.66%;
-
+    }
+    &:last-child {
         @media only screen and (max-width: 767px) {
             width: 50%;
         }
