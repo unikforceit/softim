@@ -2740,7 +2740,7 @@ button[name="save_account_details"]:hover {
     background-position-x: 95%;
     color: var(--paragraph-color);
 }
-.woocommerce-variation-add-to-cart, form.cart {
+.woocommerce-variation-add-to-cart, .product-type-simple form.cart {
     display: flex;
 }
 .single-product div.product .summary.entry-summary button[type=submit] {

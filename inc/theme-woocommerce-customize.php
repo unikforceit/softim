@@ -55,8 +55,11 @@ if (!class_exists('Softim_Woocomerce_Customize')) {
             add_filter('loop_shop_columns', [$this, 'softim_loop_columns'], 999);
             add_filter('loop_shop_per_page', [$this, 'softim_loop_shop_per_page'], 30);
             add_action('wp_footer', [$this, 'softim_quanity_script']);
+            add_action('woocommerce_single_product_summary', [$this, 'softim_product_stock'], 3);
             add_action('woocommerce_single_product_summary', [$this, 'softim_before_title'], 4);
-            add_action( 'woocommerce_after_add_to_cart_button', [$this, 'softim_yith_wcwl_add_to_wishlist'], 10 );
+            add_action( 'woocommerce_single_product_summary', [$this, 'softim_yith_wcwl_add_to_wishlist'], 5 );
+            add_action('woocommerce_single_product_summary', [$this, 'softim_after_title'], 6);
+            add_action( 'woocommerce_after_add_to_cart_button', [$this, 'softim_buy_now_button'], 10 );
 
         }
 
@@ -86,9 +89,25 @@ if (!class_exists('Softim_Woocomerce_Customize')) {
 
         public function softim_before_title()
         {
+            ?>
+            <div class="title-wrap">
+            <?php
+        }
+        public function softim_product_stock()
+        {
             global $product;
             ?>
             <span class="stock"><?php echo wp_kses_post($product->get_stock_status()); ?></span>
+            <?php
+        }
+        public function softim_yith_wcwl_add_to_wishlist()
+        {
+            echo do_shortcode('[yith_wcwl_add_to_wishlist]');
+        }
+        public function softim_after_title()
+        {
+            ?>
+            </div>
             <?php
         }
 
@@ -253,8 +272,22 @@ if (!class_exists('Softim_Woocomerce_Customize')) {
 
                 }
 
-                public function softim_yith_wcwl_add_to_wishlist(){
-                    echo do_shortcode('[yith_wcwl_add_to_wishlist]');
+                public function softim_buy_now_button(){
+
+                    // get the current post/product ID
+                    $current_product_id = get_the_ID();
+
+                    // get the product based on the ID
+                    $product = wc_get_product( $current_product_id );
+
+                    // get the "Checkout Page" URL
+                    $checkout_url = wc_get_checkout_url();
+
+                    // run only on simple products
+                    if( $product->is_type( 'simple' ) ){
+                        echo '<a href="'.$checkout_url.'?add-to-cart='.$current_product_id.'" class="buy-now button">'.esc_html('Buy Now').'</a>';
+                        //echo '<a href="'.$checkout_url.'" class="buy-now button">Buy Now</a>';
+                    }
                 }
 
                 /**
