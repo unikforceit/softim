@@ -102,7 +102,20 @@ if (!class_exists('Softim_Woocomerce_Customize')) {
         }
         public function softim_yith_wcwl_add_to_wishlist()
         {
-            echo do_shortcode('[yith_wcwl_add_to_wishlist]');
+            if (class_exists('YITH_WCWL')) :
+                global $product;
+                ?>
+                <a href="<?php echo YITH_WCWL()->is_product_in_wishlist($product->get_id()) ? esc_url(YITH_WCWL()->get_wishlist_url()) : esc_url(add_query_arg('add_to_wishlist', $product->get_id())); ?>"
+                   data-product-id="<?php echo esc_attr($product->get_id()); ?>"
+                   data-product-type="<?php echo esc_attr($product->get_type()); ?>"
+                   data-wishlist-url="<?php echo esc_url(YITH_WCWL()->get_wishlist_url()); ?>"
+                   data-browse-wishlist-text="<?php echo esc_attr(get_option('yith_wcwl_browse_wishlist_text')); ?>"
+                   class="button softim_product_wishlist_button <?php echo YITH_WCWL()->is_product_in_wishlist($product->get_id()) ? 'clicked added' : 'add_to_wishlist'; ?>"
+                   rel="nofollow" data-toggle="tooltip">
+                    <span class="icon"><i class="fa fa-heart"></i></span>
+                </a>
+            <?php
+            endif;
         }
         public function softim_after_title()
         {
