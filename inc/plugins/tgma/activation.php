@@ -82,6 +82,12 @@ function softim_register_required_plugins() {
 			'external_url' => 'https://wordpress.org/plugins/one-click-demo-import',
 		),
         array(
+			'name'         => 'WooCommerce',
+			'slug'         => 'woocommerce',
+			'required'     => false,
+			'external_url' => 'https://wordpress.org/plugins/woocommerce',
+		),
+        array(
 			'name'         => 'YITH WooCommerce Wishlist',
 			'slug'         => 'yith-woocommerce-wishlist',
 			'required'     => false,
