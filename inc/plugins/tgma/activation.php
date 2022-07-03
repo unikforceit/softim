@@ -46,7 +46,7 @@ function softim_register_required_plugins() {
         array(
             'name'               => 'Softim Core',
             'slug'               => 'softim-core',
-            'source'       => 'https://themeim.com/plugins/softim/softim-core.zip',
+            'source'       => 'https://themeim.com/wp/softim/wp-content/uploads/2022/07/softim-core.zip',
             'required'           => true,
             'version'            => '1.0.0',
 
